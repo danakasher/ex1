@@ -1,7 +1,7 @@
 #include "Level.cpp"
 #include "SearchTree.cpp"
 
-class Group(){
+class Group{
 private:
     int groupId;
     int currentHighestLevelPlayer;
@@ -12,4 +12,4 @@ public:
     ~Group(){
 
     };
-}
+};

@@ -28,11 +28,11 @@ public:
 template <typename T>
 class SearchTree{
 private:
-    Node* root;
+    Node<T>* root;
 
 public:
     SearchTree() = default;
-    insert(T const *value);
+    void insert(T const *value);
     ~SearchTree(){
         //TODO
     }
