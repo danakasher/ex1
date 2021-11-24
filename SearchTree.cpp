@@ -109,7 +109,7 @@ public:
 
 
     void roll_RR(Node<T> *balancingPnt, bool isRight){
-        Node<T> *rightSon = balancingPnt->getLeft();
+        Node<T> *rightSon = balancingPnt->getRight();
         Node<T> *leftOfRight = rightSon != nullptr? rightSon->getLeft(): nullptr;
         Node<T> *father = balancingPnt->getFather();
 
