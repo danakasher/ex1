@@ -10,7 +10,7 @@ private:
 
 public:
     int height, balancingParameter;
-    explicit Node<T>(T const &val) : value(val), left(nullptr), right(nullptr), father(nullptr) {};
+    explicit Node<T>(T const &val) : value(val), left(nullptr), right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
     ~Node() = default;
     T &getValue(){ return this->value; }
     Node *getLeft(){ return this->left; }

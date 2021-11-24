@@ -3,15 +3,15 @@
 
 int main(){
     SearchTree<int> tree = SearchTree<int>();
-    int arr[50] = {0};
+    int arr[100] = {0};
     int insert;
     bool canInsert;
-    for(int i=0; i<50; i++){
+    for(int i=0; i<100; i++){
         canInsert = false;
         while(!canInsert){
             insert = rand()%1000;
             canInsert = true;
-            for(int j=0; j<50; j++){
+            for(int j=0; j<100; j++){
                 if(arr[j] == insert){
                     canInsert = false;
                     break;
