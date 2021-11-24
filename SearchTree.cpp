@@ -27,7 +27,7 @@ public:
             if(temp==newNode){
                 //TODO:
             }
-            if (&temp > &newNode) {
+            if (newNode->getValue() > temp->getValue()) {
                 if (temp->getRight() == nullptr) {
                     temp->setRight(newNode);
                     newNode->setFather(temp);
@@ -93,19 +93,18 @@ public:
         if(father == nullptr){
             this->root = leftSon;
             this->root->setFather(nullptr);
-            leftSon->setRight(balancingPnt);
-            balancingPnt->setLeft(rightOfLeft);
         } else {
             if(isRight){
                 father->setRight(leftSon);
             } else {
                 father->setLeft(leftSon);
             }
-            father->setLeft(leftSon);
             leftSon->setFather(father);
-            leftSon->setRight(balancingPnt);
-            balancingPnt->setLeft(rightOfLeft);
         }
+        balancingPnt->setLeft(rightOfLeft);
+        leftSon->setRight(balancingPnt);
+        balancingPnt->setFather(leftSon);
+        rightOfLeft->setFather(balancingPnt);
     }
 
 
@@ -117,8 +116,6 @@ public:
         if(father == nullptr){
             this->root = rightSon;
             this->root->setFather(nullptr);
-            rightSon->setLeft(balancingPnt);
-            balancingPnt->setRight(leftOfRight);
         } else {
             if(isRight){
                 father->setRight(rightSon);
@@ -126,35 +123,43 @@ public:
                 father->setLeft(rightSon);
             }
             rightSon->setFather(father);
-            rightSon->setLeft(balancingPnt);
-            balancingPnt->setRight(leftOfRight);
         }
+        rightSon->setLeft(balancingPnt);
+        balancingPnt->setFather(rightSon);
+        balancingPnt->setRight(leftOfRight);
+
     }
 
     void roll_LR(Node<T> *balancingPnt, bool isRight) {
         Node<T> *leftSon = balancingPnt->getLeft();
-        Node<T> *rightOfLeft = leftSon != nullptr ? leftSon->getLeft() : nullptr;
+        Node<T> *rightOfLeft = leftSon != nullptr ? leftSon->getRight() : nullptr;
         Node<T> *leftOfRightOfLeft = rightOfLeft != nullptr ? rightOfLeft->getLeft() : nullptr;
         Node<T> *rightOfRightOfLeft = rightOfLeft != nullptr ? rightOfLeft->getRight() : nullptr;
         Node<T> *father = balancingPnt->getFather();
 
         if(father == nullptr){
-            this->root = leftSon;
-            leftSon->setFather(nullptr);
-            rightOfLeft->setRight(balancingPnt);
-            rightOfLeft->setLeft(leftSon);
-            balancingPnt->setLeft(rightOfRightOfLeft);
-            leftSon->setRight(leftOfRightOfLeft);
+            this->root = rightOfLeft;
+            rightOfLeft->setFather(nullptr);
+
         } else {
             if(isRight){
-                father->setRight(leftSon);
+                father->setRight(rightOfLeft);
             } else {
-                father->setLeft(leftSon);
+                father->setLeft(rightOfLeft);
             }
-            rightOfLeft->setRight(balancingPnt);
-            rightOfLeft->setLeft(leftSon);
-            balancingPnt->setLeft(rightOfRightOfLeft);
-            leftSon->setRight(leftOfRightOfLeft);
+            rightOfLeft->setFather(father);
+        }
+        rightOfLeft->setRight(balancingPnt);
+        balancingPnt->setFather(rightOfLeft);
+        rightOfLeft->setLeft(leftSon);
+        leftSon->setFather(rightOfLeft);
+        balancingPnt->setLeft(rightOfRightOfLeft);
+        if(rightOfRightOfLeft != nullptr){
+            rightOfRightOfLeft->setFather(balancingPnt);
+        }
+        leftSon->setRight(leftOfRightOfLeft);
+        if(leftOfRightOfLeft != nullptr){
+            leftOfRightOfLeft->setFather(leftSon);
         }
     }
 
@@ -163,26 +168,32 @@ public:
         Node<T> *rightSon = balancingPnt->getRight();
         Node<T> *leftOfRight = rightSon != nullptr ? rightSon->getLeft() : nullptr;
         Node<T> *rightOfLeftOfRight = leftOfRight != nullptr ? leftOfRight->getRight() : nullptr;
-        Node<T> *leftOfLeftOfRight = leftOfRight != nullptr ? leftOfRight->getRight() : nullptr;
+        Node<T> *leftOfLeftOfRight = leftOfRight != nullptr ? leftOfRight->getLeft() : nullptr;
         Node<T> *father = balancingPnt->getFather();
 
         if(father == nullptr){
-            this->root = rightSon;
-            rightSon->setFather(nullptr);
-            leftOfRight->setRight(balancingPnt);
-            leftOfRight->setLeft(rightSon);
-            balancingPnt->setLeft(leftOfLeftOfRight);
-            rightSon->setRight(rightOfLeftOfRight);
+            this->root = leftOfRight;
+            leftOfRight->setFather(nullptr);
+
         } else {
             if(isRight){
-                father->setRight(rightSon);
+                father->setRight(leftOfRight);
             } else {
-                father->setLeft(rightSon);
+                father->setLeft(leftOfRight);
             }
-            leftOfRight->setRight(balancingPnt);
-            leftOfRight->setLeft(rightSon);
-            balancingPnt->setLeft(leftOfLeftOfRight);
-            rightSon->setRight(rightOfLeftOfRight);
+            leftOfRight->setFather(father);
+        }
+        leftOfRight->setLeft(balancingPnt);
+        balancingPnt->setFather(leftOfRight);
+        leftOfRight->setRight(rightSon);
+        rightSon->setFather(leftOfRight);
+        balancingPnt->setRight(leftOfLeftOfRight);
+        if(leftOfLeftOfRight != nullptr){
+            leftOfLeftOfRight->setFather(balancingPnt);
+        }
+        rightSon->setLeft(rightOfLeftOfRight);
+        if(rightOfLeftOfRight != nullptr){
+            rightOfLeftOfRight->setFather(rightSon);
         }
     }
 
