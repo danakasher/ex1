@@ -4,6 +4,7 @@ class Node{
 private:
     T* value; //TODO: shared ptr?
     Node* left, right;
+    int height;
 
 public:
     Node(T const *val) : value(val) {};
@@ -29,9 +30,10 @@ template <typename T>
 class SearchTree{
 private:
     Node<T>* root;
+    int size;
 
 public:
-    SearchTree() = default;
+    SearchTree(): size(0) {};
     void insert(T const *value);
     ~SearchTree(){
         //TODO

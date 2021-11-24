@@ -1,4 +1,7 @@
-//
-// Created by asafk on 23/11/2021.
-//
+#include "Group.cpp"
 
+class Player{
+private:
+    int id, level;
+
+};

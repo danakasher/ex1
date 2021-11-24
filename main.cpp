@@ -1,6 +1,6 @@
 #include "Player.cpp"
 #include "SearchTree.cpp"
-#include "Group.cpp"
+#include "Group.h"
 #include "Level.cpp"
 
 int main(){
