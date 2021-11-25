@@ -1,12 +1,13 @@
 #include "SearchTree.cpp"
 #include "Node.cpp"
+#include <iostream>
 
 int main(){
     SearchTree<int, int> tree = SearchTree<int, int>();
     int arr[100] = {0};
     int insert;
     bool canInsert;
-    for(int & i : arr){
+    for(int i=0; i<100; i++){
         canInsert = false;
         while(!canInsert){
             insert = rand()%1000;
@@ -21,10 +22,13 @@ int main(){
         arr[i] = insert;
         tree.insert(insert, insert);
     }
-    tree.scanInOrder();
-    for (int i=0; i<50; i++)
-    {
-        tree.remove(arr[i]);
+    Node<int, int> **ar = tree.scanInOrder();
+    for(int i=0; i<100; i++){
+        std::cout << ar[i]->getData() << ", ";
     }
-    tree.scanInOrder();
+//    for (int i=0; i<50; i++)
+//    {
+//        tree.remove(arr[i]);
+//    }
+//    tree.scanInOrder();
 }
