@@ -22,4 +22,9 @@ int main(){
         tree.insert(insert, insert);
     }
     tree.print_in_order();
+    for (int i=0; i<50; i++)
+    {
+        tree.remove(arr[i]);
+    }
+    tree.print_in_order();
 }

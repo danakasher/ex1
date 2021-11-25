@@ -179,16 +179,159 @@ public:
         print_in_order(node->getRight());
     }
 
-    Node<Key, Data>* find (Node<Key, Data> *node, Key* key) {
-        if(node== nullptr){
-            return nullptr;
+    Node<Key, Data>* find (Key const &key) {
+        auto *node = this->root;
+        while (node!= nullptr)
+        {
+            if (node->getKey()==key){
+                return node;
+            }
+            if (key<node->getKey()){
+                node=node->getLeft();
+            }
+            else{
+                node=node->getRight();
+            }
         }
-        if(node->getKey() == key){
-            return node;
-        }
-        if (find(node->getLeft(), key)!= nullptr) return find(node->getLeft(), key);
-        else if (find(node->getRight(), key)!= nullptr) return find(node->getRight(), key);
         return nullptr;
+    }
+
+    void remove(Key const &key)
+    {
+        auto *node = find(key);
+        if (node==nullptr){
+            return;
+        }
+        auto *father = node->getFather();
+
+        //no children
+        if ((node->getLeft()== nullptr)&&(node->getRight()==nullptr)){
+            if (father== nullptr)
+            {
+                this->root= nullptr;
+                this->size-=1;
+            }
+            if (father->getLeft()==node) {
+                father->setLeft(nullptr);
+                this->size-=1;
+            }
+            else if (father->getRight()==node){
+                father->setRight(nullptr);
+                this->size-=1;
+            }
+        }
+
+        //one child in left
+        if ((node->getLeft()!= nullptr)&&(node->getRight()==nullptr)){
+            if (father== nullptr)
+            {
+                this->root= node->getLeft();
+                this->size-=1;
+            }
+            else if (father->getLeft()==node) {
+                father->setLeft(node->getLeft());
+                this->size-=1;
+            }
+            else if (father->getRight()==node){
+                father->setRight(node->getLeft());
+                this->size-=1;
+            }
+        }
+
+        //one child in Right
+        if ((node->getLeft()== nullptr)&&(node->getRight()!=nullptr)){
+            if (father== nullptr)
+            {
+                this->root= node->getRight();
+                this->size-=1;
+            }
+            else if (father->getLeft()==node) {
+                father->setLeft(node->getRight());
+                this->size-=1;
+            }
+            else if (father->getRight()==node){
+                father->setRight(node->getRight());
+                this->size-=1;
+            }
+        }
+
+        //two children
+        auto *temp=node;
+        if ((node->getLeft()!= nullptr)&&(node->getRight()!=nullptr))
+        {
+            temp = findMin(node->getRight());
+            if (father== nullptr)
+            {
+                this->root= temp;
+                this->size-=1;
+            }
+            else if (father->getLeft()==node) {
+                father->setLeft(temp);
+                this->size-=1;
+            }
+            else if (father->getRight()==node){
+                father->setRight(temp);
+                this->size-=1;
+            }
+            auto *forReplace=node;
+            forReplace->setLeft(temp->getLeft());
+            forReplace->setLeft(temp->getRight());
+            temp->setLeft(node->getLeft());
+            temp->setRight(node->getRight());
+            node->setLeft(forReplace->getLeft());
+            node->setRight(forReplace->getRight());
+            remove(node->getKey());
+        }
+
+        //ToDo
+            bool balancingPnt = false;
+        int heightLeft, heightRight;
+        while(!balancingPnt){
+            heightLeft = father->getLeft() == nullptr? 0:father->getLeft()->height;
+            heightRight = father->getRight() == nullptr? 0:father->getRight()->height;
+            calculateHeight(father);
+            father->balancingParameter = heightLeft-heightRight;
+            if(abs(father->balancingParameter) == 2){
+                balancingPnt = true;
+            }
+            else {
+                if(father != this->root){
+                    father = father->getFather();
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        switch (father->balancingParameter) {
+            case 2: {
+                if(father->getLeft()->balancingParameter >= 0){
+                    roll_LL(father);
+                } else {
+                    roll_LR(father);
+                }
+            } break;
+
+            case -2: {
+                if(father->getRight()->balancingParameter <= 0){
+                    roll_RR(father);
+                } else {
+                    roll_RL(father);
+                }
+            }
+        }
+    }
+
+    Node<Key, Data>* findMin(Node<Key, Data> *node)
+    {
+        auto *temp = node->getLeft();
+        while (temp!= nullptr)
+        {
+            node=node->getLeft();
+            temp=temp->getLeft();
+        }
+        return node;
     }
 
     ~SearchTree() {
