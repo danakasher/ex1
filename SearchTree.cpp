@@ -179,6 +179,19 @@ public:
         print_in_order(node->getRight());
     }
 
+    Node<Key, Data>* find (Node<Key, Data> *node, Key* key) {
+        if(node== nullptr){
+            return nullptr;
+        }
+        if(node->getKey() == key){
+            return node;
+        }
+        if (find(node->getLeft(), key)!= nullptr) return find(node->getLeft(), key);
+        else if (find(node->getRight(), key)!= nullptr) return find(node->getRight(), key);
+        return nullptr;
+    }
+
+
     ~SearchTree() {
         //TODO
     }
