@@ -1,6 +1,5 @@
 #include "Node.h"
 #include "SearchTree.h"
-#include <iostream>
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
@@ -40,6 +39,8 @@ void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
 }
 
 template<typename Key, typename Data>
-void SearchTree<Key, Data>::print_in_order(){
-    print_in_order(this->root);
+Node<Key, Data> *SearchTree<Key, Data>::scanInOrder(){
+    Node<Key, Data> *sortedArr[this->size];
+    scanInOrder(this->root, sortedArr, 0);
+    return sortedArr;
 }

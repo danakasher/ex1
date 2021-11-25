@@ -7,10 +7,6 @@ class SearchTree{
 private:
     Node<Key, Data> *root;
     int size;
-
-    ~SearchTree() {
-        //TODO
-    }
     void findUnbalance(Node<Key, Data> *currentNode) {
         bool balancingPnt = false;
         while (!balancingPnt) {
@@ -46,13 +42,13 @@ private:
             }
         }
     }
-    void print_in_order(Node<Key, Data> *node){
+    Node<Key,Data>* scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
         if(node == nullptr){
             return;
         }
-        print_in_order(node->getLeft());
-        std::cout << node->getData()<< ", ";
-        print_in_order(node->getRight());
+        scanInOrder(node->getLeft(), sortedArr, index);
+        sortedArr[index] = node;
+        scanInOrder(node->getRight(), sortedArr, ++index);
     }
     void roll_LL(Node<Key, Data> *balancingPnt){
         rightRotate(balancingPnt);
@@ -125,8 +121,11 @@ private:
 
 public:
     SearchTree() : root(nullptr), size(0) {};
+    ~SearchTree() {
+        //TODO
+    }
     void insert(Key const &key, Data const &data);
-    void print_in_order();
+    Node<Key, Data> *scanInOrder();
 };
 
 #endif //EX1_SEARCHTREE_H
