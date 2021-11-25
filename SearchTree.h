@@ -146,6 +146,8 @@ public:
     void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
     void deleteTree();
+    void deleteTree(Node<Key, Data> *node);
+
 
 };
 
@@ -337,12 +339,18 @@ void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, D
 }
 
 template<typename Key, typename Data>
+void SearchTree<Key, Data>::deleteTree() {
+    auto *min = findMin(this->root);
+    deleteTree(min);
+}
+
+template<typename Key, typename Data>
 void SearchTree<Key, Data>::deleteTree(Node<Key, Data> *node)
 {
     if (node== nullptr){
         return;
     }
-    auto *father = min->getFather();
+    auto *father = node->getFather();
     auto *minRight = findMin(father->getRight());
     delete node;
     deleteTree(minRight);
