@@ -42,7 +42,7 @@ private:
             }
         }
     }
-    Node<Key,Data>* scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
+    void scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
         if(node == nullptr){
             return;
         }
@@ -137,7 +137,7 @@ public:
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
     void insert(Key const &key, Data const &data);
-    Node<Key, Data> *scanInOrder();
+    Node<Key, Data> **scanInOrder();
 };
 
 
@@ -179,11 +179,10 @@ void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
 }
 
 template<typename Key, typename Data>
-Node<Key, Data> *SearchTree<Key, Data>::scanInOrder(){
-//    Node<Key, Data> *sortedArr[this->size];
-//    scanInOrder(this->root, sortedArr, 0);
-//    return sortedArr;
-    return nullptr;
+Node<Key, Data> **SearchTree<Key, Data>::scanInOrder(){
+    Node<Key, Data> *sortedArr[this->size];
+    scanInOrder(this->root, sortedArr, 0);
+    return sortedArr;
 }
 
 template<typename Key, typename Data>
