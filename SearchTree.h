@@ -135,7 +135,7 @@ private:
 public:
     SearchTree() : root(nullptr), size(0) {};
     ~SearchTree() {
-        //TODO
+        deleteTree();
     }
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
@@ -146,7 +146,7 @@ public:
     void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
     void deleteTree();
-    void deleteTree(Node<Key, Data> *node);
+    void deleteTree(Node<Key, Data> *node, Node<Key, Data> *father);
 
 
 };
@@ -347,20 +347,25 @@ void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, D
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::deleteTree() {
-    auto *min = findMin(this->root);
-    deleteTree(min);
+    deleteTree(this->root, nullptr);
 }
 
 template<typename Key, typename Data>
-void SearchTree<Key, Data>::deleteTree(Node<Key, Data> *node)
+void SearchTree<Key, Data>::deleteTree(Node<Key, Data> *node, Node<Key, Data> *father)
 {
     if (node== nullptr){
         return;
     }
-    auto *father = node->getFather();
-    auto *minRight = findMin(father->getRight());
+    deleteTree(node->getLeft(), node);
+    deleteTree(node->getRight(), node);
+    if(father != nullptr){
+        if(father->getRight() == node){
+            father->setRight(nullptr);
+        } else {
+            father->setLeft(nullptr);
+        }
+    }
+
     delete node;
-    deleteTree(minRight);
-    deleteTree(father);
 }
 #endif //EX1_SEARCHTREE_H
