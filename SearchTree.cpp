@@ -13,10 +13,10 @@ private:
 public:
     SearchTree() : root(nullptr), size(0) {};
 
-    void insert(const Key &key, const Data &data) {
+    void insert(Key const &key, Data const &data) {
         //TODO: check values
-        Node<Key, Data> *newNode = new Node<Key, Data>(key, data);
-        Node<Key, Data> *temp = root;
+        auto *newNode = new Node<Key, Data>(key, data);
+        auto *temp = root;
         bool leafAdded = false;
 
         if(temp == nullptr){
@@ -175,7 +175,7 @@ public:
             return;
         }
         print_in_order(node->getLeft());
-        cout << node->getValue()<< ", ";
+        cout << node->getData()<< ", ";
         print_in_order(node->getRight());
     }
 
