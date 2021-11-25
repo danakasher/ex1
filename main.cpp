@@ -1,6 +1,5 @@
 #include "SearchTree.cpp"
 #include "Node.cpp"
-#include "Group.cpp"
 
 int main(){
     SearchTree<int, int> tree = SearchTree<int, int>();
@@ -22,10 +21,10 @@ int main(){
         arr[i] = insert;
         tree.insert(insert, insert);
     }
-    tree.print_in_order();
+    tree.scanInOrder();
     for (int i=0; i<50; i++)
     {
         tree.remove(arr[i]);
     }
-    tree.print_in_order();
+    tree.scanInOrder();
 }
