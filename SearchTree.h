@@ -42,13 +42,15 @@ private:
             }
         }
     }
-    Node<Key,Data>* scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
-        if(node == nullptr){
-            return;
+    int scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
+        if(index == this->size || node == nullptr){
+            return index;
         }
-        scanInOrder(node->getLeft(), sortedArr, index);
+        index = scanInOrder(node->getLeft(), sortedArr, index);
         sortedArr[index] = node;
-        scanInOrder(node->getRight(), sortedArr, ++index);
+        index++;
+        index = scanInOrder(node->getRight(), sortedArr, index);
+        return index;
     }
     void roll_LL(Node<Key, Data> *balancingPnt){
         rightRotate(balancingPnt);
@@ -137,7 +139,7 @@ public:
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
     void insert(Key const &key, Data const &data);
-    Node<Key, Data> *scanInOrder();
+    Node<Key, Data> **scanInOrder();
 };
 
 
@@ -151,6 +153,7 @@ void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
     if(temp == nullptr){
         temp = newNode;
         this->root = temp;
+        this->size++;
         return;
     }
     while (!leafAdded) {
@@ -179,11 +182,10 @@ void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
 }
 
 template<typename Key, typename Data>
-Node<Key, Data> *SearchTree<Key, Data>::scanInOrder(){
-//    Node<Key, Data> *sortedArr[this->size];
-//    scanInOrder(this->root, sortedArr, 0);
-//    return sortedArr;
-    return nullptr;
+Node<Key, Data> **SearchTree<Key, Data>::scanInOrder(){
+    auto **sortedArr = new Node<Key, Data>*[this->size];
+    scanInOrder(this->root, sortedArr, 0);
+    return sortedArr;
 }
 
 template<typename Key, typename Data>
