@@ -14,6 +14,9 @@ private:
 
 public:
     Group(int id): groupId(id), currentHighestLevelPlayer(-1), numberOfPlayers(0), levelTree(){};
+    ~Group(){
+        //TODO
+    }
     int getId(){ return this->groupId; }
     int getCurrentHighestLevelPlayer(){ return this->currentHighestLevelPlayer; }
     int getNumberOfPlayers(){ return this->numberOfPlayers; }
