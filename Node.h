@@ -1,6 +1,8 @@
 #ifndef EX1_NODE_H
 #define EX1_NODE_H
 
+#include <cmath>
+
 template <typename Key, typename Data>
 class Node {
 private:
@@ -36,6 +38,13 @@ public:
     }
 
     void setFather(Node<Key, Data> *prev){ this->father = prev;}
+
+    void calculateHeightAndBalance(){
+        int heightLeft = this->getLeft() == nullptr? 0:this->getLeft()->height;
+        int heightRight = this->getRight() == nullptr? 0:this->getRight()->height;
+        this->height = fmax((double) heightRight, (double) heightLeft)+1;
+        this->balancingParameter = heightLeft - heightRight;
+    }
 
     Node<Key, Data> *getFather(){ return this->father; }
 };
