@@ -1,20 +1,21 @@
 #ifndef EX1_NODE_H
 #define EX1_NODE_H
 
-template <typename Data, typename Key>
+template <typename Key, typename Data>
 class Node {
 private:
-    Data value;
     Key key;
-    Node<Data, Key>* left;
-    Node<Data,Key>* right;
-    Node<Data,Key>* father;
+    Data data;
+    Node<Key, Data>* left;
+    Node<Key, Data>* right;
+    Node<Key, Data>* father;
 
 public:
     int height, balancingParameter;
-    explicit Node<Data,Key>(Data const &val) : value(val), left(nullptr), right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
+    explicit Node<Key, Data>(Key const *k, Data const &val) : key(k), data(val), left(nullptr), right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
     ~Node() = default;
-    Data &getValue(){ return this->value; }
+    Data &getValue(){ return this->data; }
+    Key &getKey(){ return this->key; }
     Node *getLeft(){ return this->left; }
     Node *getRight(){ return this->right; }
     void setLeft(Node *leftNode){
@@ -23,20 +24,20 @@ public:
     void setRight(Node *rightNode){
         this->right = rightNode;
     }
-    bool operator>(Node<Data,Key> &node) const {
-        return this->value > (node->getValue());
+    bool operator>(Node<Key, Data> &node) const {
+        return this->data > (node->getValue());
     }
 
-    bool operator==(Node<Data,Key> &node) const{
-        return this->value == node->value;
+    bool operator==(Node<Key, Data> &node) const{
+        return this->data == node->data;
     }
-    bool operator>=(Node<Data,Key> &node) const{
+    bool operator>=(Node<Key, Data> &node) const{
         return  this ==node || this > node;
     }
 
-    void setFather(Node<Data,Key> *prev){ this->father = prev;}
+    void setFather(Node<Key, Data> *prev){ this->father = prev;}
 
-    Node<Data,Key> *getFather(){ return this->father; }
+    Node<Key, Data> *getFather(){ return this->father; }
 };
 
 

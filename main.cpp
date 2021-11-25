@@ -2,7 +2,7 @@
 #include "Node.cpp"
 
 int main(){
-    SearchTree<int> tree = SearchTree<int>();
+    SearchTree<int, int> tree = SearchTree<int, int>();
     int arr[100] = {0};
     int insert;
     bool canInsert;
@@ -19,7 +19,7 @@ int main(){
             }
         }
         arr[i] = insert;
-        tree.insert(insert);
+        tree.insert(insert, insert);
     }
     tree.print_in_order();
 }

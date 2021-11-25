@@ -4,18 +4,19 @@ using namespace std;
 #include <iostream>
 using std::fmax;
 
-template<typename T>
+template<typename Data, typename Key>
 class SearchTree {
 private:
-    Node<T> *root;
+    Node<Key, Data> *root;
     int size;
 
 public:
     SearchTree() : root(nullptr), size(0) {};
 
-    void insert(const T &value) {
-        Node<T> *newNode = new Node<T>(value);
-        Node<T> *temp = root;
+    void insert(const Key &key, const Data &data) {
+        //TODO: check values
+        Node<Key, Data> *newNode = new Node<Key, Data>(key, data);
+        Node<Key, Data> *temp = root;
         bool leafAdded = false;
 
         if(temp == nullptr){
@@ -27,7 +28,7 @@ public:
             if(temp==newNode){
                 //TODO:
             }
-            if (newNode->getValue() > temp->getValue()) {
+            if (newNode->getKey() > temp->getKey()) {
                 if (temp->getRight() == nullptr) {
                     temp->setRight(newNode);
                     newNode->setFather(temp);
@@ -84,34 +85,34 @@ public:
         }
     }
 
-    void roll_LL(Node<T> *balancingPnt){
+    void roll_LL(Node<Key, Data> *balancingPnt){
         rightRotate(balancingPnt);
     }
 
-    void roll_RR(Node<T> *balancingPnt){
+    void roll_RR(Node<Key, Data> *balancingPnt){
         leftRotate(balancingPnt);
     }
 
-    void roll_LR(Node<T> *balancingPnt){
+    void roll_LR(Node<Key, Data> *balancingPnt){
         leftRotate(balancingPnt->getLeft());
         rightRotate(balancingPnt);
     }
 
-    void roll_RL(Node<T> *balancingPnt){
+    void roll_RL(Node<Key, Data> *balancingPnt){
         rightRotate(balancingPnt->getRight());
         leftRotate(balancingPnt);
     }
 
-    void calculateHeight(Node<T> *node){
+    void calculateHeight(Node<Key, Data> *node){
         int heightLeft = node->getLeft() == nullptr? 0:node->getLeft()->height;
         int heightRight = node->getRight() == nullptr? 0:node->getRight()->height;
         node->height = fmax((double) heightRight, (double) heightLeft)+1;
     }
 
-    void leftRotate(Node<T> *node){
-        Node<T>* father = node->getFather();
-        Node<T>* rightSon = node->getRight();
-        Node<T>* leftOfRight = rightSon->getLeft();
+    void leftRotate(Node<Key, Data> *node){
+        Node<Key, Data>* father = node->getFather();
+        Node<Key, Data>* rightSon = node->getRight();
+        Node<Key, Data>* leftOfRight = rightSon->getLeft();
 
         if(father == nullptr){
             this->root = rightSon;
@@ -136,10 +137,10 @@ public:
         calculateHeight(rightSon);
     }
 
-    void rightRotate(Node<T> *node){
-        Node<T>* father = node->getFather();
-        Node<T>* leftSon = node->getLeft();
-        Node<T>* rightOfLeft = leftSon->getRight();
+    void rightRotate(Node<Key, Data> *node){
+        Node<Key, Data>* father = node->getFather();
+        Node<Key, Data>* leftSon = node->getLeft();
+        Node<Key, Data>* rightOfLeft = leftSon->getRight();
 
         if(father == nullptr){
             this->root = leftSon;
@@ -169,7 +170,7 @@ public:
     }
 
 
-    void print_in_order(Node<T> *node){
+    void print_in_order(Node<Key, Data> *node){
         if(node == nullptr){
             return;
         }
