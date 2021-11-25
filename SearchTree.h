@@ -265,11 +265,11 @@ void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Da
         if (father == nullptr)
         {
             this->root= nullptr;
+            return;
         }
         if (father->getLeft()==node) {
             father->setLeft(nullptr);
-        }
-        else if (father->getRight()==node){
+        }else{
             father->setRight(nullptr);
         }
 }
@@ -280,11 +280,11 @@ void SearchTree<Key, Data>::removeOneChildLeft(Node<Key, Data> *node, Node<Key, 
     if (father== nullptr)
     {
         this->root= node->getLeft();
+        return;
     }
-    else if (father->getLeft()==node) {
+    if (father->getLeft()==node) {
         father->setLeft(node->getLeft());
-    }
-    else if (father->getRight()==node){
+    } else {
         father->setRight(node->getLeft());
     }
     if(node->getLeft() != nullptr){
@@ -302,8 +302,7 @@ void SearchTree<Key, Data>::removeOneChildRight(Node<Key, Data> *node, Node<Key,
     }
     else if (father->getLeft()==node) {
         father->setLeft(node->getRight());
-    }
-    else if (father->getRight()==node){
+    }else{
         father->setRight(node->getRight());
     }
     if(node->getRight() != nullptr){
