@@ -254,24 +254,23 @@ void SearchTree<Key, Data>::remove(Key const &key)
         }
         father = father->getFather();
     }
+
+    this->size -= 1;
 }
 
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father)
 {
-        if (father== nullptr)
+        if (father == nullptr)
         {
             this->root= nullptr;
-            this->size-=1;
         }
         if (father->getLeft()==node) {
             father->setLeft(nullptr);
-            this->size-=1;
         }
         else if (father->getRight()==node){
             father->setRight(nullptr);
-            this->size-=1;
         }
 }
 
@@ -281,15 +280,15 @@ void SearchTree<Key, Data>::removeOneChildLeft(Node<Key, Data> *node, Node<Key, 
     if (father== nullptr)
     {
         this->root= node->getLeft();
-        this->size-=1;
     }
     else if (father->getLeft()==node) {
         father->setLeft(node->getLeft());
-        this->size-=1;
     }
     else if (father->getRight()==node){
         father->setRight(node->getLeft());
-        this->size-=1;
+    }
+    if(node->getLeft() != nullptr){
+        node->getLeft()->setFather(father);
     }
 }
 
@@ -299,15 +298,16 @@ void SearchTree<Key, Data>::removeOneChildRight(Node<Key, Data> *node, Node<Key,
     if (father== nullptr)
     {
         this->root= node->getRight();
-        this->size-=1;
+        this->root->setFather(nullptr);
     }
     else if (father->getLeft()==node) {
         father->setLeft(node->getRight());
-        this->size-=1;
     }
     else if (father->getRight()==node){
         father->setRight(node->getRight());
-        this->size-=1;
+    }
+    if(node->getRight() != nullptr){
+        node->getRight()->setFather(father);
     }
 }
 
@@ -315,27 +315,35 @@ template<typename Key, typename Data>
 void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father)
 {
     auto *nextInOrder = findMin(node->getRight());
-    if (father== nullptr)
-    {
+    auto *fatherNextInOrder = nextInOrder->getFather();
+    if (father == nullptr){
         this->root= nextInOrder;
-        this->size-=1;
+    } else {
+        if (father->getLeft()==node) {
+            father->setLeft(nextInOrder);
+        }else{
+            father->setRight(nextInOrder);
+        }
     }
-    else if (father->getLeft()==node) {
-        father->setLeft(nextInOrder);
-        this->size-=1;
+    nextInOrder->setFather(father);
+    if(fatherNextInOrder->getRight() == nextInOrder){
+        fatherNextInOrder->setRight(node);
+    } else {
+        fatherNextInOrder->setLeft(node);
     }
-    else if (father->getRight()==node){
-        father->setRight(nextInOrder);
-        this->size-=1;
+    node->setFather(fatherNextInOrder);
+    auto *tempLeft = node->getLeft();
+    auto *tempRight = node->getRight();
+    node->setRight(nextInOrder->getRight());
+    if(node->getRight() != nullptr){
+        node->getRight()->setFather(node);
     }
-    auto *temp=node;
-    temp->setLeft(nextInOrder->getLeft());
-    temp->setLeft(nextInOrder->getRight());
-    nextInOrder->setLeft(node->getLeft());
-    nextInOrder->setRight(node->getRight());
-    node->setLeft(temp->getLeft());
-    node->setRight(temp->getRight());
-    remove(node->getKey());
+    node->setLeft(nullptr);
+    nextInOrder->setLeft(tempLeft);
+    nextInOrder->setRight(tempRight);
+    tempLeft->setFather(nextInOrder);
+    tempRight->setFather(nextInOrder);
+    removeOneChildRight(node, node->getFather());
 }
 
 template<typename Key, typename Data>
