@@ -140,7 +140,7 @@ public:
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
     void insert(Key const &key, Data const &data);
-    Node<Key, Data> *scanInOrder();
+    Node<Key, Data> **scanInOrder();
     void removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
@@ -335,4 +335,9 @@ void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, D
     remove(node->getKey());
 }
 
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::deleteTree()
+{
+
+}
 #endif //EX1_SEARCHTREE_H

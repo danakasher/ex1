@@ -27,9 +27,13 @@ int main(){
         std::cout << ar[0]->getData() << ", ";
         ar++;
     }
-//    for (int i=0; i<50; i++)
-//    {
-//        tree.remove(arr[i]);
-//    }
-//    tree.scanInOrder();
+   for (int i=0; i<5; i++) {
+       tree.remove(arr[i]);
+       Node<int, int> **array = tree.scanInOrder();
+       std::cout << "\n ";
+       for (int i = 0; i < 20-i-1; i++) {
+           std::cout << array[0]->getData() << ", ";
+           array++;
+       }
+   }
 }
