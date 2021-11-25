@@ -153,6 +153,7 @@ void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
     if(temp == nullptr){
         temp = newNode;
         this->root = temp;
+        this->size++;
         return;
     }
     while (!leafAdded) {
