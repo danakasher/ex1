@@ -191,7 +191,6 @@ public:
         return nullptr;
     }
 
-
     ~SearchTree() {
         //TODO
     }
