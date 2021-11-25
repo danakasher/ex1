@@ -12,9 +12,9 @@ private:
 
 public:
     int height, balancingParameter;
-    explicit Node<Key, Data>(Key const *k, Data const &val) : key(k), data(val), left(nullptr), right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
+    explicit Node<Key, Data>(Key const &k, Data const &val) : key(k), data(val), left(nullptr), right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
     ~Node() = default;
-    Data &getValue(){ return this->data; }
+    Data &getData(){ return this->data; }
     Key &getKey(){ return this->key; }
     Node *getLeft(){ return this->left; }
     Node *getRight(){ return this->right; }
@@ -25,7 +25,7 @@ public:
         this->right = rightNode;
     }
     bool operator>(Node<Key, Data> &node) const {
-        return this->data > (node->getValue());
+        return this->data > (node->getData());
     }
 
     bool operator==(Node<Key, Data> &node) const{
