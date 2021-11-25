@@ -129,6 +129,7 @@ private:
         return node;
     }
 
+
 public:
     SearchTree() : root(nullptr), size(0) {};
     ~SearchTree() {
@@ -138,6 +139,11 @@ public:
     void remove(Key const &key);
     void insert(Key const &key, Data const &data);
     Node<Key, Data> *scanInOrder();
+    void removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
+    void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
+    void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
+    void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
+
 };
 
 
@@ -215,6 +221,40 @@ void SearchTree<Key, Data>::remove(Key const &key)
 
     //no children
     if ((node->getLeft()== nullptr)&&(node->getRight()==nullptr)){
+        removeNoChildren(node,father);
+    }
+
+    //one child in left
+    if ((node->getLeft()!= nullptr)&&(node->getRight()==nullptr)){
+        removeOneChildLeft(node,father);
+    }
+
+    //one child in Right
+    if ((node->getLeft()== nullptr)&&(node->getRight()!=nullptr)){
+        removeOneChildRight(node,father);
+    }
+
+    //two children
+    if ((node->getLeft()!= nullptr)&&(node->getRight()!=nullptr))
+    {
+        removeTwoChildren(node,father);
+    }
+
+    //remain balancing
+    while (father!= nullptr) {
+        father->calculateHeightAndBalance();
+        if (abs(father->balancingParameter) == 2)
+        {
+            balanceTree(father);
+        }
+        father = father->getFather();
+    }
+}
+
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father)
+{
         if (father== nullptr)
         {
             this->root= nullptr;
@@ -228,109 +268,69 @@ void SearchTree<Key, Data>::remove(Key const &key)
             father->setRight(nullptr);
             this->size-=1;
         }
-    }
-
-    //one child in left
-    if ((node->getLeft()!= nullptr)&&(node->getRight()==nullptr)){
-        if (father== nullptr)
-        {
-            this->root= node->getLeft();
-            this->size-=1;
-        }
-        else if (father->getLeft()==node) {
-            father->setLeft(node->getLeft());
-            this->size-=1;
-        }
-        else if (father->getRight()==node){
-            father->setRight(node->getLeft());
-            this->size-=1;
-        }
-    }
-
-    //one child in Right
-    if ((node->getLeft()== nullptr)&&(node->getRight()!=nullptr)){
-        if (father== nullptr)
-        {
-            this->root= node->getRight();
-            this->size-=1;
-        }
-        else if (father->getLeft()==node) {
-            father->setLeft(node->getRight());
-            this->size-=1;
-        }
-        else if (father->getRight()==node){
-            father->setRight(node->getRight());
-            this->size-=1;
-        }
-    }
-
-    //two children
-    auto *temp=node;
-    if ((node->getLeft()!= nullptr)&&(node->getRight()!=nullptr))
-    {
-        temp = findMin(node->getRight());
-        if (father== nullptr)
-        {
-            this->root= temp;
-            this->size-=1;
-        }
-        else if (father->getLeft()==node) {
-            father->setLeft(temp);
-            this->size-=1;
-        }
-        else if (father->getRight()==node){
-            father->setRight(temp);
-            this->size-=1;
-        }
-        auto *forReplace=node;
-        forReplace->setLeft(temp->getLeft());
-        forReplace->setLeft(temp->getRight());
-        temp->setLeft(node->getLeft());
-        temp->setRight(node->getRight());
-        node->setLeft(forReplace->getLeft());
-        node->setRight(forReplace->getRight());
-        remove(node->getKey());
-    }
-
-//    //ToDo
-//    bool balancingPnt = false;
-//    int heightLeft, heightRight;
-//    while(!balancingPnt){
-//        heightLeft = father->getLeft() == nullptr? 0:father->getLeft()->height;
-//        heightRight = father->getRight() == nullptr? 0:father->getRight()->height;
-//        calculateHeight(father);
-//        father->balancingParameter = heightLeft-heightRight;
-//        if(abs(father->balancingParameter) == 2){
-//            balancingPnt = true;
-//        }
-//        else {
-//            if(father != this->root){
-//                father = father->getFather();
-//            }
-//            else {
-//                break;
-//            }
-//        }
-//    }
-
-//    switch (father->balancingParameter) {
-//        case 2: {
-//            if(father->getLeft()->balancingParameter >= 0){
-//                roll_LL(father);
-//            } else {
-//                roll_LR(father);
-//            }
-//        } break;
-//
-//        case -2: {
-//            if(father->getRight()->balancingParameter <= 0){
-//                roll_RR(father);
-//            } else {
-//                roll_RL(father);
-//            }
-//        }
-//    }
 }
 
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father)
+{
+    if (father== nullptr)
+    {
+        this->root= node->getLeft();
+        this->size-=1;
+    }
+    else if (father->getLeft()==node) {
+        father->setLeft(node->getLeft());
+        this->size-=1;
+    }
+    else if (father->getRight()==node){
+        father->setRight(node->getLeft());
+        this->size-=1;
+    }
+}
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father)
+{
+    if (father== nullptr)
+    {
+        this->root= node->getRight();
+        this->size-=1;
+    }
+    else if (father->getLeft()==node) {
+        father->setLeft(node->getRight());
+        this->size-=1;
+    }
+    else if (father->getRight()==node){
+        father->setRight(node->getRight());
+        this->size-=1;
+    }
+}
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father)
+{
+    auto *nextInOrder = findMin(node->getRight());
+    if (father== nullptr)
+    {
+        this->root= nextInOrder;
+        this->size-=1;
+    }
+    else if (father->getLeft()==node) {
+        father->setLeft(nextInOrder);
+        this->size-=1;
+    }
+    else if (father->getRight()==node){
+        father->setRight(nextInOrder);
+        this->size-=1;
+    }
+    auto *temp=node;
+    temp->setLeft(nextInOrder->getLeft());
+    temp->setLeft(nextInOrder->getRight());
+    nextInOrder->setLeft(node->getLeft());
+    nextInOrder->setRight(node->getRight());
+    node->setLeft(temp->getLeft());
+    node->setRight(temp->getRight());
+    remove(node->getKey());
+}
 
 #endif //EX1_SEARCHTREE_H

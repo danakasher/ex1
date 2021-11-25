@@ -22,9 +22,12 @@ int main(){
         tree.insert(insert, insert);
     }
     tree.scanInOrder();
-    for (int i=0; i<50; i++)
-    {
-        tree.remove(arr[i]);
-    }
+    //for (int i=0; i<50; i++)
+    //{
+    //    tree.remove(arr[i]);
+    //}
+    tree.remove(467);
+    tree.remove(724);
+    tree.remove(500);
     tree.scanInOrder();
 }
