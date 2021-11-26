@@ -16,19 +16,25 @@ public:
 };
 
 class PlayerKey{
-    const int id;
+private:
+    int id;
     int level;
 
 public:
     PlayerKey(int id, const int level): id(id), level(level){};
-    bool operator==(const PlayerKey &key){
+    bool operator==(const PlayerKey &key) const {
         return this->id == key.getId() && this->level == key.getLevel();
     }
-    bool operator<(const PlayerKey &key){
-        return this->level < key.getLevel() || (this->level == key.getLevel() && this->id < key.getId());
+    bool operator<(const PlayerKey &key) const {
+        return this->level < key.getLevel() || (this->level == key.getLevel() && this->id > key.getId());
     }
-    bool operator>(const PlayerKey &key){
+    bool operator>(const PlayerKey &key) const {
         return !(*this < key) && !(*this == key);
+    }
+    void operator=(const PlayerKey &key) {
+        this->id = key.getId();
+        this->level = key.getLevel();
+
     }
     int getId() const { return this->id; }
     int getLevel() const { return this->level; }

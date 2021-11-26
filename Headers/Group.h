@@ -2,40 +2,46 @@
 
 #define EX1_GROUP_H
 #include "Player.h"
-#include "Level.h"
 #include "SearchTree.h"
+
 
 class Group{
 private:
     const int groupId;
-    int currentHighestLevel, highestPlayerId;
+    PlayerKey currentHighest;
     SearchTree<PlayerKey, int> playerTree;
-
+    void replaceIfHighest(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
 
 public:
-    explicit Group(int id): groupId(id), currentHighestLevel(-1), highestPlayerId(-1), playerTree(){};
+    explicit Group(int id): groupId(id), currentHighest(PlayerKey(-1, -1)), playerTree(){};
     ~Group(){
         //TODO
     }
     int getId(){ return this->groupId; }
-    int getCurrentHighestLevel(){ return this->currentHighestLevel; }
-    int getHighestPlayerId(){ return this->highestPlayerId; }
+    PlayerKey getCurrentHighest() const { return this->currentHighest; }
     void increaseLevel(int id, int oldLevel, int increaseBy){
         PlayerKey oldKey = PlayerKey(id, oldLevel);
         PlayerKey newKey = PlayerKey(id, oldLevel + increaseBy);
         playerTree.remove(oldKey);
-        playerTree.insert(new Node<PlayerKey, int>(newKey, 0));
+        if(oldKey == currentHighest){
+            currentHighest = newKey;
+        }
+        playerTree.insert(new Node<PlayerKey, int>(newKey, id));
     }
     void insertPlayer(Node<PlayerKey, int> *playerNode){
         playerTree.insert(playerNode);
         PlayerKey key = playerNode->getKey();
-        if(key.getLevel() > currentHighestLevel){
-            currentHighestLevel = key.getLevel();
-            highestPlayerId = key.getId();
+        if(key > currentHighest || playerTree.getSize() == 1){
+            currentHighest = key;
         }
     }
     void removePlayer(PlayerKey key){
-     playerTree.remove(key);
+        Node<PlayerKey, int> *playerNode = playerTree.find(key);
+        if(playerNode == nullptr){
+            return;
+        }
+        replaceIfHighest(playerNode, key);
+        playerTree.remove(key);
     }
 };
 

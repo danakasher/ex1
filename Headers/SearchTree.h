@@ -145,8 +145,9 @@ public:
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
     void insert(Node<Key, Data> *newNode);
+    void insert(Key &key, Data &data); //For Testing
     Node<Key, Data> **scanInOrder();
-
+    int getSize() const { return this->size; }
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
     bool isBalanced();
 };
@@ -372,4 +373,11 @@ template<typename Key, typename Data>
 bool SearchTree<Key, Data>::isBalanced(){
     return isBalanced(this->root, true);
 }
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::insert(Key &key, Data &data) {
+    Node<Key, Data> *newNode = new Node<Key, Data>(key, data);
+    insert(newNode);
+}
+
 #endif //EX1_SEARCHTREE_H
