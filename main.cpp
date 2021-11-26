@@ -3,9 +3,9 @@
 #include "Headers/Group.h"
 #include <iostream>
 static bool testWithNumbers(){
-    int size = 50;
+    int size = 500;
     SearchTree<int, int> tree = SearchTree<int, int>();
-    int arr[50] = {0};
+    int arr[500] = {0};
     int insertRand;
     bool canInsert;
     Node<int, int> **array;
