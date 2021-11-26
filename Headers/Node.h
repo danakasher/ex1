@@ -6,7 +6,7 @@
 template <typename Key, typename Data>
 class Node {
 private:
-    Key key;
+    const Key key;
     Data data;
     Node<Key, Data>* left;
     Node<Key, Data>* right;

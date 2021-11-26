@@ -1,5 +1,6 @@
-#include "SearchTree.cpp"
-#include "Node.cpp"
+#include "Classes/SearchTree.cpp"
+#include "Headers/Node.h"
+#include "Headers/Group.h"
 #include <iostream>
 
 int main() {

@@ -1,6 +1,7 @@
 #ifndef EX1_SEARCHTREE_H
 #define EX1_SEARCHTREE_H
 #include <iostream>
+#include "Node.h"
 
 template <typename Key, typename Data>
 class SearchTree{
@@ -140,7 +141,7 @@ public:
     }
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
-    void insert(Key const &key, Data const &data);
+    void insert(Node<Key, Data> *newNode);
     Node<Key, Data> **scanInOrder();
     void removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
@@ -151,15 +152,12 @@ public:
 
 
 template<typename Key, typename Data>
-void SearchTree<Key, Data>::insert(const Key &key, const Data &data) {
-//TODO: check values
-    auto *newNode = new Node<Key, Data>(key, data);
+void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
     auto *temp = root;
     bool leafAdded = false;
 
     if(temp == nullptr){
-        temp = newNode;
-        this->root = temp;
+        this->root = newNode;
         this->size++;
         return;
     }
@@ -251,7 +249,6 @@ void SearchTree<Key, Data>::remove(Key const &key)
 
     this->size -= 1;
 }
-
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father)
