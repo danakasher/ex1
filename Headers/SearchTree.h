@@ -363,7 +363,13 @@ bool SearchTree<Key, Data>::isBalanced(Node<Key, Data> *node, bool carry){
     if(node == nullptr) return true;
 
     carry = isBalanced(node->getLeft(), carry) && carry;
+    if(!carry){
+        return false;
+    }
     carry = isBalanced(node->getRight(), carry) && carry;
+    if(!carry){
+        return false;
+    }
     node->calculateHeightAndBalance();
 
     return carry && abs(node->balancingParameter) < 2;
