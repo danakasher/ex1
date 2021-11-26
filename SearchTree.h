@@ -205,8 +205,7 @@ Node<Key, Data>* SearchTree<Key, Data>::find(Key const &key) {
         }
         if (key<node->getKey()){
             node=node->getLeft();
-        }
-        else{
+        } else {
             node=node->getRight();
         }
     }
