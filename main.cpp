@@ -5,7 +5,7 @@
 static bool testWithNumbers(){
     int size = 500;
     SearchTree<int, int> tree = SearchTree<int, int>();
-    int arr[500] = {0};
+    int *arr = new int[size];
     int insertRand;
     bool canInsert;
     Node<int, int> **array;
@@ -37,8 +37,6 @@ static bool testWithNumbers(){
             return false;
         }
     }
-
-
 
     array = tree.scanInOrder();
     prev = -1;
