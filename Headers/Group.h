@@ -13,7 +13,9 @@ private:
     void replaceIfHighest(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
 
 public:
-    explicit Group(int id): groupId(id), currentHighest(PlayerKey(-1, -1)), playerTree(){};
+    explicit Group(int id): groupId(id), currentHighest(PlayerKey(-1, -1)){
+        playerTree = SearchTree<PlayerKey, int>();
+    }
     ~Group(){
         //TODO
     }
@@ -28,9 +30,10 @@ public:
         }
         playerTree.insert(new Node<PlayerKey, int>(newKey, id));
     }
-    void insertPlayer(Node<PlayerKey, int> *playerNode){
+    void insertPlayer(int id, int level){
+        PlayerKey key = PlayerKey(id, level);
+        Node<PlayerKey, int> *playerNode = new Node<PlayerKey, int>(key, id);
         playerTree.insert(playerNode);
-        PlayerKey key = playerNode->getKey();
         if(key > currentHighest || playerTree.getSize() == 1){
             currentHighest = key;
         }

@@ -17,7 +17,7 @@ public:
     explicit Node<Key, Data>(Key const &k, Data const &val) : key(k), data(val), left(nullptr),
                                         right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
     ~Node() = default;
-    const Data &getData() const { return this->data; }
+    Data &getData() { return this->data; }
     const Key &getKey() const { return this->key; }
     Node *getLeft() const { return this->left; }
     Node *getRight() const { return this->right; }

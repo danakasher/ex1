@@ -2,7 +2,7 @@
 #include "Headers/Node.h"
 #include "Headers/Group.h"
 #include <iostream>
-static bool testWithNumbers(){
+bool testWithNumbers(){
     int size = 1000;
     SearchTree<int, int> tree = SearchTree<int, int>();
     int *arr = new int[size];
@@ -50,8 +50,63 @@ static bool testWithNumbers(){
     return true;
 }
 
+bool testWithPlayersAndGroups(){
+    SearchTree<int, Group> groupsTree = SearchTree<int, Group>();
+    int groups = 2, players = 200;
+    int *groupIds = new int[groups];
+    int insertRand;
+    Group **dummy = new Group*[groups];
+    bool canInsert;
+    int prev;
+    Node<int, Group> *node;
+    for (int i = 0; i < groups; i++) {
+        canInsert = false;
+        while (!canInsert) {
+            insertRand = rand() % (groups*10);
+            canInsert = true;
+            for (int j = 0; j < groups; j++) {
+                if (groupIds[j] == insertRand) {
+                    canInsert = false;
+                    break;
+                }
+            }
+        }
+        groupIds[i] = insertRand;
+        dummy[i] = new Group(insertRand);
+        if(!groupsTree.isBalanced()){
+            std::cout << "WELL WELLLLLLLL";
+            return false;
+        }
+        node = new Node<int, Group>(insertRand, *dummy[i]);
+        groupsTree.insert(node);
+    }
+    int randGroup;
+    int randLevel, randId;
+    int *ids = new int[players];
+    for(int i=0; i<players; i++){
+        ids[i] = i;
+    }
+    bool pickedId;
+    for(int i=0; i<players; i++){
+        pickedId = false;
+        randGroup = rand()%groups;
+        randLevel = rand()%10;
+        while(!pickedId){
+            randId = rand()%players;
+            if(ids[randId] != -1){
+                ids[randId] = -1;
+                pickedId = true;
+            }
+        }
+        groupsTree.find(groupIds[randGroup])->getData().insertPlayer(randId, randLevel);
+    }
+    return true;
+}
 int main() {
     if(testWithNumbers()){
+        std::cout << "FINE\n";
+    }
+    if(testWithPlayersAndGroups()){
         std::cout << "FINE\n";
     }
     return 0;
