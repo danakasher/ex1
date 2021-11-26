@@ -3,7 +3,7 @@
 #include "Headers/Group.h"
 #include <iostream>
 static bool testWithNumbers(){
-    int size = 500;
+    int size = 1000;
     SearchTree<int, int> tree = SearchTree<int, int>();
     int *arr = new int[size];
     int insertRand;
@@ -40,7 +40,7 @@ static bool testWithNumbers(){
 
     array = tree.scanInOrder();
     prev = -1;
-    for (int j = 0; j < size - size/2 -1; j++) {
+    for (int j = 0; j < tree.getSize(); j++) {
         if (prev > array[j]->getKey()) {
             std::cout << "Error: Not sorted\n";
             return false;
