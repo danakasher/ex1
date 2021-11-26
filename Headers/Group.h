@@ -43,6 +43,9 @@ public:
         replaceIfHighest(playerNode, key);
         playerTree.remove(key);
     }
+    Node<PlayerKey, int> **toArray(){
+        return playerTree.scanInOrder();
+    }
 };
 
 #endif //EX1_GROUP_H
