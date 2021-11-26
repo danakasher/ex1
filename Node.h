@@ -17,33 +17,24 @@ public:
     explicit Node<Key, Data>(Key const &k, Data const &val) : key(k), data(val), left(nullptr),
                                         right(nullptr), father(nullptr), height(0), balancingParameter(0) {};
     ~Node() = default;
-    Data &getData(){ return this->data; }
-    Key &getKey(){ return this->key; }
-    Node *getLeft(){ return this->left; }
-    Node *getRight(){ return this->right; }
-    void setLeft(Node *leftNode){
+    const Data &getData() const { return this->data; }
+    const Key &getKey() const { return this->key; }
+    Node *getLeft() const { return this->left; }
+    Node *getRight() const { return this->right; }
+    void setLeft(Node* const leftNode){
         this->left = leftNode;
     }
-    void setRight(Node *rightNode){
+    void setRight(Node* const rightNode){
         this->right = rightNode;
     }
-    bool operator>(Node<Key, Data> &node) const {
-        return this->data > (node->getData());
-    }
-    bool operator==(Node<Key, Data> &node) const{
-        return this->data == node->data;
-    }
-    bool operator>=(Node<Key, Data> &node) const{
-        return  this ==node || this > node;
-    }
-    void setFather(Node<Key, Data> *prev){ this->father = prev;}
+    void setFather(Node<Key, Data>* const prev){ this->father = prev;}
     void calculateHeightAndBalance(){
         int heightLeft = this->getLeft() == nullptr? 0:this->getLeft()->height;
         int heightRight = this->getRight() == nullptr? 0:this->getRight()->height;
         this->height = fmax((double) heightRight, (double) heightLeft)+1;
         this->balancingParameter = heightLeft - heightRight;
     }
-    Node<Key, Data> *getFather(){ return this->father; }
+    Node<Key, Data> *getFather() const { return this->father; }
 };
 
 

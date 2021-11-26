@@ -130,12 +130,13 @@ private:
         }
         return node;
     }
+    void deleteTree(Node<Key, Data> *node, Node<Key, Data> *father);
 
 
 public:
     SearchTree() : root(nullptr), size(0) {};
     ~SearchTree() {
-        deleteTree();
+        deleteTree(this->root, nullptr);
     }
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
@@ -145,9 +146,6 @@ public:
     void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
-    void deleteTree();
-    void deleteTree(Node<Key, Data> *node, Node<Key, Data> *father);
-
 
 };
 
@@ -245,13 +243,10 @@ void SearchTree<Key, Data>::remove(Key const &key)
         removeTwoChildren(node,father);
     }
 
-    //remain balancing
-    while (father!= nullptr) {
+    // Re-balance
+    while (father != nullptr) {
         father->calculateHeightAndBalance();
-        if (abs(father->balancingParameter) == 2)
-        {
-            balanceTree(father);
-        }
+        balanceTree(father);
         father = father->getFather();
     }
 
@@ -343,11 +338,6 @@ void SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node, Node<Key, D
     tempLeft->setFather(nextInOrder);
     tempRight->setFather(nextInOrder);
     removeOneChildRight(node, node->getFather());
-}
-
-template<typename Key, typename Data>
-void SearchTree<Key, Data>::deleteTree() {
-    deleteTree(this->root, nullptr);
 }
 
 template<typename Key, typename Data>
