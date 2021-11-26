@@ -29,6 +29,11 @@ public:
     }
     void setFather(Node<Key, Data>* const prev){ this->father = prev;}
     void calculateHeightAndBalance(){
+        if(this->getLeft() == nullptr && this->getRight() == nullptr) {
+            this->balancingParameter = 0;
+            this->height = 0;
+            return;
+        }
         int heightLeft = this->getLeft() == nullptr? 0:this->getLeft()->height;
         int heightRight = this->getRight() == nullptr? 0:this->getRight()->height;
         this->height = fmax((double) heightRight, (double) heightLeft)+1;
