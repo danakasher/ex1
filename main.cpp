@@ -21,25 +21,34 @@ int main() {
             }
         }
         arr[i] = insert;
-        tree.insert(insert, insert);
-    }
-    Node<int, int> **ar = tree.scanInOrder();
-    for (int i = 0; i < size; i++) {
-        std::cout << ar[0]->getData() << ", ";
-        ar++;
-    }
-    for (int i = 0; i < size; i++) {
-        tree.remove(arr[i]);
-        Node<int, int> **array = tree.scanInOrder();
-        std::cout << "\n ";
-        int prev = -1;
-        for (int j = 0; j < size - i - 1; j++) {
-            if (prev > array[0]->getData()) {
-                std::cout << "Error: Not sorted\n";
-            }
-            prev = array[0]->getData();
-            std::cout << array[0]->getData() << ", ";
-            array++;
+        if(!tree.isBalanced()){
+            std::cout << "WELL WELLLLLLLL";
+            return -1;
         }
+        tree.insert(insert, insert);
+        Node<int, int> **ar = tree.scanInOrder();
+        for (int j = 0; j < i; j++) {
+            std::cout << ar[0]->getData() << ", ";
+            ar++;
+        }
+        std::cout << "\n";
     }
+
+    Node<int, int> **array;
+    for (int i = 0; i < size/2; i++) {
+        tree.remove(arr[i]);
+    }
+
+    int prev;
+    array = tree.scanInOrder();
+    for (int j = 0; j < size - size/2 -1; j++) {
+        prev = -1;
+        if (prev > array[j]->getKey()) {
+            std::cout << "Error: Not sorted\n";
+            return -1;
+        }
+        prev = array[j]->getKey();
+        std::cout << prev << ", ";
+    }
+    return 0;
 }

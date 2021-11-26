@@ -130,8 +130,11 @@ private:
         }
         return node;
     }
+    void removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
+    void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
+    void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
     void deleteTree(Node<Key, Data> *node, Node<Key, Data> *father);
-
+    bool isBalanced(Node<Key, Data> *node, bool carry);
 
 public:
     SearchTree() : root(nullptr), size(0) {};
@@ -142,11 +145,9 @@ public:
     void remove(Key const &key);
     void insert(Key const &key, Data const &data);
     Node<Key, Data> **scanInOrder();
-    void removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
-    void removeTwoChildren(Node<Key, Data> *node, Node<Key, Data> *father);
-    void removeOneChildRight(Node<Key, Data> *node, Node<Key, Data> *father);
-    void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
 
+    void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
+    bool isBalanced();
 };
 
 
@@ -346,6 +347,7 @@ void SearchTree<Key, Data>::deleteTree(Node<Key, Data> *node, Node<Key, Data> *f
         return;
     }
     deleteTree(node->getLeft(), node);
+    deleteTree(node->getLeft(), node);
     deleteTree(node->getRight(), node);
     if(father != nullptr){
         if(father->getRight() == node){
@@ -356,5 +358,21 @@ void SearchTree<Key, Data>::deleteTree(Node<Key, Data> *node, Node<Key, Data> *f
     }
 
     delete node;
+}
+
+template<typename Key, typename Data>
+bool SearchTree<Key, Data>::isBalanced(Node<Key, Data> *node, bool carry){
+    if(node == nullptr) return true;
+
+    carry = isBalanced(node->getLeft(), carry) && carry;
+    carry = isBalanced(node->getRight(), carry) && carry;
+    node->calculateHeightAndBalance();
+
+    return carry && abs(node->balancingParameter) < 2;
+}
+
+template<typename Key, typename Data>
+bool SearchTree<Key, Data>::isBalanced(){
+    return isBalanced(this->root, true);
 }
 #endif //EX1_SEARCHTREE_H
