@@ -13,6 +13,11 @@ public:
     void increaseLevel(int increaseBy){
         this->level += increaseBy;
     }
+    //void changeGroup(int newGroupId)
+    //{
+      //  this->groupId=newGroupId;
+    //}
+    int getGroupId() const { return this->groupId; }
 };
 
 class PlayerKey{

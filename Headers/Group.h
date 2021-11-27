@@ -49,6 +49,10 @@ public:
     Node<PlayerKey, int> **toArray(){
         return playerTree.scanInOrder();
     }
+    int getSize()
+    {
+        return this->playerTree.getSize();
+    }
 };
 
 #endif //EX1_GROUP_H
