@@ -23,12 +23,8 @@ public:
     PlayerKey getCurrentHighest() const { return this->currentHighest; }
     void increaseLevel(int id, int oldLevel, int increaseBy){
         PlayerKey oldKey = PlayerKey(id, oldLevel);
-        PlayerKey newKey = PlayerKey(id, oldLevel + increaseBy);
         playerTree.remove(oldKey);
-        if(oldKey == currentHighest){
-            currentHighest = newKey;
-        }
-        playerTree.insert(new Node<PlayerKey, int>(newKey, id));
+        insertPlayer(id, oldLevel + increaseBy);
     }
     void insertPlayer(int id, int level){
         PlayerKey key = PlayerKey(id, level);
