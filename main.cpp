@@ -8,6 +8,11 @@ bool isSorted(SearchTree<int, int> &tree){
 
     int prev = -1;
     for(int k=0; k<tree.getSize(); k++){
+        if(k == tree.getSize()-1){
+            std::cout << array[k]->getKey() << "\n";
+        } else {
+            std::cout << array[k]->getKey() << " ";
+        }
         if (prev > (array[k]->getKey())) {
             return false;
         }
@@ -17,7 +22,7 @@ bool isSorted(SearchTree<int, int> &tree){
 }
 
 bool testWithNumbers(){
-    int size = 1000;
+    int size = 20;
     SearchTree<int, int> tree = SearchTree<int, int>();
     int *arr = new int[size];
     int insertRand;
