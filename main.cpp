@@ -2,14 +2,26 @@
 #include "Headers/Node.h"
 #include "Headers/Group.h"
 #include <iostream>
+
+bool isSorted(SearchTree<int, int> &tree){
+    Node<int, int> **array = tree.scanInOrder();
+
+    int prev = -1;
+    for(int k=0; k<tree.getSize(); k++){
+        if (prev > (array[k]->getKey())) {
+            return false;
+        }
+        prev = array[k]->getKey();
+    }
+    return true;
+}
+
 bool testWithNumbers(){
     int size = 1000;
     SearchTree<int, int> tree = SearchTree<int, int>();
     int *arr = new int[size];
     int insertRand;
     bool canInsert;
-    Node<int, int> **array;
-    int prev;
     for (int i = 0; i < size; i++) {
         canInsert = false;
         while (!canInsert) {
@@ -32,20 +44,17 @@ bool testWithNumbers(){
 
     for (int i = 0; i < size/2; i++) {
         tree.remove(arr[i]);
+        if(!isSorted(tree)){
+            std::cout << "Not sorted";
+            return false;
+        }
+        if(tree.find(arr[i]) != nullptr){
+            std::cout << "WELL";
+        }
         if(!tree.isBalanced()){
             std::cout << "WELL WELLLLLLLL";
             return false;
         }
-    }
-
-    array = tree.scanInOrder();
-    prev = -1;
-    for (int j = 0; j < tree.getSize(); j++) {
-        if (prev > array[j]->getKey()) {
-            std::cout << "Error: Not sorted\n";
-            return false;
-        }
-        prev = array[j]->getKey();
     }
     return true;
 }
