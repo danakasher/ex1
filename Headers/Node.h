@@ -26,9 +26,15 @@ public:
     }
     void setLeft(Node* const leftNode){
         this->left = leftNode;
+        if(leftNode != nullptr){
+            leftNode->setFather(this);
+        }
     }
     void setRight(Node* const rightNode){
         this->right = rightNode;
+        if(rightNode != nullptr){
+            rightNode->setFather(this);
+        }
     }
     void setFather(Node<Key, Data>* const prev){ this->father = prev;}
     void calculateHeightAndBalance(){
