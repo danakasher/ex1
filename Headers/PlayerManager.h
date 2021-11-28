@@ -13,7 +13,27 @@ private:
     SearchTree<int, PlayerOwner> playerTree;
     SearchTree<int, GroupOwner> groupTree;
     SearchTree<int, Group*> nonEmptyGroupTree;
-    void replaceHighestInSystem(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
+    void replaceIfHighestRemoved(Node<int, PlayerOwner> *removedNode){
+        Player *player = removedNode->getData().get();
+        PlayerKey nodeKey = PlayerKey(player);
+        if((!(nodeKey == this->currentHighest))){
+            return;
+        }
+
+        currentHighest = PlayerKey();
+        Node<int, PlayerOwner> *leftSon = removedNode->getLeft();
+        Node<int, PlayerOwner> *father = removedNode->getFather();
+
+        if(leftSon != nullptr){
+            PlayerKey leftKey = PlayerKey(leftSon->getData().get());
+            this->currentHighest = this->currentHighest < leftKey? leftKey:this->currentHighest;
+        }
+
+        if(father != nullptr){
+            PlayerKey fatherKey = PlayerKey(father->getData().get());
+            this->currentHighest = this->currentHighest < fatherKey? fatherKey:this->currentHighest;
+        }
+    }
 
 public:
     explicit PlayerManager(): currentHighest(PlayerKey(-1, -1)){
@@ -64,13 +84,6 @@ public:
 
         PlayerOwner playerOwner(newPlayer);
 
-        Node<int, PlayerOwner> *playerNode;
-        try{
-            playerNode = new Node<int, PlayerOwner>(playerOwner->getId(), playerOwner);
-        } catch (std::bad_alloc &exception){
-            return ALLOCATION_ERROR;
-        }
-
         GroupOwner groupOwner = groupNode->getData();
         Group *group = groupOwner.get();
         groupOwner->insertPlayer(playerOwner.get());
@@ -89,7 +102,7 @@ public:
         return SUCCESS;
     }
 
-    StatusType RemovePlayer(int playerID){
+    StatusType RemovePlayer(const int playerID){
         if(playerID <= 0){
             return INVALID_INPUT;
         }
@@ -101,8 +114,7 @@ public:
 
         PlayerOwner playerOwner = node->getData();
 
-        //TODO
-//       replaceIfHighest(playerNode, PlayerID);
+        replaceIfHighestRemoved(node);
 
         Node<int, GroupOwner> *groupNode = groupTree.find(playerOwner->getGroupId());
         GroupOwner groupOwner = groupNode->getData();
@@ -180,26 +192,26 @@ public:
 //        //לעדכן גם בעץ הלא ריקות
 //        //return success
 //    }
-//    void GetHighestLevel(int GroupID, int *PlayerID)
-//    {
-//        if ((playerID==nullptr)||(GroupId==0))
-//        {
-//            //return Invalid input
-//            //todo
-//        }
-//        if (GroupID<0)
-//        {
-//            return currentHighest;
-//        }
-//        Group group = this->groupTree.find(GroupID);
-//        if (group==nullptr)
-//        {
-//            //return failure;
-//            //todo
-//        }
-//        *PlayerID = group.getCurrentHighest().getId();
-//        //return success
-//    }
+
+    StatusType GetHighestLevel(int groupId, int *playerId){
+        if (playerId == nullptr || groupId == 0){
+            return INVALID_INPUT;
+        }
+        if (groupId < 0){
+            *playerId = currentHighest.getId();
+            return SUCCESS;
+        }
+
+        Node<int, GroupOwner> *groupNode = groupTree.find(groupId);
+        if (groupNode == nullptr) {
+            return FAILURE;
+        }
+
+        GroupOwner groupOwner = groupNode->getData();
+        *playerId = groupOwner->getCurrentHighest().getId();
+        return SUCCESS;
+    }
+
 //    void GetAllPlayersByLevel (int GroupID, int **Players, int *numOfPlayers)
 //    {
 //        if ((GroupID==0)||(Players==nullptr)||(numOfPlayers== nullptr))

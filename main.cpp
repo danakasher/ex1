@@ -62,6 +62,42 @@ bool testWithNumbers(){
 }
 
 bool testWithPlayersAndGroups(){
+    PlayerManager manager;
+    manager.AddGroup(1);
+
+    int *playerId = new int();
+
+    manager.AddPlayer(1, 1, 1);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(2, 1, 3);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(3, 1, 1);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(4, 1, 1);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(4, 1, 2);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(5, 1, 3);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(6, 1, 4);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(7, 1, 2);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.RemovePlayer(6);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(8, 1, 4);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+
     return true;
 }
 

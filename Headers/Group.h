@@ -16,7 +16,7 @@ private:
 public:
     Group(const Group &group) = delete;
     Group &operator=(const Group &group) = delete;
-    explicit Group(int id): groupId(id), size(0), currentHighest(PlayerKey(-1, -1)){}
+    explicit Group(int id): groupId(id), size(0){}
     ~Group(){
         //TODO
     }
@@ -26,14 +26,14 @@ public:
     PlayerKey getCurrentHighest() const { return this->currentHighest; }
 
     void increaseLevel(Player *player, int increaseBy){
-        PlayerKey oldKey = PlayerKey(player->getId(), player->getLevel());
+        PlayerKey oldKey = PlayerKey(player);
         playerTree.remove(oldKey);
         player->increaseLevel(increaseBy);
         insertPlayer(player);
     }
 
     void insertPlayer(Player *newPlayer){
-        PlayerKey key = PlayerKey(newPlayer->getId(), newPlayer->getLevel());
+        PlayerKey key = PlayerKey(newPlayer);
         Node<PlayerKey, int> *playerNode = new Node<PlayerKey, int>(key, newPlayer->getId());
         playerTree.insert(playerNode);
         if(key > currentHighest || playerTree.getSize() == 1){
