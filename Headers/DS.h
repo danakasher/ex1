@@ -40,7 +40,6 @@ public:
         }
         groupTree.insert(GroupNode);
     }
-
     void AddPlayer(int PlayerID, int GroupID, int Level)
     {
         if ((PlayerID<=0)||(GroupID<=0)||(Level<=0)){
@@ -70,7 +69,6 @@ public:
         }
         //צריך לעדכן את החוליה של הקבוצה בצומת הלא ריקה להצביע על השחקן ברמה הכי גבוהה
     }
-
     void RemovePlayer(int PlayerID)
     {
         //we need an option to find a player only by Id and not Level
