@@ -133,6 +133,8 @@ private:
     }
 
 public:
+    SearchTree &operator=(const SearchTree &tree) = delete;
+    SearchTree(const SearchTree &tree) = delete;
     SearchTree() : root(nullptr), size(0) {};
     ~SearchTree() {
         deleteTree(this->root, nullptr);

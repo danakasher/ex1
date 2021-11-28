@@ -7,16 +7,16 @@
 
 class Group{
 private:
-    const int groupId;
+    int groupId;
     int size;
     PlayerKey currentHighest;
     SearchTree<PlayerKey, int> playerTree;
     void replaceHighestInGroup(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
 
 public:
-    explicit Group(int id): groupId(id), size(0), currentHighest(PlayerKey(-1, -1)){
-        playerTree = SearchTree<PlayerKey, int>();
-    }
+    Group(const Group &group) = delete;
+    Group &operator=(const Group &group) = delete;
+    explicit Group(int id): groupId(id), size(0), currentHighest(PlayerKey(-1, -1)){}
     ~Group(){
         //TODO
     }
@@ -42,13 +42,14 @@ public:
         this->size = playerTree.getSize();
     }
 
-    void removePlayer(PlayerKey key){
-        Node<PlayerKey, int> *playerNode = playerTree.find(key);
+    void removePlayer(int playerId, int playerLevel){
+        PlayerKey playerKey = PlayerKey(playerId, playerLevel);
+        Node<PlayerKey, int> *playerNode = playerTree.find(playerKey);
         if(playerNode == nullptr){
             return;
         }
-        replaceHighestInGroup(playerNode, key);
-        playerTree.remove(key);
+        replaceHighestInGroup(playerNode, playerKey);
+        playerTree.remove(playerKey);
     }
 
     Node<PlayerKey, int> **toArray(){
