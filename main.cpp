@@ -1,6 +1,7 @@
 #include "Classes/SearchTree.cpp"
 #include "Headers/Node.h"
 #include "Headers/Group.h"
+#include "Headers/Player.h"
 #include <iostream>
 
 bool isSorted(SearchTree<int, int> &tree){
@@ -69,6 +70,7 @@ bool testWithPlayersAndGroups(){
     int groups = 2, players = 200;
     int *groupIds = new int[groups];
     int insertRand;
+    Player **pdummy = new Player*[players];
     Group **dummy = new Group*[groups];
     bool canInsert;
     int prev;
@@ -112,7 +114,8 @@ bool testWithPlayersAndGroups(){
                 pickedId = true;
             }
         }
-        groupsTree.find(groupIds[randGroup])->getData().insertPlayer(randId, randLevel);
+        pdummy[i] = new Player(randId, randLevel, randGroup);
+        groupsTree.find(groupIds[randGroup])->getData().insertPlayer(pdummy[i]);
     }
     return true;
 }

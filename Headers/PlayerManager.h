@@ -1,98 +1,126 @@
-//
-// Created by USER on 27/11/2021.
-//
-
-#ifndef EX1_DS_H
-#define EX1_DS_H
+#ifndef EX1_PLAYERMANAGER_H
+#define EX1_PLAYERMANAGER_H
 #include "Player.h"
 #include "SearchTree.h"
 #include "Group.h"
+#include "library.h"
+#include <memory>
 
+class PlayerManager {
+    typedef std::shared_ptr<Player> PlayerOwner;
+    typedef std::shared_ptr<Group> GroupOwner;
 
-class DS {
 private:
     PlayerKey currentHighest;
-    SearchTree<PlayerKey, int> playerTree;
-    SearchTree<int, SearchTree<PlayerKey, int>> groupTree;
-    SearchTree<int, PlayerKey> UnEmptyGroupTree;
-    void replaceIfHighest(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
+    SearchTree<int, PlayerOwner> playerTree;
+    SearchTree<int, GroupOwner> groupTree;
+    SearchTree<int, Group> nonEmptyGroupTree;
+    void replaceHighestInSystem(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
 
 public:
-    explicit DS(): currentHighest(PlayerKey(-1, -1)){
+    explicit PlayerManager(): currentHighest(PlayerKey(-1, -1)){
         playerTree = SearchTree<PlayerKey, int>();
-        groupTree = SearchTree<int, SearchTree<PlayerKey, int>>();
-        UnEmptyGroupTree = SearchTree<int, int>();
-
+        groupTree = SearchTree<int, Group>();
+        nonEmptyGroupTree = SearchTree<int, int>();
     }
-    ~DS(){
+    ~PlayerManager(){
         //TODO
     }
 
-    void AddGroup(int GroupID){
+    StatusType AddGroup(int groupID){
+        Group *group = nullptr;
         if (GroupID<=0){
-            //return invalid input
-            //todo
+            return INVALID_INPUT;
         }
-        Node<PlayerKey, int> *GroupNode = new Node<int, SearchTree<PlayerKey, int>>(GroupID, nullptr);
-        if (GroupNode== nullptr)
-        {
-            //return allocation error
+        if(groupTree.find(groupId) != nullptr){
+            return FAILURE;
         }
-        groupTree.insert(GroupNode);
+        Group *group = new Group(groupID);
+        if(group == nullptr){
+            return ALLOCATION_ERROR;
+        }
+        GroupOwner owner(group);
+
+        if (GroupNode == nullptr) {
+            return ALLOCATION_ERROR;
+        }
+
+        groupTree.insert(owner->getId(), owner);
+        return SUCCESS;
     }
-    void AddPlayer(int PlayerID, int GroupID, int Level)
-    {
-        if ((PlayerID<=0)||(GroupID<=0)||(Level<=0)){
-            //return invalid input
-            //todo
+
+    StatusType AddPlayer(int playerId, int groupId, int level) {
+        Player *newPlayer = nullptr;
+        Node<int, PlayerOwner> *playerNode = nullptr;
+
+        if (PlayerID<=0 || GroupID<=0 || Level<=0){
+            return INVALID_INPUT;
         }
-        Node<int, SearchTree<PlayerKey, int>> groupNode = groupTree.find(GroupID);
-        if (groupNode== nullptr){
-            //return failure
-            //todo
+
+        Node<int, GroupOwner> *groupNode = groupTree.find(groupId);
+        if(playerTree.find(playerId) != nullptr || groupOwner == nullptr){
+            return FAILURE;
         }
-        Group group = groupNode.getData();
-        group.insertPlayer(PlayerID,level);
-        PlayerKey key = PlayerKey(id, level);
-        Node<PlayerKey, int> *playerNode = new Node<PlayerKey, int>(key, id);
-        if (playerNode== nullptr)
-        {
-            //return allocation error
+
+        newPlayer = new Player(id, level, groupId);
+        if(newPlayer == nullptr){
+            return ALLOCATION_ERROR;
         }
-        this->playerTree.insert(playerNode);
-        if(key > this->currentHighest || this->playerTree.getSize() == 1){
-            this->currentHighest = key;
+
+        PlayerOwner playerOwner(newPlayer);
+
+        playerNode = new Node<int, PlayerOwner>(playerOwner->getId(), playerOwner);
+        if (playerNode == nullptr){
+            return ALLOCATION_ERROR;
         }
-        if (group.getSize()==1)
-        {
-            this->UnEmptyGroupTree.insert(GroupID, playerNode);
+
+        GroupOwner groupOwner = groupNode.getData();
+        groupOwner->insertPlayer(playerOwner.get());
+
+        if(group.getSize() == 1){
+            nonEmptyGroupTree.insert(groupOwner.get())
         }
-        //צריך לעדכן את החוליה של הקבוצה בצומת הלא ריקה להצביע על השחקן ברמה הכי גבוהה
+
+        playerTree.insert(playerOwner->getId(), playerOwner);
+
+        PlayerKey temp = PlayerKey(playerOwner->getId(), playerOwner->getLevel());
+        if(temp > this->currentHighest || playerTree.getSize() == 1){
+            this->currentHighest = temp;
+        }
+
+        return SUCCESS;
     }
-    void RemovePlayer(int PlayerID)
-    {
-        //we need an option to find a player only by Id and not Level
-        Node<PlayerKey, int> *playerNode = playerTree.find(PlayerID);
-        if(playerNode == nullptr){
-            return;
+
+    StatusType RemovePlayer(int PlayerID){
+        if(playerID <= 0){
+            return INVALID_INPUT;
         }
-        Player player =playerNode->getData();
-        replaceIfHighest(playerNode, PlayerID);
-        Node<int, SearchTree<PlayerKey, int>> *groupNode = groupTree.find(player.getGroupId());
-        Group group = groupNode->getData();
+
+        Node<int, PlayerOwner> *node = playerTree.find(playerID);
+        if(node == nullptr){
+            return FAILURE;
+        }
+
+        PlayerOwner playerOwner = node->getData();
+
+        replaceIfHighest(playerNode, PlayerID); //TODO
+
+        Node<int, GroupOwner> *groupNode = groupTree.find(playerOwner->getGroupId());
+        GroupOwner groupOwner = groupNode->getData();
+
         playerTree.remove(PlayerID);
         group.removePlayer(PlayerID);
-        if (group.getSize()==0)
-        {
-            this->UnEmptyGroupTree.remove(group.getId());
+
+        if (group.getSize()==0) {
+            nonEmptyGroupTree.remove(group.getId());
         }
-        else
-        {
+        else {
             //לשים את השלב הכי גבוה החדש בדאטה של החוליה של הקבוצה בעץ הלא ריקות
+            // מה???
         }
-        //return success
+        return SUCCESS;
     }
-    void ReplaceGroup(int GroupID, int ReplacementID)
+    StatusType ReplaceGroup(int GroupID, int ReplacementID)
     {
         if ((GroupID<=0)||(ReplacementID<=0)||(GroupID==ReplacementID))
         {
@@ -128,7 +156,7 @@ public:
         //לעדכן את הרמה הכי גבוהה של הקבוצה בעץ הלא ריקות
         //return Success
     }
-    void IncreaseLevel (int PlayerID, int LevelIncrease)
+    StatusType IncreaseLevel (int PlayerID, int LevelIncrease)
     {
         if ((PlayerID<=0)||(LevelIncrease<=0))
         {
@@ -213,11 +241,7 @@ public:
 
 
     }
-
-
-
-
 }
 
 
-#endif //EX1_DS_H
+#endif //EX1_PLAYERMANAGER_H

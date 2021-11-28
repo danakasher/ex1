@@ -1,6 +1,6 @@
 #include "../Headers/Group.h"
 
-void Group::replaceIfHighest(Node<PlayerKey, int> *node, PlayerKey const &key) {
+void Group::replaceHighestInGroup(Node<PlayerKey, int> *node, PlayerKey const &key) {
     if((!(key == this->currentHighest))){
         return;
     }
