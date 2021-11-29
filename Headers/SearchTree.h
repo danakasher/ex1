@@ -418,12 +418,6 @@ void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMerg
         currentIndex++;
     }
 
-    std::cout<<"Sorted array:\n";
-    for(int i=0; i<mergedSize; i++){
-        std::cout << sortedArr[i]->getKey() << " ";
-    }
-    std::cout<<"\n";
-
     setRoot(buildFromSortedArray(sortedArr, 0, mergedSize-1));
     this->size = mergedSize;
 }

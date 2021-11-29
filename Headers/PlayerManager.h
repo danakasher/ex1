@@ -143,6 +143,11 @@ public:
         GroupOwner toRemoveOwner = toRemove->getData();
         GroupOwner toMergeOwner = toMerge->getData();
 
+        toMergeOwner->merge(toRemoveOwner.get());
+
+        groupTree.remove(toRemoveOwner->getId());
+        nonEmptyGroupTree.remove(toRemoveOwner->getId());
+
         return SUCCESS;
     }
 
