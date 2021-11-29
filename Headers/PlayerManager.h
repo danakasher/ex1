@@ -36,9 +36,9 @@ private:
     }
 
 public:
-    explicit PlayerManager(): currentHighest(PlayerKey(-1, -1)){
-
-    }
+    PlayerManager(const PlayerManager &manager) = delete;
+    PlayerManager &operator=(const PlayerManager &manager) = delete;
+    explicit PlayerManager(): currentHighest(){}
 
     ~PlayerManager(){
         //TODO
