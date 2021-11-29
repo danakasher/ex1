@@ -151,30 +151,25 @@ public:
         return SUCCESS;
     }
 
-//    StatusType IncreaseLevel (int PlayerID, int LevelIncrease)
-//    {
-//        if ((PlayerID<=0)||(LevelIncrease<=0))
-//        {
-//            //return InvalidInput
-//            //Todo
-//        }
-//        Player player = this->playerTree.find(PlayerID);
-//        if (player==nullptr)
-//        {
-//            //return allocation error
-//            //todo
-//        }
-//        Group group = this->groupTree.find(player.getGroupId());
-//        if (group==nullptr)
-//        {
-//            //return allocation error
-//            //todo
-//        }
-//        group.increaseLevel(PlayerID,player.getLevel(), LevelIncrease);
-//        player.increaseLevel(LevelIncrease);
-//        //לעדכן גם בעץ הלא ריקות
-//        //return success
-//    }
+    StatusType IncreaseLevel(int PlayerID, int increaseBy){
+        if (PlayerID <= 0 || increaseBy <= 0){
+            return INVALID_INPUT;
+        }
+
+        Node<int, PlayerOwner> *playerNode = this->playerTree.find(PlayerID);
+        if (playerNode == nullptr){
+            return FAILURE;
+        }
+
+        PlayerOwner playerOwner = playerNode->getData();
+
+        GroupOwner groupOwner = this->groupTree.find(playerOwner->getGroupId())->getData();
+
+        groupOwner->increaseLevel(playerOwner.get(), increaseBy);
+        playerOwner->increaseLevel(increaseBy);
+
+        return SUCCESS;
+    }
 
     StatusType GetHighestLevel(int groupId, int *playerId){
         if (playerId == nullptr || groupId == 0){
@@ -195,44 +190,70 @@ public:
         return SUCCESS;
     }
 
-//    void GetAllPlayersByLevel (int GroupID, int **Players, int *numOfPlayers)
-//    {
-//        if ((GroupID==0)||(Players==nullptr)||(numOfPlayers== nullptr))
-//        {
-//            //return invalid input
-//            //todo
-//        }
-//        if (GroupID<0){
-//            *numOfPlayers = this->playerTree.getSize();
-//            if (this->playerTree.getSize()==0)
-//            {
-//                **Players = nullptr;
-//            }
-//            else {**Players = this->playerTree.scanInOrder();}
-//        }
-//        else{
-//            Group group = this->groupTree.find(GroupID);
-//            if (group== nullptr){
-//                //return failure
-//            }
-//            *numOfPlayers=group.getSize();
-//            if (group.getSize()==0)
-//            {
-//                **Players = nullptr;
-//            }
-//            else {**Players = group.toArray();}
-//        }
-//        //return success
-//    }
-//    void GetGroupsHighestLevel (int numOfGroups, int **Players){
-//        auto *GroupArr = this->UnEmptyGroupTree.scanInOrder();
-//        auto *PlayerArr = new Node<PlayerKey, int>*[numOfGroups]
-//        for (int i=0; i<this->UnEmptyGroupTree.getSize();i++)
-//        {
-//           // PlayerArr[i] = GroupArr[i].getData();
-//           //Todo
-//        }
-//    }
+    StatusType GetAllPlayersByLevel (int groupID, int **players, int *numOfPlayers){
+        if (groupID == 0 || players == nullptr || numOfPlayers == nullptr){
+            return INVALID_INPUT;
+        }
+        Node<int, PlayerOwner> **playerNodes;
+        Node<PlayerKey, int> **groupPlayerNodes;
+        if (groupID < 0){
+            *numOfPlayers = this->playerTree.getSize();
+            if (this->playerTree.getSize()==0){
+                return SUCCESS;
+            }
+            else {
+                try{
+                    playerNodes = playerTree.scanInOrder();
+                    players = new int*[playerTree.getSize()];
+                } catch (std::bad_alloc &e){
+                    return ALLOCATION_ERROR;
+                }
+                for(int i=0; i<playerTree.getSize(); i++){
+                    *players[i] = playerNodes[i]->getKey();
+                }
+            }
+        }
+        else{
+            Node<int, GroupOwner> *groupNode = this->groupTree.find(groupID);
+            if (groupNode == nullptr){
+                return FAILURE;
+            }
+            GroupOwner groupOwner = groupNode->getData();
+            *numOfPlayers= groupOwner->getSize();
+            if (*numOfPlayers == 0){
+                return SUCCESS
+            }
+            else {
+                try{
+                    groupPlayerNodes = groupOwner->toArray();
+                    players = new int*[groupOwner->getSize()];
+                } catch (std::bad_alloc &e){
+                    return ALLOCATION_ERROR;
+                }
+                for(int i=0; i<playerTree.getSize(); i++){
+                    *players[i] = groupPlayerNodes[i]->getKey().getId();
+                }
+            }
+        }
+        return success
+    }
+
+    StatusType GetGroupsHighestLevel(int **players, int numOfGroups){
+        if(players == nullptr || numOfGroups < 1){
+            return INVALID_INPUT;
+        }
+        Node<int, Group*> **groupArr;
+        try{
+            groupArr = this->nonEmptyGroupTree.scanInOrder();
+        } catch(std::bad_alloc &e){
+            return ALLOCATION_ERROR;
+        }
+
+        for (int i=0; i<this->nonEmptyGroupTree.getSize(); i++){
+            *players[i] = groupArr[i]->getData()->getCurrentHighest().getId();
+        }
+        return SUCCESS;
+    }
 };
 
 
