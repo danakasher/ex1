@@ -109,12 +109,26 @@ bool testWithPlayersAndGroups(){
         return false;
     }
     manager.AddPlayer(1, 1, 1);
-    manager.AddPlayer(2, 1, 1);
-    manager.AddPlayer(2, 1, 1);
-    manager.AddPlayer(2, 1, 1);
-    manager.AddPlayer(2, 1, 1);
-    manager.AddPlayer(2, 1, 1);
-    manager.AddPlayer(2, 1, 1);
+    manager.AddPlayer(2, 2, 1);
+    if (manager.AddPlayer(2, 1, 1)!=FAILURE){return false;}
+    manager.RemovePlayer(1);
+    if(manager.RemovePlayer(1) != FAILURE){
+        return false;
+    }
+    manager.ReplaceGroup(1,2);
+    manager.GetHighestLevel(2, playerId);
+    if(*playerId != 121){
+        return false;
+    }
+    manager.AddGroup(1);
+    manager.GetHighestLevel(1, playerId);
+    if(*playerId != 1){
+        return false;
+    }
+    //manager.AddPlayer(2, 1, 1);
+    //manager.AddPlayer(2, 1, 1);
+    //manager.AddPlayer(2, 1, 1);
+    //manager.AddPlayer(2, 1, 1);
 
 
 
