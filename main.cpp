@@ -67,7 +67,11 @@ bool testWithPlayersAndGroups(){
 
     int *playerId = new int();
 
-    manager.AddPlayer(1, 1, 1);
+    manager.GetHighestLevel(1, playerId);
+    std::cout << *playerId << "\n";
+    manager.GetHighestLevel(-1, playerId);
+    std::cout << *playerId << "\n";
+    manager.AddPlayer(11, 1, 1);
     manager.GetHighestLevel(1, playerId);
     std::cout << *playerId << "\n";
     manager.AddPlayer(2, 1, 3);
