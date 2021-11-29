@@ -125,49 +125,27 @@ public:
         if(groupOwner->getSize() == 0) {
             nonEmptyGroupTree.remove(groupOwner->getId());
         }
-        else {
-            //לשים את השלב הכי גבוה החדש בדאטה של החוליה של הקבוצה בעץ הלא ריקות
-            // מה???
-        }
         return SUCCESS;
     }
 
-//    StatusType ReplaceGroup(int groupId, int replacementId)
-//    {
-//        if ((GroupID<=0)||(ReplacementID<=0)||(GroupID==replacementId))
-//        {
-//            //return std::invalid_argument;
-//            //ToDo
-//        }
-//        Group group = groupTree.find(groupId);
-//        if (group == nullptr)
-//        {
-//            //return Failure
-//            //Todo
-//        }
-//        Node<PlayerKey, int> **arr = group.toArray();
-//        if (arr== nullptr)
-//        {
-//            //return Allocation Error
-//            //Todo
-//        }
-//        Group newGroup = groupTree.find(ReplacementID);
-//        if (newGroup== nullptr)
-//        {
-//                //return Failure
-//                //Todo
-//        }
-//        if (group.getSize()>0){
-//            this->UnEmptyGroupTree.remove(GroupID);
-//        }
-//        for (int i=0;i<group.getSize(); i++)
-//        {
-//            newGroup.insertPlayer(arr[i].getId(), arr[i].getLevel());
-//        }
-//        this->groupTree.remove(GroupID);
-//        //לעדכן את הרמה הכי גבוהה של הקבוצה בעץ הלא ריקות
-//        //return Success
-//    }
+    StatusType ReplaceGroup(int groupId, int replacementId)
+    {
+        if ( groupId <=0  || replacementId <= 0 || groupId == replacementId){
+            return INVALID_INPUT;
+        }
+
+        Node<int, GroupOwner> *toRemove = groupTree.find(groupId);
+        Node<int, GroupOwner> *toMerge = groupTree.find(replacementId);
+        if(toRemove == nullptr || toMerge == nullptr){
+            return FAILURE;
+        }
+
+        GroupOwner toRemoveOwner = toRemove->getData();
+        GroupOwner toMergeOwner = toMerge->getData();
+
+        return SUCCESS;
+    }
+
 //    StatusType IncreaseLevel (int PlayerID, int LevelIncrease)
 //    {
 //        if ((PlayerID<=0)||(LevelIncrease<=0))

@@ -19,15 +19,16 @@ bool isSorted(SearchTree<int, int> &tree){
 }
 
 bool testWithNumbers(){
-    int size = 20;
+    int size = 5;
     SearchTree<int, int> tree;
+    SearchTree<int, int> tree2;
     int *arr = new int[size];
     int insertRand;
     bool canInsert;
     for (int i = 0; i < size; i++) {
         canInsert = false;
         while (!canInsert) {
-            insertRand = rand() % (size*10);
+            insertRand = rand() % (size*100);
             canInsert = true;
             for (int j = 0; j < size; j++) {
                 if (arr[j] == insertRand) {
@@ -44,20 +45,49 @@ bool testWithNumbers(){
         tree.insert(insertRand, insertRand);
     }
 
-    for (int i = 0; i < size/2; i++) {
-        tree.remove(arr[i]);
-        if(!isSorted(tree)){
-            std::cout << "Not sorted";
-            return false;
+    for (int i = 0; i < size; i++) {
+        canInsert = false;
+        while (!canInsert) {
+            insertRand = rand() % ((size)*100);
+            canInsert = true;
+            for (int j = 0; j < size; j++) {
+                if (arr[j] == insertRand) {
+                    canInsert = false;
+                    break;
+                }
+            }
         }
-        if(tree.find(arr[i]) != nullptr){
-            std::cout << "WELL";
-        }
-        if(!tree.isBalanced()){
+        arr[i] = insertRand;
+        if(!tree2.isBalanced()){
             std::cout << "WELL WELLLLLLLL";
             return false;
         }
+        tree2.insert(insertRand, insertRand);
     }
+
+    isSorted(tree);
+    std::cout <<"\n";
+    isSorted(tree2);
+    std::cout <<"\n";
+    tree.mergeWith(tree2.scanInOrder(), tree2.getSize());
+    std::cout<<"\nMerged Tree: ";
+    isSorted(tree);
+    std::cout <<"\n";
+
+//    for (int i = 0; i < size/2; i++) {
+//        tree.remove(arr[i]);
+//        if(!isSorted(tree)){
+//            std::cout << "Not sorted";
+//            return false;
+//        }
+//        if(tree.find(arr[i]) != nullptr){
+//            std::cout << "WELL";
+//        }
+//        if(!tree.isBalanced()){
+//            std::cout << "WELL WELLLLLLLL";
+//            return false;
+//        }
+//    }
     return true;
 }
 

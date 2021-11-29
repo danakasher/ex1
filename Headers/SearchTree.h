@@ -2,6 +2,7 @@
 #define EX1_SEARCHTREE_H
 #include <iostream>
 #include "Node.h"
+#include "cmath"
 
 template <typename Key, typename Data>
 class SearchTree{
@@ -131,6 +132,7 @@ private:
             newRoot->setFather(nullptr);
         }
     }
+    Node<Key, Data>* buildFromSortedArray(Node<Key, Data> **array, int indexLeft, int indexRight);
 
 public:
     SearchTree &operator=(const SearchTree &tree) = delete;
@@ -147,6 +149,7 @@ public:
     int getSize() const { return this->size; }
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
     bool isBalanced();
+    void mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize);
 };
 
 
@@ -381,6 +384,64 @@ template<typename Key, typename Data>
 void SearchTree<Key, Data>::insert(Key &key, Data &data) {
     Node<Key, Data> *newNode = new Node<Key, Data>(key, data);
     insert(newNode);
+}
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize) {
+    Node<Key, Data> **ownNodes = this->scanInOrder();
+
+    int mergedSize = this->size + toMergeSize;
+    Node<Key, Data> **sortedArr = new Node<Key, Data>*[mergedSize];
+    int indexToMerge = 0, indexOwn = 0;
+    int currentIndex = 0;
+    int minSize = (int) fmin(toMergeSize, this->getSize());
+    while(indexToMerge < minSize && indexOwn < minSize){
+        if(toMergeNodes[indexToMerge]->getKey() < ownNodes[indexOwn]->getKey()){
+            sortedArr[currentIndex] = toMergeNodes[indexToMerge];
+            indexToMerge++;
+        } else {
+            sortedArr[currentIndex] = ownNodes[indexOwn];
+            indexOwn++;
+        }
+        currentIndex++;
+    }
+
+    while(indexToMerge < toMergeSize){
+        sortedArr[currentIndex] = toMergeNodes[indexToMerge];
+        indexToMerge++;
+        currentIndex++;
+    }
+
+    while(indexOwn < this->getSize()){
+        sortedArr[currentIndex] = ownNodes[indexOwn];
+        indexOwn++;
+        currentIndex++;
+    }
+
+    std::cout<<"Sorted array:\n";
+    for(int i=0; i<mergedSize; i++){
+        std::cout << sortedArr[i]->getKey() << " ";
+    }
+    std::cout<<"\n";
+
+    setRoot(buildFromSortedArray(sortedArr, 0, mergedSize-1));
+    this->size = mergedSize;
+}
+
+template<typename Key, typename Data>
+Node<Key, Data>* SearchTree<Key, Data>::buildFromSortedArray(Node<Key, Data> **array, int indexLeft, int indexRight){
+    if (indexLeft > indexRight) {
+        return nullptr;
+    }
+
+    int mid = (indexLeft + indexRight)/2;
+    Node<Key, Data> *currentRoot = array[mid];
+
+    currentRoot->setLeft(buildFromSortedArray(array, indexLeft, mid - 1));
+
+    currentRoot->setRight(buildFromSortedArray(array, mid + 1, indexRight));
+
+    return currentRoot;
 }
 
 #endif //EX1_SEARCHTREE_H
