@@ -139,8 +139,7 @@ public:
         playerTree.~SearchTree();
     }
 
-    StatusType ReplaceGroup(int groupId, int replacementId)
-    {
+    StatusType ReplaceGroup(int groupId, int replacementId){
         if ( groupId <=0  || replacementId <= 0 || groupId == replacementId){
             return INVALID_INPUT;
         }
@@ -161,8 +160,8 @@ public:
             nonEmptyGroupTree.insert(replacementId, toMerge);
         }
 
-        groupTree.remove(toRemoveOwner->getId());
-        nonEmptyGroupTree.remove(toRemoveOwner->getId());
+        groupTree.remove(groupId);
+        nonEmptyGroupTree.remove(groupId);
 
         return SUCCESS;
     }

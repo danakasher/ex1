@@ -8,9 +8,9 @@ class Node {
 private:
     const Key key;
     Data data;
-    Node<Key, Data>* left;
-    Node<Key, Data>* right;
-    Node<Key, Data>* father;
+    Node<Key, Data>* left = nullptr;
+    Node<Key, Data>* right = nullptr;
+    Node<Key, Data>* father = nullptr;
 
 public:
     int height, balancingParameter;
@@ -29,12 +29,14 @@ public:
         if(leftNode != nullptr){
             leftNode->setFather(this);
         }
+        this->calculateHeightAndBalance();
     }
     void setRight(Node* const rightNode){
         this->right = rightNode;
         if(rightNode != nullptr){
             rightNode->setFather(this);
         }
+        this->calculateHeightAndBalance();
     }
     void setFather(Node<Key, Data>* const prev){ this->father = prev;}
     void calculateHeightAndBalance(){
