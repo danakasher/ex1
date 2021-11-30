@@ -125,11 +125,13 @@ bool testWithPlayersAndGroups(){
     if(*playerId != 1){
         return false;
     }
-    //manager.AddPlayer(2, 1, 1);
-    //manager.AddPlayer(2, 1, 1);
-    //manager.AddPlayer(2, 1, 1);
-    //manager.AddPlayer(2, 1, 1);
-
+    //int **players = new int*[1];
+    //int *numPlayers = 0;
+    //manager.GetAllPlayersByLevel(-1,players,numPlayers);
+    //for (int i=0; i<*numPlayers; i++)
+    //{
+    //    std::cout << players[i] << ", ";
+    //}
 
 
     return true;

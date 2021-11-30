@@ -221,7 +221,7 @@ public:
             GroupOwner groupOwner = groupNode->getData();
             *numOfPlayers= groupOwner->getSize();
             if (*numOfPlayers == 0){
-                return SUCCESS
+                return SUCCESS;
             }
             else {
                 try{
@@ -235,7 +235,7 @@ public:
                 }
             }
         }
-        return success
+        return SUCCESS;
     }
 
     StatusType GetGroupsHighestLevel(int **players, int numOfGroups){
