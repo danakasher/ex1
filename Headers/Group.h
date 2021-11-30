@@ -9,15 +9,15 @@ class Group{
 private:
     int groupId;
     PlayerKey currentHighest;
-    SearchTree<PlayerKey, int> playerTree;
-    void replaceHighestInGroup(Node<PlayerKey, int> *currentHighest, PlayerKey const &key);
+    SearchTree<PlayerKey, Player*> playerTree;
+    void replaceHighestInGroup(Node<PlayerKey, Player*> *currentHighest, PlayerKey const &key);
 
 public:
     Group(const Group &group) = delete;
     Group &operator=(const Group &group) = delete;
     explicit Group(int id): groupId(id){}
     ~Group(){
-        //TODO
+        playerTree.~SearchTree();
     }
 
     int getId(){ return this->groupId; }
@@ -33,7 +33,7 @@ public:
 
     void insertPlayer(Player *newPlayer){
         PlayerKey key = PlayerKey(newPlayer);
-        Node<PlayerKey, int> *playerNode = new Node<PlayerKey, int>(key, newPlayer->getId());
+        Node<PlayerKey, Player*> *playerNode = new Node<PlayerKey, Player*>(key, newPlayer);
         playerTree.insert(playerNode);
         if(key > currentHighest || playerTree.getSize() == 1){
             currentHighest = key;
@@ -42,7 +42,7 @@ public:
 
     void removePlayer(int playerId, int playerLevel){
         PlayerKey playerKey = PlayerKey(playerId, playerLevel);
-        Node<PlayerKey, int> *playerNode = playerTree.find(playerKey);
+        Node<PlayerKey, Player*> *playerNode = playerTree.find(playerKey);
         if(playerNode == nullptr){
             return;
         }
@@ -50,12 +50,16 @@ public:
         playerTree.remove(playerKey);
     }
 
-    Node<PlayerKey, int> **toArray(){
+    Node<PlayerKey, Player*> **toArray(){
         return playerTree.scanInOrder();
     }
 
     void merge(Group *group){
-        playerTree.mergeWith(group->toArray(), group->getSize());
+        Node<PlayerKey, Player*> **arr = group->toArray();
+        playerTree.mergeWith(arr, group->getSize());
+        for(int i=0; i<group->getSize(); i++){
+            arr[i]->getData()->setGroupId(this->groupId);
+        }
         if(currentHighest < group->getCurrentHighest()){
             currentHighest = group->getCurrentHighest();
         }

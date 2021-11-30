@@ -1,7 +1,7 @@
 #ifndef EX1_PLAYERMANAGER_H
 #define EX1_PLAYERMANAGER_H
 #include "Group.h"
-#include "library.h"
+#include "library1.h"
 #include <memory>
 
 class PlayerManager {
@@ -9,6 +9,7 @@ class PlayerManager {
     typedef std::shared_ptr<Group> GroupOwner;
 
 private:
+    //TODO: Make everything a pointer
     PlayerKey currentHighest;
     SearchTree<int, PlayerOwner> playerTree;
     SearchTree<int, GroupOwner> groupTree;
@@ -128,20 +129,25 @@ public:
         return SUCCESS;
     }
 
+    void Quit(){
+        groupTree.~SearchTree();
+        playerTree.~SearchTree();
+    }
+
     StatusType ReplaceGroup(int groupId, int replacementId)
     {
         if ( groupId <=0  || replacementId <= 0 || groupId == replacementId){
             return INVALID_INPUT;
         }
 
-        Node<int, GroupOwner> *toRemove = groupTree.find(groupId);
-        Node<int, GroupOwner> *toMerge = groupTree.find(replacementId);
-        if(toRemove == nullptr || toMerge == nullptr){
+        Node<int, GroupOwner> *group = groupTree.find(groupId);
+        Node<int, GroupOwner> *replacementGroup = groupTree.find(replacementId);
+        if(group == nullptr || replacementGroup == nullptr){
             return FAILURE;
         }
 
-        GroupOwner toRemoveOwner = toRemove->getData();
-        GroupOwner toMergeOwner = toMerge->getData();
+        GroupOwner toRemoveOwner = group->getData();
+        GroupOwner toMergeOwner = replacementGroup->getData();
 
         toMergeOwner->merge(toRemoveOwner.get());
 
@@ -163,9 +169,9 @@ public:
 
         PlayerOwner playerOwner = playerNode->getData();
 
-        GroupOwner groupOwner = this->groupTree.find(playerOwner->getGroupId())->getData();
+        Group *group = this->nonEmptyGroupTree.find(playerOwner->getGroupId())->getData();
 
-        groupOwner->increaseLevel(playerOwner.get(), increaseBy);
+        group->increaseLevel(playerOwner.get(), increaseBy);
         playerOwner->increaseLevel(increaseBy);
 
         return SUCCESS;
@@ -195,7 +201,7 @@ public:
             return INVALID_INPUT;
         }
         Node<int, PlayerOwner> **playerNodes;
-        Node<PlayerKey, int> **groupPlayerNodes;
+        Node<PlayerKey, Player*> **groupPlayerNodes;
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
             if (this->playerTree.getSize()==0){
@@ -204,12 +210,12 @@ public:
             else {
                 try{
                     playerNodes = playerTree.scanInOrder();
-                    players = new int*[playerTree.getSize()];
+                    (*players) = new int[playerTree.getSize()];
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
                 }
                 for(int i=0; i<playerTree.getSize(); i++){
-                    *players[i] = playerNodes[i]->getKey();
+                    (*players)[i] = playerNodes[i]->getKey();
                 }
             }
         }
@@ -221,36 +227,36 @@ public:
             GroupOwner groupOwner = groupNode->getData();
             *numOfPlayers= groupOwner->getSize();
             if (*numOfPlayers == 0){
-                return SUCCESS
+                return SUCCESS;
             }
             else {
                 try{
                     groupPlayerNodes = groupOwner->toArray();
-                    players = new int*[groupOwner->getSize()];
+                    (*players) = new int[groupOwner->getSize()];
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
                 }
                 for(int i=0; i<playerTree.getSize(); i++){
-                    *players[i] = groupPlayerNodes[i]->getKey().getId();
+                    (*players)[i] = groupPlayerNodes[i]->getKey().getId();
                 }
             }
         }
-        return success
+        return SUCCESS;
     }
 
-    StatusType GetGroupsHighestLevel(int **players, int numOfGroups){
+    StatusType GetGroupsHighestLevel(int numOfGroups, int **players){
         if(players == nullptr || numOfGroups < 1){
             return INVALID_INPUT;
         }
         Node<int, Group*> **groupArr;
         try{
             groupArr = this->nonEmptyGroupTree.scanInOrder();
+            (*players) = (int*)(malloc(sizeof(int) * playerTree.getSize()));
         } catch(std::bad_alloc &e){
             return ALLOCATION_ERROR;
         }
-
         for (int i=0; i<this->nonEmptyGroupTree.getSize(); i++){
-            *players[i] = groupArr[i]->getData()->getCurrentHighest().getId();
+            (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
         }
         return SUCCESS;
     }

@@ -140,6 +140,7 @@ public:
     SearchTree() : root(nullptr), size(0) {};
     ~SearchTree() {
         deleteTree(this->root, nullptr);
+        this->root = nullptr;
     }
     Node<Key, Data>* find (Key const &key);
     void remove(Key const &key);
