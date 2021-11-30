@@ -12,8 +12,10 @@ private:
     //TODO: Make everything a pointer
     PlayerKey currentHighest;
     SearchTree<int, PlayerOwner> playerTree;
+    SearchTree<PlayerKey, Player*> playerByLevel;
     SearchTree<int, GroupOwner> groupTree;
     SearchTree<int, Group*> nonEmptyGroupTree;
+
     void replaceIfHighestRemoved(Node<int, PlayerOwner> *removedNode){
         Player *player = removedNode->getData().get();
         PlayerKey nodeKey = PlayerKey(player);
@@ -67,6 +69,9 @@ public:
     }
 
     StatusType AddPlayer(int playerId, int groupId, int level) {
+        if(playerId > 100){
+            std::cout<<"wpw";
+        }
         if (playerId<=0 || groupId<=0 || level<=0){
             return INVALID_INPUT;
         }
@@ -94,6 +99,8 @@ public:
         }
 
         playerTree.insert(playerId, playerOwner);
+        PlayerKey playerKey = PlayerKey(playerId, level);
+        playerByLevel.insert(playerKey, newPlayer);
 
         PlayerKey temp = PlayerKey(playerOwner->getId(), playerOwner->getLevel());
         if(temp > this->currentHighest || playerTree.getSize() == 1){
@@ -121,6 +128,7 @@ public:
         GroupOwner groupOwner = groupNode->getData();
 
         playerTree.remove(playerID);
+        playerByLevel.remove(PlayerKey(playerID, playerOwner->getLevel()));
         groupOwner->removePlayer(playerID, playerOwner->getLevel());
 
         if(groupOwner->getSize() == 0) {
@@ -148,8 +156,13 @@ public:
 
         GroupOwner toRemoveOwner = group->getData();
         GroupOwner toMergeOwner = replacementGroup->getData();
+        Group *toMerge = toMergeOwner.get();
 
         toMergeOwner->merge(toRemoveOwner.get());
+
+        if(toMergeOwner->getSize() - toRemoveOwner->getSize() == 0){
+            nonEmptyGroupTree.insert(replacementId, toMerge);
+        }
 
         groupTree.remove(toRemoveOwner->getId());
         nonEmptyGroupTree.remove(toRemoveOwner->getId());
@@ -157,12 +170,12 @@ public:
         return SUCCESS;
     }
 
-    StatusType IncreaseLevel(int PlayerID, int increaseBy){
-        if (PlayerID <= 0 || increaseBy <= 0){
+    StatusType IncreaseLevel(int playerID, int increaseBy){
+        if (playerID <= 0 || increaseBy <= 0){
             return INVALID_INPUT;
         }
 
-        Node<int, PlayerOwner> *playerNode = this->playerTree.find(PlayerID);
+        Node<int, PlayerOwner> *playerNode = this->playerTree.find(playerID);
         if (playerNode == nullptr){
             return FAILURE;
         }
@@ -171,8 +184,19 @@ public:
 
         Group *group = this->nonEmptyGroupTree.find(playerOwner->getGroupId())->getData();
 
-        group->increaseLevel(playerOwner.get(), increaseBy);
-        playerOwner->increaseLevel(increaseBy);
+        PlayerKey oldKey = PlayerKey(playerID, playerOwner->getLevel());
+        group->removePlayer(oldKey.getId(), oldKey.getLevel());
+        playerByLevel.remove(oldKey);
+
+        Player *player = playerOwner.get();
+        player->increaseLevel(increaseBy);
+        PlayerKey newKey = PlayerKey(player->getId(), player->getLevel());
+        playerByLevel.insert(newKey, player);
+        group->insertPlayer(player);
+
+        if(currentHighest < newKey){
+            currentHighest = newKey;
+        }
 
         return SUCCESS;
     }
@@ -200,7 +224,7 @@ public:
         if (groupID == 0 || players == nullptr || numOfPlayers == nullptr){
             return INVALID_INPUT;
         }
-        Node<int, PlayerOwner> **playerNodes;
+        Node<PlayerKey, Player*> **playerNodes;
         Node<PlayerKey, Player*> **groupPlayerNodes;
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
@@ -209,13 +233,13 @@ public:
             }
             else {
                 try{
-                    playerNodes = playerTree.scanInOrder();
+                    playerNodes = playerByLevel.scanInOrder();
                     (*players) = new int[playerTree.getSize()];
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
                 }
                 for(int i=playerTree.getSize()-1; i>=0; i--){
-                    (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey();
+                    (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey().getId();
                 }
             }
         }

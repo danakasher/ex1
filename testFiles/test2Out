@@ -19,6 +19,7 @@ and there are no more players!
 AddPlayer: FAILURE
 RemovePlayer: SUCCESS
 AddPlayer: SUCCESS
+AddPlayer: SUCCESS
 GroupIndex	||	Player
 1	||	25
 2	||	34
@@ -29,10 +30,214 @@ AddPlayer: SUCCESS
 Highest level player is: 24
 AddPlayer: SUCCESS
 AddPlayer: SUCCESS
+AddPlayer: FAILURE
+Rank	||	Player
+1	||	39
+2	||	40
+3	||	25
+and there are no more players!
+AddPlayer: SUCCESS
+Rank	||	Player
+1	||	32
+2	||	39
+3	||	40
+4	||	25
+and there are no more players!
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+Rank	||	Player
+1	||	17
+2	||	32
+3	||	18
+4	||	30
+5	||	39
+6	||	40
+7	||	25
+and there are no more players!
+AddPlayer: SUCCESS
+Rank	||	Player
+1	||	15
+2	||	17
+3	||	32
+4	||	18
+5	||	30
+6	||	39
+7	||	40
+8	||	25
+and there are no more players!
+wpwAddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+Rank	||	Player
+1	||	12
+2	||	233
+3	||	11
+4	||	34
+and there are no more players!
 AddPlayer: SUCCESS
 AddPlayer: SUCCESS
 AddPlayer: SUCCESS
 AddPlayer: SUCCESS
+Rank	||	Player
+1	||	46
+2	||	77
+3	||	79
+4	||	45
+and there are no more players!
+Highest level player is: 12
 AddPlayer: SUCCESS
-AddPlayer: SUCCESS
+Highest level player is: 82
+Rank	||	Player
+1	||	82
+2	||	46
+3	||	77
+4	||	79
+5	||	45
+and there are no more players!
+RemovePlayer: SUCCESS
+RemovePlayer: SUCCESS
+RemovePlayer: SUCCESS
+RemovePlayer: SUCCESS
+RemovePlayer: SUCCESS
+ReplaceGroup: SUCCESS
+Rank	||	Player
+1	||	82
+2	||	46
+3	||	77
+4	||	15
+5	||	17
+6	||	32
+7	||	18
+8	||	30
+9	||	39
+10	||	40
+11	||	25
+and there are no more players!
+GetAllPlayersByLevel: FAILURE
+ReplaceGroup: SUCCESS
+GetAllPlayersByLevel: FAILURE
+Rank	||	Player
+1	||	82
+2	||	46
+3	||	77
+4	||	15
+5	||	17
+6	||	32
+7	||	18
+8	||	30
+9	||	39
+10	||	40
+11	||	25
+and there are no more players!
+Highest level player is: 82
+Highest level player is: 82
+Highest level player is: 233
+GetHighestLevel: FAILURE
+GroupIndex	||	Player
+1	||	233
+2	||	82
+and there are no more players!
+IncreaseLevel: SUCCESS
+Rank	||	Player
+1	||	233
+2	||	82
+3	||	46
+4	||	77
+5	||	15
+6	||	17
+7	||	32
+8	||	18
+9	||	30
+10	||	11
+11	||	39
+12	||	40
+13	||	25
+and there are no more players!
+IncreaseLevel: SUCCESS
+Rank	||	Player
+1	||	25
+2	||	233
+3	||	82
+4	||	46
+5	||	77
+6	||	15
+7	||	17
+8	||	32
+9	||	18
+10	||	30
+11	||	11
+12	||	39
+13	||	40
+and there are no more players!
+RemovePlayer: SUCCESS
+Rank	||	Player
+1	||	25
+2	||	233
+3	||	46
+4	||	77
+5	||	15
+6	||	17
+7	||	32
+8	||	18
+9	||	30
+10	||	11
+11	||	39
+12	||	40
+and there are no more players!
+RemovePlayer: SUCCESS
+Rank	||	Player
+1	||	233
+2	||	46
+3	||	77
+4	||	15
+5	||	17
+6	||	32
+7	||	18
+8	||	30
+9	||	11
+10	||	39
+11	||	40
+and there are no more players!
+IncreaseLevel: SUCCESS
+Rank	||	Player
+1	||	233
+2	||	46
+3	||	77
+4	||	15
+5	||	32
+6	||	17
+7	||	18
+8	||	30
+9	||	11
+10	||	39
+11	||	40
+and there are no more players!
+wpwAddPlayer: SUCCESS
+wpwAddPlayer: SUCCESS
+wpwAddPlayer: SUCCESS
+wpwAddPlayer: SUCCESS
+GroupIndex	||	Player
+1	||	233
+2	||	102
+3	||	101
+4	||	103
+5	||	104
+6	||	46
+and there are no more players!
+ReplaceGroup: SUCCESS
+GroupIndex	||	Player
+1	||	233
+2	||	101
+3	||	103
+4	||	104
+5	||	46
+and there are no more players!
+ReplaceGroup: SUCCESS
+GroupIndex	||	Player
+1	||	233
+2	||	101
+3	||	103
+4	||	46
+and there are no more players!
 Quit done.

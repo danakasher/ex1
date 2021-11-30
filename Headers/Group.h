@@ -24,13 +24,6 @@ public:
 
     PlayerKey getCurrentHighest() const { return this->currentHighest; }
 
-    void increaseLevel(Player *player, int increaseBy){
-        PlayerKey oldKey = PlayerKey(player);
-        playerTree.remove(oldKey);
-        player->increaseLevel(increaseBy);
-        insertPlayer(player);
-    }
-
     void insertPlayer(Player *newPlayer){
         PlayerKey key = PlayerKey(newPlayer);
         Node<PlayerKey, Player*> *playerNode = new Node<PlayerKey, Player*>(key, newPlayer);
