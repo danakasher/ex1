@@ -245,6 +245,10 @@ void SearchTree<Key, Data>::remove(Key const &key)
     // Re-balance
     if(father == nullptr){
         father = this->root;
+        if(father == nullptr){
+            this->size = 0;
+            return;
+        }
         balanceTree(father->getRight());
         balanceTree(father->getLeft());
     }

@@ -255,7 +255,7 @@ public:
         } catch(std::bad_alloc &e){
             return ALLOCATION_ERROR;
         }
-        for (int i=0; i<this->nonEmptyGroupTree.getSize(); i++){
+        for (int i=0; i<numOfGroups; i++){
             (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
         }
         return SUCCESS;

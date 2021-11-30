@@ -1,0 +1,21 @@
+Init done.
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: INVALID_INPUT
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: FAILURE
+AddGroup: SUCCESS
+AddGroup: FAILURE
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddPlayer: SUCCESS
+//
+AddPlayer: FAILURE
+RemovePlayer: SUCCESS
+AddPlayer: SUCCESS
+25
+Quit done.
