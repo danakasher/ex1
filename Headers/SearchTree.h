@@ -55,6 +55,16 @@ private:
         index = scanInOrder(node->getRight(), sortedArr, index);
         return index;
     }
+    int scanPostOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index){
+        if(index == this->size || node == nullptr){
+            return index;
+        }
+        index = scanPostOrder(node->getRight(), sortedArr, index);
+        sortedArr[index] = node;
+        index++;
+        index = scanPostOrder(node->getLeft(), sortedArr, index);
+        return index;
+    }
     void roll_LL(Node<Key, Data> *balancingPnt){
         rightRotate(balancingPnt);
     }
@@ -147,6 +157,7 @@ public:
     void insert(Node<Key, Data> *newNode);
     void insert(Key &key, Data &data); //For Testing
     Node<Key, Data> **scanInOrder();
+    Node<Key, Data> **scanPostOrder();
     int getSize() const { return this->size; }
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
     bool isBalanced();

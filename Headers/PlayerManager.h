@@ -214,8 +214,8 @@ public:
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
                 }
-                for(int i=0; i<playerTree.getSize(); i++){
-                    (*players)[i] = playerNodes[i]->getKey();
+                for(int i=playerTree.getSize()-1; i>=0; i--){
+                    (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey();
                 }
             }
         }
@@ -232,12 +232,12 @@ public:
             else {
                 try{
                     groupPlayerNodes = groupOwner->toArray();
-                    (*players) = new int[groupOwner->getSize()];
+                    (*players) = (int*)(malloc(sizeof(int) * groupOwner->getSize()));
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
                 }
-                for(int i=0; i<playerTree.getSize(); i++){
-                    (*players)[i] = groupPlayerNodes[i]->getKey().getId();
+                for(int i=groupOwner->getSize()-1; i >=0; i--){
+                    (*players)[groupOwner->getSize()-1 - i] = groupPlayerNodes[i]->getKey().getId();
                 }
             }
         }

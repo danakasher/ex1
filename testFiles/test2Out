@@ -13,9 +13,26 @@ AddGroup: SUCCESS
 AddGroup: SUCCESS
 AddGroup: SUCCESS
 AddPlayer: SUCCESS
-//
+GroupIndex	||	Player
+1	||	34
+and there are no more players!
 AddPlayer: FAILURE
 RemovePlayer: SUCCESS
 AddPlayer: SUCCESS
-25
+GroupIndex	||	Player
+1	||	25
+2	||	34
+and there are no more players!
+Highest level player is: 25
+Highest level player is: 34
+AddPlayer: SUCCESS
+Highest level player is: 24
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
 Quit done.
