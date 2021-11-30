@@ -69,9 +69,6 @@ public:
     }
 
     StatusType AddPlayer(int playerId, int groupId, int level) {
-        if(playerId > 100){
-            std::cout<<"wpw";
-        }
         if (playerId<=0 || groupId<=0 || level<=0){
             return INVALID_INPUT;
         }
