@@ -95,6 +95,7 @@ public:
         Group *group = groupOwner.get();
         groupOwner->insertPlayer(playerOwner.get());
 
+
         if(groupOwner->getSize() == 1){
             nonEmptyGroupTree.insert(groupId, group);
         }
@@ -229,7 +230,6 @@ public:
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
             if (this->playerTree.getSize()==0){
-                players= nullptr;
                 return SUCCESS;
             }
             else {
