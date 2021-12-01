@@ -97,7 +97,7 @@ int main(int argc, const char**argv) {
     int line = 1;
     while (fgets(buffer, MAX_STRING_INPUT_SIZE, stdin) != NULL) {
         fflush(stdout);
-        if(line == 46){
+        if(line == 699){
             std::cout<<"";
         }
         if (parser(buffer) == error)

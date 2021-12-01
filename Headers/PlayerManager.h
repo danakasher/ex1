@@ -229,6 +229,7 @@ public:
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
             if (this->playerTree.getSize()==0){
+                players= nullptr;
                 return SUCCESS;
             }
             else {
@@ -251,6 +252,7 @@ public:
             GroupOwner groupOwner = groupNode->getData();
             *numOfPlayers= groupOwner->getSize();
             if (*numOfPlayers == 0){
+                *players=nullptr;
                 return SUCCESS;
             }
             else {
