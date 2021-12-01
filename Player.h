@@ -28,18 +28,13 @@ public:
     PlayerKey(): id(-1), level(-1){};
     ~PlayerKey() = default;
     bool operator==(const PlayerKey &key) const {
-        return this->id == key.getId() && this->level == key.getLevel();
+        return this->level == key.getLevel() && this->id == key.getId();
     }
     bool operator<(const PlayerKey &key) const {
         return this->level < key.getLevel() || (this->level == key.getLevel() && this->id > key.getId());
     }
     bool operator>(const PlayerKey &key) const {
-        return !(*this < key) && !(*this == key);
-    }
-    void operator=(const PlayerKey &key) {
-        this->id = key.getId();
-        this->level = key.getLevel();
-
+        return this->level > key.getLevel() || (this->level == key.getLevel() && this->id < key.getId());
     }
     int getId() const { return this->id; }
     int getLevel() const { return this->level; }

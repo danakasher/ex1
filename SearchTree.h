@@ -218,8 +218,7 @@ void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
     }
     while (!leafAdded) {
         if (temp == newNode) {
-            //TODO:
-            return; //in this exercise, we check it when we add a new player or a new group
+            return;
         }
         if (newNode->getKey() > temp->getKey()) {
             if (temp->getRight() == nullptr) {
@@ -449,7 +448,6 @@ void SearchTree<Key, Data>::insert(Key &key, Data &data) {
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize) {
     Node<Key, Data> **ownNodes = this->scanInOrder();
-
     int mergedSize = this->size + toMergeSize;
     Node<Key, Data> **sortedArr = new Node<Key, Data> *[mergedSize];
     int indexToMerge = 0, indexOwn = 0;
@@ -476,6 +474,12 @@ void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMerg
         sortedArr[currentIndex] = ownNodes[indexOwn];
         indexOwn++;
         currentIndex++;
+    }
+
+    for(int i=0; i<mergedSize; i++){
+        sortedArr[i]->setLeft(nullptr);
+        sortedArr[i]->setRight(nullptr);
+        sortedArr[i]->setFather(nullptr);
     }
 
     setRoot(buildFromSortedArray(sortedArr, 0, mergedSize - 1));
