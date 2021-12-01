@@ -151,27 +151,6 @@ public:
             return INVALID_INPUT;
         }
 
-        Node<int, PlayerOwner> *node = playerTree.find(772986531);
-        int groupIDDD;
-        if(node != nullptr){
-            groupIDDD = node->getData()->getGroupId();
-            if(groupId ==  groupIDDD || replacementId == groupIDDD){
-//                std::cout<<"fuckingshit";
-            }
-        }
-
-        if(replacementId == 1537274941){
-            std::cout<<"fuckoff";
-        }
-
-        if(groupId == 1069094922 || replacementId == 1069094922){
-            std::cout<<"fuckingshit";
-        }
-
-        if(replacementId == 1069094922){
-            std::cout<<"fuckingshit";
-        }
-
         Node<int, GroupOwner> *group = groupTree.find(groupId);
         Node<int, GroupOwner> *replacementGroup = groupTree.find(replacementId);
         if(group == nullptr || replacementGroup == nullptr){
@@ -181,7 +160,6 @@ public:
         GroupOwner toRemoveOwner = group->getData();
         GroupOwner toMergeOwner = replacementGroup->getData();
         Group *toMerge = toMergeOwner.get();
-        Group *toRemove = toRemoveOwner.get();
         toMergeOwner->merge(toRemoveOwner.get());
 
         if(toMergeOwner->getSize() - toRemoveOwner->getSize() == 0 && toMergeOwner->getSize() != 0){

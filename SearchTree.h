@@ -453,7 +453,7 @@ void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMerg
     int indexToMerge = 0, indexOwn = 0;
     int currentIndex = 0;
     int minSize = (int) fmin(toMergeSize, this->getSize());
-    while (indexToMerge < minSize && indexOwn < minSize) {
+    while (indexToMerge < toMergeSize && indexOwn < this->size) {
         if (toMergeNodes[indexToMerge]->getKey() < ownNodes[indexOwn]->getKey()) {
             sortedArr[currentIndex] = toMergeNodes[indexToMerge];
             indexToMerge++;
