@@ -25,7 +25,7 @@ private:
 public:
     explicit PlayerKey(Player *player): id(player->getId()), level(player->getLevel()){};
     PlayerKey(int id, const int level): id(id), level(level){};
-    PlayerKey(): id(1), level(-1){};
+    PlayerKey(): id(-1), level(-1){};
     ~PlayerKey() = default;
     bool operator==(const PlayerKey &key) const {
         return this->id == key.getId() && this->level == key.getLevel();

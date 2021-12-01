@@ -186,6 +186,10 @@ public:
     void insert(Key &key, Data &data); //For Testing
     Node<Key, Data> **scanInOrder();
 
+    Node<Key, Data> *findLeftmost(Node<Key, Data> *node);
+
+    Node<Key, Data> *findRightmost(Node<Key, Data> *node);
+
     Node<Key, Data> **scanPostOrder();
 
     int getSize() const { return this->size; }
@@ -492,6 +496,26 @@ Node<Key, Data> *SearchTree<Key, Data>::buildFromSortedArray(Node<Key, Data> **a
     currentRoot->setRight(buildFromSortedArray(array, mid + 1, indexRight));
 
     return currentRoot;
+}
+
+template<typename Key, typename Data>
+Node<Key, Data> *SearchTree<Key, Data>::findLeftmost(Node<Key, Data> *node){
+    if(node == nullptr) return node;
+    while(node->getLeft() != nullptr){
+        node = node->getLeft();
+    }
+
+    return node;
+}
+
+template<typename Key, typename Data>
+Node<Key, Data> *SearchTree<Key, Data>::findRightmost(Node<Key, Data> *node){
+    if(node == nullptr) return node;
+    while(node->getRight() != nullptr){
+        node = node->getRight();
+    }
+
+    return node;
 }
 
 #endif //EX1_SEARCHTREE_H

@@ -1,7 +1,7 @@
 #ifndef EX1_GROUP_H
 
 #define EX1_GROUP_H
-#include "Player.h"
+#include "Player.cpp"
 #include "SearchTree.h"
 
 
@@ -10,7 +10,23 @@ private:
     int groupId;
     PlayerKey currentHighest;
     SearchTree<PlayerKey, Player*> playerTree;
-    void replaceHighestInGroup(Node<PlayerKey, Player*> *currentHighest, PlayerKey const &key);
+    void replaceHighestInGroup(Node<PlayerKey, Player*> *removedNode, PlayerKey const &key){
+        if((!(key == this->currentHighest))){
+            return;
+        }
+
+        currentHighest = PlayerKey();
+        Node<PlayerKey, Player*> *rightmostLeft = playerTree.findRightmost(removedNode->getLeft());
+        Node<PlayerKey, Player*> *father = removedNode->getFather();
+
+        if(rightmostLeft != nullptr){
+            this->currentHighest = this->currentHighest < rightmostLeft->getKey()? rightmostLeft->getKey():this->currentHighest;
+        }
+
+        if(father != nullptr){
+            this->currentHighest = this->currentHighest < father->getKey()? father->getKey():this->currentHighest;
+        }
+    }
 
 public:
     Group(const Group &group) = delete;

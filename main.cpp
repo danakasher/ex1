@@ -1,4 +1,4 @@
-#include "Headers/PlayerManager.h"
+#include "PlayerManager.h"
 
 bool isSorted(SearchTree<int, int> &tree){
     Node<int, int> **array = tree.scanInOrder();

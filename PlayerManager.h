@@ -17,24 +17,24 @@ private:
     SearchTree<int, GroupOwner> groupTree;
     SearchTree<int, Group*> nonEmptyGroupTree;
 
-    void replaceIfHighestRemoved(Node<int, PlayerOwner> *removedNode){
-        Player *player = removedNode->getData().get();
+    void replaceIfHighestRemoved(Node<PlayerKey, Player*> *removedNode){
+        Player *player = removedNode->getData();
         PlayerKey nodeKey = PlayerKey(player);
         if((!(nodeKey == this->currentHighest))){
             return;
         }
 
         currentHighest = PlayerKey();
-        Node<int, PlayerOwner> *leftSon = removedNode->getLeft();
-        Node<int, PlayerOwner> *father = removedNode->getFather();
+        Node<PlayerKey, Player*> *leftSon = playerByLevel.findRightmost(removedNode->getLeft());
+        Node<PlayerKey, Player*> *father = removedNode->getFather();
 
         if(leftSon != nullptr){
-            PlayerKey leftKey = PlayerKey(leftSon->getData().get());
+            PlayerKey leftKey = PlayerKey(leftSon->getData());
             this->currentHighest = this->currentHighest < leftKey? leftKey:this->currentHighest;
         }
 
         if(father != nullptr){
-            PlayerKey fatherKey = PlayerKey(father->getData().get());
+            PlayerKey fatherKey = PlayerKey(father->getData());
             this->currentHighest = this->currentHighest < fatherKey? fatherKey:this->currentHighest;
         }
     }
@@ -124,7 +124,9 @@ public:
 
         PlayerOwner playerOwner = node->getData();
 
-        replaceIfHighestRemoved(node);
+        PlayerKey key = PlayerKey(playerOwner->getId(), playerOwner->getLevel());
+        Node<PlayerKey, Player*> *nodeByLevel = playerByLevel.find(key);
+        replaceIfHighestRemoved(nodeByLevel);
 
         Node<int, GroupOwner> *groupNode = groupTree.find(playerOwner->getGroupId());
         GroupOwner groupOwner = groupNode->getData();
@@ -275,6 +277,10 @@ public:
             return INVALID_INPUT;
         }
 
+        if(numOfGroups > nonEmptyGroupTree.getSize()){
+            return FAILURE;
+        }
+
         Node<int, Group*> **groupArr;
         try{
             groupArr = this->nonEmptyGroupTree.scanInOrder();
@@ -282,7 +288,7 @@ public:
         } catch(std::bad_alloc &e){
             return ALLOCATION_ERROR;
         }
-        for (int i=0; i<fmin(numOfGroups, nonEmptyGroupTree.getSize()); i++){
+        for (int i=0; i<numOfGroups; i++){
             (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
         }
         return SUCCESS;

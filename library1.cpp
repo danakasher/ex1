@@ -1,5 +1,5 @@
-#include "../Headers/library1.h"
-#include "../Headers/PlayerManager.h"
+#include "library1.h"
+#include "PlayerManager.h"
 
 void *Init(){
     PlayerManager *manager;
