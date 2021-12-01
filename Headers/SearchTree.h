@@ -195,6 +195,10 @@ public:
     bool isBalanced();
 
     void mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize);
+    Node<Key, Data>* getRoot(){
+        return this->root;
+    }
+
 };
 
 
@@ -211,6 +215,7 @@ void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
     while (!leafAdded) {
         if (temp == newNode) {
             //TODO:
+            return; //in this exercise, we check it when we add a new player or a new group
         }
         if (newNode->getKey() > temp->getKey()) {
             if (temp->getRight() == nullptr) {
