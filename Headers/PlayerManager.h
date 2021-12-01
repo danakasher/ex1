@@ -4,6 +4,7 @@
 #include "library1.h"
 #include <memory>
 
+//Current working
 class PlayerManager {
     typedef std::shared_ptr<Player> PlayerOwner;
     typedef std::shared_ptr<Group> GroupOwner;
