@@ -1,0 +1,2992 @@
+Init
+AddGroup 88
+AddGroup 68
+AddGroup 28
+AddGroup 769
+AddGroup 970
+AddGroup 249
+AddGroup 89
+AddGroup 494
+AddGroup 687
+AddGroup 243
+AddGroup 677
+AddGroup 20
+AddGroup 342
+AddGroup 444
+AddGroup 292
+AddGroup 118
+AddGroup 456
+AddGroup 792
+AddGroup 738
+AddGroup 283
+AddGroup 401
+AddGroup 465
+AddGroup 269
+AddGroup 172
+AddGroup 540
+AddGroup 299
+AddGroup 76
+AddGroup 352
+AddGroup 847
+AddGroup 13
+AddGroup 326
+AddGroup 592
+AddGroup 534
+AddGroup 808
+AddGroup 635
+AddGroup 949
+AddGroup 161
+AddGroup 838
+AddGroup 375
+AddGroup 37
+AddGroup 998
+AddGroup 560
+AddGroup 520
+AddGroup 988
+AddGroup 937
+AddGroup 982
+AddGroup 749
+AddGroup 763
+AddGroup 392
+AddGroup 423
+AddGroup 709
+AddGroup 318
+AddGroup 241
+AddGroup 637
+AddGroup 441
+AddGroup 334
+AddGroup 459
+AddGroup 985
+AddGroup 412
+AddGroup 646
+AddGroup 845
+AddGroup 821
+AddGroup 829
+AddGroup 247
+AddGroup 961
+AddGroup 818
+AddGroup 974
+AddGroup 48
+AddGroup 874
+AddGroup 345
+AddGroup 411
+AddGroup 54
+AddGroup 256
+AddGroup 293
+AddGroup 432
+AddGroup 105
+AddGroup 522
+AddGroup 116
+AddGroup 571
+AddGroup 378
+AddGroup 214
+AddGroup 454
+AddGroup 253
+AddGroup 488
+AddGroup 822
+AddGroup 163
+AddGroup 921
+AddGroup 725
+AddGroup 898
+AddGroup 931
+AddPlayer 4569 845 2
+AddPlayer 2659 378 0
+AddPlayer 4829 292 3
+AddPlayer 4571 352 5
+AddPlayer 5683 763 6
+AddPlayer 9402 520 8
+AddPlayer 9011 898 2
+AddPlayer 6958 571 9
+AddPlayer 8628 571 0
+AddPlayer 2114 118 0
+AddPlayer 9204 637 4
+AddPlayer 562 243 9
+AddPlayer 1378 818 7
+AddPlayer 3568 118 3
+AddPlayer 7865 838 6
+AddPlayer 2421 520 5
+AddPlayer 954 171 5
+AddPlayer 6645 687 4
+AddPlayer 1553 874 6
+AddPlayer 6734 292 8
+AddPlayer 7665 749 2
+AddPlayer 6438 847 8
+AddPlayer 1511 982 7
+AddPlayer 3626 949 3
+AddPlayer 8539 352 8
+AddPlayer 4588 401 9
+AddPlayer 4148 921 7
+AddPlayer 9216 293 6
+AddPlayer 9616 444 1
+AddPlayer 3851 821 3
+AddPlayer 3570 988 1
+AddPlayer 2262 326 0
+AddPlayer 9241 161 6
+AddPlayer 1214 375 2
+AddPlayer 7069 937 6
+AddPlayer 5711 367 5
+AddPlayer 2199 522 6
+AddPlayer 6022 921 7
+AddPlayer 3718 125 9
+AddPlayer 7199 465 3
+AddPlayer 7635 28 2
+AddPlayer 5525 560 7
+AddPlayer 5599 818 0
+AddPlayer 1213 444 1
+AddPlayer 2031 88 5
+AddPlayer 4001 172 8
+AddPlayer 1032 937 5
+AddPlayer 6992 256 1
+AddPlayer 2217 214 3
+AddPlayer 3195 522 0
+AddPlayer 9218 687 2
+AddPlayer 509 352 2
+AddPlayer 2383 520 1
+AddPlayer 1206 37 9
+AddPlayer 6137 874 2
+AddPlayer 5898 386 8
+AddPlayer 3367 520 1
+AddPlayer 4122 921 9
+AddPlayer 2230 28 2
+AddPlayer 1550 988 1
+AddPlayer 2093 687 5
+AddPlayer 9751 792 8
+AddPlayer 3449 635 8
+AddPlayer 8761 375 4
+AddPlayer 4006 247 1
+AddPlayer 5585 949 2
+AddPlayer 8564 48 4
+AddPlayer 6312 769 2
+AddPlayer 3793 725 8
+AddPlayer 7299 845 0
+AddPlayer 2620 818 7
+AddPlayer 7338 432 9
+AddPlayer 4470 20 4
+AddPlayer 5797 171 0
+AddPlayer 8239 326 0
+AddPlayer 1445 931 1
+AddPlayer 4634 687 4
+AddPlayer 8229 874 6
+AddPlayer 5381 808 4
+AddPlayer 8605 635 2
+AddPlayer 4547 293 3
+AddPlayer 5917 299 6
+AddPlayer 7862 386 7
+AddPlayer 2369 709 0
+AddPlayer 4791 459 4
+AddPlayer 8249 937 9
+AddPlayer 4419 592 9
+AddPlayer 267 998 2
+AddPlayer 7269 68 8
+AddPlayer 2896 808 7
+AddPlayer 711 637 8
+AddPlayer 6048 214 7
+AddPlayer 770 534 6
+AddPlayer 6342 253 4
+AddPlayer 449 898 3
+AddPlayer 2518 423 7
+AddPlayer 7082 256 8
+AddPlayer 9581 26 2
+AddPlayer 4117 386 6
+AddPlayer 1261 326 2
+AddPlayer 6774 874 6
+AddPlayer 8010 253 7
+AddPlayer 4522 874 8
+AddPlayer 3552 534 6
+AddPlayer 4703 214 9
+AddPlayer 8960 974 0
+AddPlayer 1994 677 7
+AddPlayer 173 974 7
+AddPlayer 4059 345 4
+AddPlayer 5145 560 5
+AddPlayer 8508 367 0
+AddPlayer 6498 37 6
+AddPlayer 4362 709 9
+AddPlayer 3225 571 2
+AddPlayer 3170 974 6
+AddPlayer 5022 818 8
+AddPlayer 1890 808 9
+AddPlayer 2431 522 4
+AddPlayer 3477 116 6
+AddPlayer 9466 738 6
+AddPlayer 9689 985 5
+AddPlayer 3248 64 6
+AddPlayer 8797 961 6
+AddPlayer 9690 646 8
+AddPlayer 257 253 0
+AddPlayer 1383 76 9
+AddPlayer 5728 423 4
+AddPlayer 8147 118 2
+AddPlayer 4713 88 9
+AddPlayer 1967 256 5
+AddPlayer 9449 342 8
+AddPlayer 9564 769 2
+AddPlayer 3315 378 5
+AddPlayer 5752 432 6
+AddPlayer 1027 292 8
+AddPlayer 3384 118 8
+AddPlayer 738 821 4
+AddPlayer 4556 818 1
+AddPlayer 6702 540 8
+AddPlayer 7501 687 6
+AddPlayer 2788 459 5
+AddPlayer 3043 247 9
+AddPlayer 8347 20 1
+AddPlayer 8578 116 9
+AddPlayer 8119 465 5
+AddPlayer 406 937 7
+AddPlayer 1231 378 7
+AddPlayer 2143 523 8
+AddPlayer 3054 792 9
+AddPlayer 7337 299 4
+AddPlayer 9883 432 2
+AddPlayer 3846 738 3
+AddPlayer 4970 974 3
+AddPlayer 783 345 5
+AddPlayer 5353 163 9
+AddPlayer 1832 931 9
+AddPlayer 9866 874 4
+AddPlayer 1418 386 6
+AddPlayer 7539 792 9
+AddPlayer 8969 961 5
+AddPlayer 2717 982 9
+AddPlayer 6518 441 8
+AddPlayer 4315 89 0
+AddPlayer 2865 898 3
+AddPlayer 5009 456 4
+AddPlayer 3955 974 4
+AddPlayer 5200 677 2
+AddPlayer 1038 256 5
+AddPlayer 2449 299 5
+AddPlayer 1420 88 8
+AddPlayer 1045 64 0
+AddPlayer 8402 299 8
+AddPlayer 7253 822 2
+AddPlayer 8668 898 8
+AddPlayer 2770 171 1
+AddPlayer 4309 269 5
+AddPlayer 3677 725 3
+AddPlayer 9544 118 4
+AddPlayer 1606 406 4
+AddPlayer 6787 125 1
+AddPlayer 2440 292 7
+AddPlayer 4887 161 5
+AddPlayer 460 829 7
+AddPlayer 2327 334 8
+AddPlayer 9598 635 8
+AddPlayer 7014 494 3
+AddPlayer 1056 318 0
+AddPlayer 604 847 7
+AddPlayer 8066 432 5
+AddPlayer 1414 808 6
+AddPlayer 4298 687 2
+AddPlayer 4849 677 8
+AddPlayer 5457 172 0
+AddPlayer 1536 247 3
+AddPlayer 1972 982 3
+AddPlayer 232 88 0
+AddPlayer 215 441 9
+AddPlayer 8105 769 3
+AddPlayer 6328 465 3
+AddPlayer 4605 931 5
+AddPlayer 9125 269 7
+AddPlayer 5274 171 6
+AddPlayer 332 243 6
+AddPlayer 8194 54 7
+AddPlayer 3173 974 3
+AddPlayer 2090 677 7
+AddPlayer 5495 749 3
+AddPlayer 1440 76 3
+AddPlayer 5486 708 5
+AddPlayer 9267 874 6
+AddPlayer 6008 949 5
+AddPlayer 3098 454 2
+AddPlayer 4608 838 4
+AddPlayer 8040 540 3
+AddPlayer 7674 444 5
+AddPlayer 3870 253 3
+AddPlayer 8728 874 7
+AddPlayer 23 299 3
+AddPlayer 7581 534 6
+AddPlayer 4449 454 6
+AddPlayer 1633 494 8
+AddPlayer 4393 459 8
+AddPlayer 5827 89 1
+AddPlayer 598 318 3
+AddPlayer 9152 118 1
+AddPlayer 1486 646 3
+AddPlayer 3711 465 6
+AddPlayer 2127 367 1
+AddPlayer 5630 243 7
+AddPlayer 9961 838 7
+AddPlayer 3768 292 2
+AddPlayer 7024 921 0
+AddPlayer 3594 161 8
+AddPlayer 8009 454 5
+AddPlayer 5785 985 7
+AddPlayer 6815 441 4
+AddPlayer 6171 818 8
+AddPlayer 7828 845 5
+AddPlayer 9501 269 6
+AddPlayer 4291 534 6
+AddPlayer 1060 818 7
+AddPlayer 6524 105 3
+AddPlayer 9075 386 3
+AddPlayer 166 283 1
+AddPlayer 6896 961 6
+AddPlayer 5948 961 3
+AddPlayer 6626 454 9
+AddPlayer 903 931 6
+AddPlayer 7685 37 7
+AddPlayer 8558 243 3
+AddPlayer 2125 921 3
+AddPlayer 6015 970 0
+AddPlayer 8693 423 4
+AddPlayer 6368 163 4
+AddPlayer 4770 792 8
+AddPlayer 9458 105 3
+AddPlayer 7596 540 5
+AddPlayer 5256 763 9
+AddPlayer 6599 769 4
+AddPlayer 6389 171 2
+AddPlayer 8039 822 4
+AddPlayer 7476 749 0
+AddPlayer 2531 738 3
+AddPlayer 3531 172 5
+AddPlayer 8816 534 5
+AddPlayer 1090 465 3
+AddPlayer 2317 970 7
+AddPlayer 8648 13 3
+AddPlayer 843 423 8
+AddPlayer 6205 456 4
+AddPlayer 8911 345 8
+AddPlayer 2251 432 4
+AddPlayer 5768 26 8
+AddPlayer 4407 406 2
+AddPlayer 4702 709 0
+AddPlayer 2508 283 8
+AddPlayer 4657 708 8
+AddPlayer 9590 970 7
+AddPlayer 1710 459 0
+AddPlayer 2604 494 9
+AddPlayer 2519 540 3
+AddPlayer 5478 677 0
+AddPlayer 4368 738 5
+AddPlayer 8259 89 1
+AddPlayer 4594 444 4
+AddPlayer 7605 326 2
+AddPlayer 3860 738 1
+AddPlayer 2008 845 4
+AddPlayer 3340 76 7
+AddPlayer 5221 105 9
+AddPlayer 1067 921 9
+AddPlayer 9956 334 8
+AddPlayer 804 13 7
+AddPlayer 1688 172 6
+AddPlayer 1179 256 1
+AddPlayer 6197 769 4
+AddPlayer 9695 118 0
+AddPlayer 260 898 8
+AddPlayer 6742 13 2
+AddPlayer 9879 243 7
+AddPlayer 7880 37 0
+AddPlayer 5867 367 1
+AddPlayer 7515 822 0
+AddPlayer 9948 116 0
+AddPlayer 5260 247 8
+AddPlayer 2471 406 2
+AddPlayer 4882 818 7
+AddPlayer 9013 241 3
+AddPlayer 9905 378 9
+AddPlayer 5756 821 4
+AddPlayer 699 792 6
+AddPlayer 3063 677 5
+AddPlayer 3705 961 5
+AddPlayer 5938 334 4
+AddPlayer 3055 172 2
+AddPlayer 273 637 0
+AddPlayer 6380 64 8
+AddPlayer 5700 88 6
+AddPlayer 7592 792 9
+AddPlayer 1369 253 2
+AddPlayer 8823 76 2
+AddPlayer 1004 520 7
+AddPlayer 3097 985 4
+AddPlayer 2863 243 9
+AddPlayer 6099 921 5
+AddPlayer 2228 163 5
+AddPlayer 975 253 1
+AddPlayer 7384 256 2
+AddPlayer 2731 116 8
+AddPlayer 8491 822 9
+AddPlayer 8343 163 6
+AddPlayer 3686 818 8
+AddPlayer 8786 874 6
+AddPlayer 9796 116 6
+AddPlayer 9916 345 3
+AddPlayer 403 974 9
+AddPlayer 9559 243 5
+AddPlayer 1040 161 2
+AddPlayer 8573 432 2
+AddPlayer 7089 318 0
+AddPlayer 8433 283 5
+AddPlayer 1689 592 3
+AddPlayer 7752 253 8
+AddPlayer 8489 465 8
+AddPlayer 4669 401 6
+AddPlayer 2374 937 6
+AddPlayer 2292 749 5
+AddPlayer 3129 105 1
+AddPlayer 5241 326 5
+AddPlayer 5035 970 3
+AddPlayer 8224 386 5
+AddPlayer 5288 342 2
+AddPlayer 2637 687 1
+AddPlayer 6336 64 8
+AddPlayer 6142 534 3
+AddPlayer 219 560 6
+AddPlayer 8566 709 2
+AddPlayer 5045 454 1
+AddPlayer 7235 54 7
+AddPlayer 6087 592 6
+AddPlayer 6886 985 0
+AddPlayer 2826 161 3
+AddPlayer 5885 392 2
+AddPlayer 2495 635 4
+AddPlayer 7776 808 2
+AddPlayer 4457 214 8
+AddPlayer 7757 488 0
+AddPlayer 4712 247 4
+AddPlayer 9122 432 5
+AddPlayer 7878 432 3
+AddPlayer 7759 172 5
+AddPlayer 4764 243 0
+AddPlayer 441 411 4
+AddPlayer 6672 822 7
+AddPlayer 7950 345 6
+AddPlayer 5365 292 9
+AddPlayer 9254 465 8
+AddPlayer 7586 412 8
+AddPlayer 1481 161 8
+AddPlayer 387 845 3
+AddPlayer 9765 838 0
+AddPlayer 3532 412 3
+AddPlayer 5013 214 6
+AddPlayer 6003 299 1
+AddPlayer 8946 708 1
+AddPlayer 8705 998 0
+AddPlayer 9936 269 5
+AddPlayer 5678 970 4
+AddPlayer 1251 456 5
+AddPlayer 9808 822 9
+AddPlayer 2373 635 7
+AddPlayer 4474 847 0
+AddPlayer 6548 708 3
+AddPlayer 3208 28 5
+AddPlayer 990 432 7
+AddPlayer 6494 20 8
+AddPlayer 446 937 3
+AddPlayer 9811 921 4
+AddPlayer 4280 125 8
+AddPlayer 7043 171 6
+AddPlayer 9706 974 7
+AddPlayer 1603 253 1
+AddPlayer 1913 401 9
+AddPlayer 564 253 5
+AddPlayer 8759 847 2
+AddPlayer 8209 116 2
+AddPlayer 1248 998 2
+AddPlayer 821 456 1
+AddPlayer 5857 283 5
+AddPlayer 4971 845 8
+AddPlayer 9822 125 4
+AddPlayer 7050 874 2
+AddPlayer 7070 214 6
+AddPlayer 2903 488 3
+AddPlayer 4814 411 9
+AddPlayer 6129 406 4
+AddPlayer 6636 522 3
+AddPlayer 9649 161 4
+AddPlayer 2623 116 9
+AddPlayer 3528 342 3
+AddPlayer 6979 161 8
+AddPlayer 5307 769 6
+AddPlayer 6213 708 1
+AddPlayer 7230 48 6
+AddPlayer 5428 821 2
+AddPlayer 1959 293 1
+AddPlayer 5477 318 1
+AddPlayer 3320 961 4
+AddPlayer 209 454 5
+AddPlayer 1960 949 5
+AddPlayer 9283 534 1
+AddPlayer 6425 725 0
+AddPlayer 151 28 1
+AddPlayer 938 37 5
+AddPlayer 6047 406 8
+AddPlayer 4928 28 8
+AddPlayer 2552 818 7
+AddPlayer 3288 392 5
+AddPlayer 6123 412 5
+AddPlayer 8983 677 5
+AddPlayer 3871 982 5
+AddPlayer 3331 64 1
+AddPlayer 5418 13 2
+AddPlayer 2935 540 5
+AddPlayer 7538 465 4
+AddPlayer 3656 292 9
+AddPlayer 8943 444 1
+AddPlayer 158 738 2
+AddPlayer 1488 342 9
+AddPlayer 7696 89 3
+AddPlayer 1490 763 6
+AddPlayer 270 985 2
+AddPlayer 9113 411 2
+AddPlayer 4460 253 4
+AddPlayer 8846 37 2
+AddPlayer 935 292 0
+AddPlayer 9556 459 0
+AddPlayer 7063 214 0
+AddPlayer 9095 392 3
+AddPlayer 3546 592 5
+AddPlayer 8084 392 8
+AddPlayer 9154 847 8
+AddPlayer 9339 937 6
+AddPlayer 3077 725 4
+AddPlayer 1836 961 9
+AddPlayer 8323 161 9
+AddPlayer 345 829 3
+AddPlayer 488 974 7
+AddPlayer 5308 171 0
+AddPlayer 4299 269 5
+AddPlayer 3855 937 7
+AddPlayer 9014 37 8
+AddPlayer 4710 459 2
+AddPlayer 4481 28 4
+AddPlayer 9806 444 6
+AddPlayer 9312 352 4
+AddPlayer 6533 974 8
+AddPlayer 2774 125 9
+AddPlayer 3707 982 5
+AddPlayer 3928 454 0
+AddPlayer 3636 808 8
+AddPlayer 8493 161 9
+AddPlayer 3270 847 6
+AddPlayer 1963 68 4
+AddPlayer 5152 520 3
+AddPlayer 5730 687 2
+AddPlayer 5211 687 0
+AddPlayer 547 523 0
+AddPlayer 6034 283 1
+AddPlayer 6681 708 1
+AddPlayer 2708 105 3
+AddPlayer 527 299 4
+AddPlayer 5489 465 7
+AddPlayer 6236 592 9
+AddPlayer 9019 392 0
+AddPlayer 4798 763 5
+AddPlayer 1218 985 9
+AddPlayer 5262 378 7
+AddPlayer 8732 560 8
+AddPlayer 5487 709 1
+AddPlayer 7381 243 5
+AddPlayer 6503 283 3
+AddPlayer 632 540 2
+AddPlayer 2686 342 9
+AddPlayer 2022 26 0
+AddPlayer 6631 970 4
+AddPlayer 5352 326 0
+AddPlayer 8317 334 6
+AddPlayer 4544 352 9
+AddPlayer 3730 163 6
+AddPlayer 3700 709 0
+AddPlayer 5281 406 5
+AddPlayer 8529 269 8
+AddPlayer 5005 378 9
+AddPlayer 5229 465 3
+AddPlayer 6293 214 5
+AddPlayer 9987 931 1
+AddPlayer 2083 249 1
+AddPlayer 2569 687 1
+AddPlayer 2024 931 4
+AddPlayer 3421 28 0
+AddPlayer 3120 118 0
+AddPlayer 4420 592 5
+AddPlayer 2260 949 6
+AddPlayer 6276 494 1
+AddPlayer 8272 571 2
+AddPlayer 2856 253 9
+AddPlayer 1373 949 1
+AddPlayer 9182 459 6
+AddPlayer 3695 64 8
+AddPlayer 5586 560 4
+AddPlayer 3128 243 6
+AddPlayer 3461 637 0
+AddPlayer 2744 392 0
+AddPlayer 9814 488 8
+AddPlayer 3145 406 1
+AddPlayer 485 375 6
+AddPlayer 5920 299 8
+AddPlayer 8768 808 2
+AddPlayer 3785 821 8
+AddPlayer 645 48 6
+AddPlayer 883 293 1
+AddPlayer 364 20 5
+AddPlayer 2625 64 2
+AddPlayer 6780 821 9
+AddPlayer 7933 845 7
+AddPlayer 1304 214 4
+AddPlayer 9709 456 6
+AddPlayer 4715 738 4
+AddPlayer 7634 749 5
+AddPlayer 1145 708 8
+AddPlayer 8737 961 7
+AddPlayer 879 465 1
+AddPlayer 4786 20 7
+AddPlayer 867 646 9
+AddPlayer 5747 592 2
+AddPlayer 3002 171 4
+AddPlayer 9244 116 2
+AddPlayer 1966 845 3
+AddPlayer 7442 161 1
+AddPlayer 6782 247 8
+AddPlayer 3537 534 1
+AddPlayer 3454 249 9
+AddPlayer 2561 105 4
+AddPlayer 339 821 1
+AddPlayer 4292 465 3
+AddPlayer 6372 299 7
+AddPlayer 7455 937 3
+AddPlayer 2915 241 1
+AddPlayer 3265 488 0
+AddPlayer 8739 125 5
+AddPlayer 5763 253 7
+AddPlayer 318 829 8
+AddPlayer 4953 829 6
+AddPlayer 2914 821 0
+AddPlayer 5829 269 7
+AddPlayer 6439 163 4
+AddPlayer 7551 105 6
+AddPlayer 2380 54 2
+AddPlayer 9418 677 3
+AddPlayer 5258 441 0
+AddPlayer 6011 637 5
+AddPlayer 2116 64 4
+AddPlayer 9937 982 1
+AddPlayer 8899 89 6
+AddPlayer 6768 822 6
+AddPlayer 6382 88 5
+AddPlayer 4717 874 2
+AddPlayer 6605 68 4
+AddPlayer 1009 677 3
+AddPlayer 322 299 9
+AddPlayer 8453 845 4
+AddPlayer 2590 985 2
+AddPlayer 1971 821 5
+AddPlayer 2052 412 3
+AddPlayer 8616 411 5
+AddPlayer 1165 792 1
+AddPlayer 1405 982 6
+AddPlayer 9790 118 0
+AddPlayer 7760 821 4
+AddPlayer 4836 982 5
+AddPlayer 5738 406 7
+AddPlayer 9603 646 9
+AddPlayer 4029 520 8
+AddPlayer 102 982 0
+AddPlayer 5979 488 5
+AddPlayer 9932 998 4
+AddPlayer 434 763 6
+AddPlayer 1905 635 8
+AddPlayer 9966 386 2
+AddPlayer 6044 283 4
+AddPlayer 1037 392 1
+AddPlayer 249 68 2
+AddPlayer 5184 88 8
+AddPlayer 638 89 2
+AddPlayer 5373 808 9
+AddPlayer 8662 459 0
+AddPlayer 8152 26 1
+AddPlayer 8504 988 3
+AddPlayer 9145 921 5
+AddPlayer 2965 560 9
+AddPlayer 2154 592 6
+AddPlayer 3458 88 5
+AddPlayer 5821 520 5
+AddPlayer 7111 241 6
+AddPlayer 6505 253 3
+AddPlayer 5244 961 0
+AddPlayer 94 68 6
+AddPlayer 2038 28 7
+AddPlayer 3708 635 5
+AddPlayer 9622 998 1
+AddPlayer 4127 998 4
+AddPlayer 8273 401 9
+AddPlayer 5914 125 8
+AddPlayer 3941 68 7
+AddPlayer 3889 709 1
+AddPlayer 6230 961 1
+AddPlayer 6944 88 9
+AddPlayer 3262 749 0
+AddPlayer 2407 874 3
+AddPlayer 3180 249 1
+AddPlayer 8122 454 6
+AddPlayer 4876 961 7
+AddPlayer 2344 243 3
+AddPlayer 1152 921 7
+AddPlayer 7181 444 8
+AddPlayer 3471 68 3
+AddPlayer 8961 687 8
+AddPlayer 3794 125 1
+AddPlayer 3365 459 7
+AddPlayer 6480 454 3
+AddPlayer 483 283 6
+AddPlayer 8898 961 3
+AddPlayer 7281 488 8
+AddPlayer 5336 749 7
+AddPlayer 675 998 3
+AddPlayer 2222 937 4
+AddPlayer 6104 13 5
+AddPlayer 3434 378 2
+AddPlayer 8610 829 7
+AddPlayer 2760 459 2
+AddPlayer 1480 494 7
+AddPlayer 471 247 4
+AddPlayer 1515 709 0
+AddPlayer 7959 13 7
+AddPlayer 7583 68 4
+AddPlayer 7958 256 4
+AddPlayer 5181 243 8
+AddPlayer 1770 161 3
+AddPlayer 6502 28 0
+AddPlayer 3295 898 7
+AddPlayer 8353 342 8
+AddPlayer 3460 687 9
+AddPlayer 3564 821 7
+AddPlayer 2321 456 4
+AddPlayer 6651 821 9
+AddPlayer 7334 172 5
+AddPlayer 3930 378 9
+AddPlayer 4526 20 3
+AddPlayer 8494 847 3
+AddPlayer 8403 342 7
+AddPlayer 6537 520 0
+AddPlayer 8824 974 6
+AddPlayer 9718 725 7
+AddPlayer 235 456 0
+AddPlayer 2355 898 8
+AddPlayer 9190 677 2
+AddPlayer 2822 423 9
+AddPlayer 9120 345 6
+AddPlayer 1857 974 1
+AddPlayer 8995 970 9
+AddPlayer 9666 709 2
+AddPlayer 1800 540 4
+AddPlayer 8597 171 8
+AddPlayer 81 345 5
+AddPlayer 2351 560 6
+AddPlayer 8568 299 0
+AddPlayer 1625 646 1
+AddPlayer 2362 412 2
+AddPlayer 1493 118 2
+AddPlayer 3206 406 8
+AddPlayer 9065 401 9
+AddPlayer 1357 998 3
+AddPlayer 3300 161 4
+AddPlayer 9593 456 4
+AddPlayer 5333 845 7
+AddPlayer 7951 970 8
+AddPlayer 6150 411 3
+AddPlayer 639 318 2
+AddPlayer 2129 763 6
+AddPlayer 1149 874 3
+AddPlayer 5879 161 4
+AddPlayer 1409 838 4
+AddPlayer 3282 163 7
+AddPlayer 8034 459 9
+AddPlayer 4276 292 9
+AddPlayer 9848 921 3
+AddPlayer 197 985 7
+AddPlayer 6032 571 8
+AddPlayer 5046 26 5
+AddPlayer 5225 241 2
+AddPlayer 185 386 2
+AddPlayer 8140 635 3
+AddPlayer 96 709 6
+AddPlayer 1764 20 6
+AddPlayer 2091 635 9
+AddPlayer 2892 76 5
+AddPlayer 1532 392 6
+AddPlayer 4795 456 7
+AddPlayer 16 540 3
+AddPlayer 9476 13 4
+AddPlayer 1308 247 6
+AddPlayer 1821 845 5
+AddPlayer 5205 269 3
+AddPlayer 2465 523 7
+AddPlayer 4881 838 8
+AddPlayer 6283 172 6
+AddPlayer 8173 931 8
+AddPlayer 7403 592 2
+AddPlayer 7554 88 1
+AddPlayer 8003 249 5
+AddPlayer 2952 847 2
+AddPlayer 1000 821 4
+AddPlayer 6688 821 9
+AddPlayer 3453 256 2
+AddPlayer 5887 725 1
+AddPlayer 9509 54 9
+AddPlayer 3802 738 5
+AddPlayer 921 411 4
+AddPlayer 2673 708 4
+AddPlayer 9602 949 9
+AddPlayer 7677 998 0
+AddPlayer 342 974 4
+AddPlayer 5251 974 6
+AddPlayer 573 465 5
+AddPlayer 4810 241 1
+AddPlayer 2739 838 1
+AddPlayer 4557 898 9
+AddPlayer 3326 326 2
+AddPlayer 2444 367 9
+AddPlayer 4598 792 2
+AddPlayer 1096 961 5
+AddPlayer 8480 367 3
+AddPlayer 1980 423 8
+AddPlayer 2299 646 9
+AddPlayer 2039 738 5
+AddPlayer 9659 89 3
+AddPlayer 5168 763 2
+AddPlayer 99 708 7
+AddPlayer 9481 709 2
+AddPlayer 1316 592 4
+AddPlayer 8280 292 6
+AddPlayer 2667 241 4
+AddPlayer 9318 28 6
+AddPlayer 3410 921 6
+AddPlayer 7980 172 4
+AddPlayer 4862 985 7
+AddPlayer 4705 444 9
+AddPlayer 4222 318 2
+AddPlayer 8235 465 3
+AddPlayer 2636 20 5
+AddPlayer 3299 454 4
+AddPlayer 2949 20 9
+AddPlayer 7119 931 8
+AddPlayer 4076 571 1
+AddPlayer 9911 821 7
+AddPlayer 4857 456 9
+AddPlayer 1463 392 5
+AddPlayer 7941 898 0
+AddPlayer 4339 808 4
+AddPlayer 9295 48 5
+AddPlayer 9785 88 9
+AddPlayer 6720 249 1
+AddPlayer 9052 54 6
+AddPlayer 9560 829 0
+AddPlayer 3472 293 0
+AddPlayer 3950 444 9
+AddPlayer 1771 646 1
+AddPlayer 8307 874 2
+AddPlayer 2618 520 8
+AddPlayer 8964 687 3
+AddPlayer 7453 520 8
+AddPlayer 3917 292 0
+AddPlayer 9462 253 3
+AddPlayer 8387 845 2
+AddPlayer 9637 738 8
+AddPlayer 5090 970 6
+AddPlayer 6232 534 1
+AddPlayer 3543 738 5
+AddPlayer 2828 28 2
+AddPlayer 2961 88 0
+AddPlayer 8363 318 2
+AddPlayer 5910 845 4
+AddPlayer 7859 465 6
+AddPlayer 4221 808 1
+AddPlayer 8836 708 9
+AddPlayer 890 687 7
+AddPlayer 9863 792 2
+AddPlayer 1720 847 5
+AddPlayer 430 838 0
+AddPlayer 6269 411 3
+AddPlayer 4138 48 4
+AddPlayer 7943 646 6
+AddPlayer 9478 974 9
+AddPlayer 2599 48 0
+AddPlayer 8925 459 0
+AddPlayer 164 432 1
+AddPlayer 6033 520 7
+AddPlayer 5703 54 4
+AddPlayer 1713 318 9
+AddPlayer 2282 520 7
+AddPlayer 2685 520 2
+AddPlayer 2838 161 7
+AddPlayer 3029 829 0
+AddPlayer 2976 352 3
+AddPlayer 1879 822 7
+AddPlayer 7711 375 3
+AddPlayer 3678 28 4
+AddPlayer 4992 898 4
+AddPlayer 6928 64 3
+AddPlayer 5151 269 2
+AddPlayer 1083 974 0
+AddPlayer 5094 763 9
+AddPlayer 3582 749 8
+AddPlayer 6525 534 8
+AddPlayer 595 406 2
+AddPlayer 1514 725 5
+AddPlayer 4326 375 1
+AddPlayer 6834 116 3
+AddPlayer 2140 792 0
+AddPlayer 3659 571 3
+AddPlayer 8110 847 1
+AddPlayer 6677 821 3
+AddPlayer 2592 118 4
+AddPlayer 7510 172 4
+AddPlayer 9601 769 6
+AddPlayer 7423 961 3
+AddPlayer 95 412 4
+AddPlayer 7368 378 4
+AddPlayer 2268 256 2
+AddPlayer 1459 411 3
+AddPlayer 2496 982 1
+AddPlayer 2734 401 0
+AddPlayer 9819 456 4
+AddPlayer 7560 256 3
+AddPlayer 2064 687 4
+AddPlayer 5803 769 3
+AddPlayer 916 243 0
+AddPlayer 3118 64 1
+AddPlayer 6801 637 3
+AddPlayer 1023 488 6
+AddPlayer 6878 401 6
+AddPlayer 4572 326 0
+AddPlayer 1758 64 3
+AddPlayer 6026 64 0
+AddPlayer 2950 441 4
+AddPlayer 4157 392 1
+AddPlayer 1289 494 3
+AddPlayer 7114 818 4
+AddPlayer 9759 522 4
+AddPlayer 1534 48 6
+AddPlayer 8431 88 6
+AddPlayer 9512 318 2
+AddPlayer 6241 37 0
+AddPlayer 3082 818 8
+AddPlayer 2707 326 8
+AddPlayer 6867 456 3
+AddPlayer 7042 792 0
+AddPlayer 7978 256 0
+AddPlayer 2693 988 2
+AddPlayer 4255 105 2
+AddPlayer 9626 26 8
+AddPlayer 7347 163 1
+AddPlayer 2360 423 0
+AddPlayer 1581 571 4
+AddPlayer 6072 822 1
+AddPlayer 6463 26 6
+AddPlayer 7627 454 5
+AddPlayer 4369 444 0
+AddPlayer 9843 985 4
+GetGroupsHighestLevel 13
+ReplaceGroup 423 646
+AddGroup 26
+AddPlayer 1378 763 6
+IncreaseLevel 158 4
+IncreaseLevel 4555 3
+RemovePlayer 9649
+IncreaseLevel 9418 5
+ReplaceGroup 68 637
+AddPlayer 9758 249 2
+IncreaseLevel 8239 5
+ReplaceGroup 326 412
+AddPlayer 954 48 8
+AddGroup 961
+IncreaseLevel 4420 2
+ReplaceGroup 523 822
+ReplaceGroup 522 299
+ReplaceGroup 26 20
+IncreaseLevel 9626 4
+IncreaseLevel 1931 4
+IncreaseLevel 2949 3
+ReplaceGroup 749 769
+IncreaseLevel 3097 1
+GetGroupsHighestLevel 34
+IncreaseLevel 7859 4
+GetHighestLevel 283
+IncreaseLevel 2052 4
+IncreaseLevel 3449 5
+ReplaceGroup 708 64
+ReplaceGroup 821 523
+GetGroupsHighestLevel 52
+GetHighestLevel 406
+IncreaseLevel 8693 4
+IncreaseLevel 2327 4
+GetAllPlayersByLevel 292
+ReplaceGroup 725 13
+AddGroup 522
+IncreaseLevel 8898 1
+RemovePlayer 7605
+IncreaseLevel 5489 5
+RemovePlayer 7056
+ReplaceGroup 898 988
+GetHighestLevel -1
+AddGroup 352
+IncreaseLevel 1959 5
+ReplaceGroup 454 293
+AddPlayer 3477 105 1
+AddPlayer 6171 738 8
+GetHighestLevel 829
+IncreaseLevel 4876 4
+IncreaseLevel 6294 2
+GetHighestLevel 241
+GetAllPlayersByLevel 334
+ReplaceGroup 345 592
+AddGroup 241
+IncreaseLevel 5308 1
+IncreaseLevel 8961 1
+IncreaseLevel 6382 5
+RemovePlayer 6026
+IncreaseLevel 7042 3
+ReplaceGroup 64 985
+IncreaseLevel 8310 5
+IncreaseLevel 7043 4
+RemovePlayer 9152
+IncreaseLevel 1972 4
+IncreaseLevel 9120 3
+IncreaseLevel 2111 5
+IncreaseLevel 9544 1
+GetHighestLevel 125
+IncreaseLevel 7828 3
+IncreaseLevel 6312 1
+IncreaseLevel 3145 2
+ReplaceGroup 646 847
+GetGroupsHighestLevel 26
+IncreaseLevel 595 3
+AddGroup 829
+IncreaseLevel 7959 1
+ReplaceGroup 423 116
+GetAllPlayersByLevel -1
+RemovePlayer 3768
+GetHighestLevel 534
+IncreaseLevel 483 3
+IncreaseLevel 5260 3
+ReplaceGroup 961 534
+AddPlayer 9011 345 6
+IncreaseLevel 5333 2
+IncreaseLevel 7403 4
+RemovePlayer 4953
+RemovePlayer 9339
+ReplaceGroup 763 970
+AddGroup 256
+ReplaceGroup 970 172
+ReplaceGroup 540 937
+ReplaceGroup 821 792
+ReplaceGroup 792 838
+GetHighestLevel 345
+AddPlayer 3695 292 6
+AddPlayer 8605 829 6
+IncreaseLevel 2734 1
+AddPlayer 9075 808 8
+AddGroup 808
+IncreaseLevel 4544 5
+GetHighestLevel 172
+IncreaseLevel 6505 2
+AddPlayer 7253 646 4
+ReplaceGroup 247 105
+GetHighestLevel 37
+GetHighestLevel 494
+GetHighestLevel 48
+ReplaceGroup 808 26
+GetGroupsHighestLevel 13
+ReplaceGroup 970 520
+IncreaseLevel 9148 3
+IncreaseLevel 7281 2
+IncreaseLevel 8558 5
+IncreaseLevel 4544 2
+ReplaceGroup 931 214
+IncreaseLevel 7069 1
+IncreaseLevel 1980 3
+AddPlayer 1032 687 2
+ReplaceGroup 411 488
+IncreaseLevel 9601 1
+AddPlayer 6171 423 9
+ReplaceGroup 845 494
+ReplaceGroup 292 375
+RemovePlayer 8353
+IncreaseLevel 6129 1
+IncreaseLevel 9559 1
+ReplaceGroup 20 637
+ReplaceGroup 635 54
+IncreaseLevel 2518 4
+ReplaceGroup 26 838
+GetAllPlayersByLevel 465
+IncreaseLevel 3331 1
+ReplaceGroup 432 459
+ReplaceGroup 367 68
+ReplaceGroup 68 48
+AddGroup 406
+ReplaceGroup 898 488
+RemovePlayer 9113
+IncreaseLevel 2083 2
+ReplaceGroup 26 592
+AddGroup 89
+ReplaceGroup 37 441
+GetHighestLevel 247
+IncreaseLevel 1960 3
+IncreaseLevel 6382 1
+AddGroup 822
+ReplaceGroup 401 214
+ReplaceGroup 459 412
+RemovePlayer 1440
+ReplaceGroup 283 769
+ReplaceGroup 76 326
+IncreaseLevel 2482 4
+IncreaseLevel 6269 4
+IncreaseLevel 3532 3
+IncreaseLevel 8403 4
+GetHighestLevel 118
+ReplaceGroup 326 423
+RemovePlayer 5887
+AddPlayer 1550 116 2
+ReplaceGroup 838 708
+ReplaceGroup 299 822
+GetAllPlayersByLevel 241
+ReplaceGroup 520 441
+ReplaceGroup 488 125
+AddPlayer 7596 256 3
+ReplaceGroup 821 898
+ReplaceGroup 687 367
+ReplaceGroup 125 821
+AddGroup 520
+IncreaseLevel 4857 3
+GetGroupsHighestLevel 30
+IncreaseLevel 4339 5
+ReplaceGroup 845 345
+IncreaseLevel 471 1
+IncreaseLevel 3120 1
+GetHighestLevel 253
+GetAllPlayersByLevel 792
+AddGroup 646
+AddPlayer 2618 13 2
+GetHighestLevel -1
+IncreaseLevel 4280 5
+GetAllPlayersByLevel 318
+ReplaceGroup 708 708
+GetGroupsHighestLevel 42
+ReplaceGroup 412 898
+AddPlayer 1665 318 7
+GetHighestLevel 37
+IncreaseLevel 3300 5
+AddGroup 821
+GetHighestLevel 874
+IncreaseLevel 5035 1
+IncreaseLevel 4605 1
+ReplaceGroup 822 970
+IncreaseLevel 6992 1
+ReplaceGroup 988 818
+AddGroup 432
+AddPlayer 2129 931 8
+ReplaceGroup 635 269
+AddGroup 534
+IncreaseLevel 6022 1
+ReplaceGroup 76 818
+IncreaseLevel 2091 2
+IncreaseLevel 5772 4
+AddGroup 921
+AddGroup 318
+RemovePlayer 5251
+IncreaseLevel 6301 1
+GetAllPlayersByLevel 375
+IncreaseLevel 7980 2
+IncreaseLevel 5249 2
+IncreaseLevel 1045 2
+ReplaceGroup 89 454
+IncreaseLevel 7757 1
+IncreaseLevel 8453 1
+ReplaceGroup 326 523
+IncreaseLevel 3564 5
+IncreaseLevel 5205 2
+GetGroupsHighestLevel 50
+AddGroup 88
+ReplaceGroup 725 874
+IncreaseLevel 8648 5
+AddPlayer 1758 256 5
+IncreaseLevel 332 1
+AddPlayer 6742 822 7
+GetGroupsHighestLevel 28
+RemovePlayer 3043
+AddPlayer 9478 54 1
+AddGroup 13
+ReplaceGroup 763 406
+ReplaceGroup 444 392
+ReplaceGroup 412 54
+AddPlayer 4173 494 8
+IncreaseLevel 6015 3
+AddGroup 214
+IncreaseLevel 4705 5
+IncreaseLevel 6048 5
+GetAllPlayersByLevel 401
+RemovePlayer 6197
+IncreaseLevel 3930 5
+AddGroup 37
+ReplaceGroup 37 76
+GetHighestLevel 269
+GetHighestLevel 821
+IncreaseLevel 5772 1
+IncreaseLevel 7560 3
+IncreaseLevel 2604 2
+IncreaseLevel 509 3
+IncreaseLevel 632 5
+RemovePlayer 5879
+IncreaseLevel 6780 3
+IncreaseLevel 1192 3
+AddPlayer 1218 792 7
+IncreaseLevel 7605 4
+GetAllPlayersByLevel 847
+ReplaceGroup 64 847
+ReplaceGroup 367 998
+ReplaceGroup 725 411
+IncreaseLevel 7696 4
+GetAllPlayersByLevel 432
+ReplaceGroup 738 367
+ReplaceGroup 253 982
+IncreaseLevel 921 4
+GetAllPlayersByLevel 534
+ReplaceGroup 68 571
+IncreaseLevel 9295 4
+ReplaceGroup 37 829
+IncreaseLevel 5244 4
+IncreaseLevel 6944 5
+IncreaseLevel 9811 1
+AddGroup 792
+IncreaseLevel 4148 3
+IncreaseLevel 3678 3
+ReplaceGroup 635 749
+ReplaceGroup 171 249
+IncreaseLevel 975 4
+IncreaseLevel 6276 2
+AddPlayer 6533 48 7
+AddGroup 646
+GetAllPlayersByLevel -1
+AddGroup 37
+AddPlayer 6129 88 6
+IncreaseLevel 6599 5
+IncreaseLevel 8272 5
+AddGroup 838
+GetAllPlayersByLevel 818
+ReplaceGroup 818 523
+IncreaseLevel 935 4
+ReplaceGroup 931 465
+IncreaseLevel 1603 3
+AddPlayer 6881 961 0
+GetAllPlayersByLevel 749
+IncreaseLevel 5181 3
+IncreaseLevel 3340 2
+AddGroup 494
+ReplaceGroup 974 37
+IncreaseLevel 5898 4
+IncreaseLevel 2260 2
+IncreaseLevel 6342 2
+IncreaseLevel 2373 1
+ReplaceGroup 520 26
+GetGroupsHighestLevel 44
+GetAllPlayersByLevel -1
+ReplaceGroup 247 334
+IncreaseLevel 6787 2
+AddPlayer 23 829 6
+IncreaseLevel 249 2
+ReplaceGroup 985 488
+IncreaseLevel 257 1
+IncreaseLevel 1214 4
+GetHighestLevel 125
+GetAllPlayersByLevel 465
+GetHighestLevel 822
+IncreaseLevel 2828 1
+IncreaseLevel 4569 2
+IncreaseLevel 5857 4
+ReplaceGroup 949 444
+IncreaseLevel 4460 3
+AddGroup 64
+RemovePlayer 5151
+IncreaseLevel 7347 5
+IncreaseLevel 9706 5
+GetAllPlayersByLevel 125
+AddPlayer 3063 560 6
+IncreaseLevel 6293 3
+ReplaceGroup 738 829
+IncreaseLevel 4420 3
+GetAllPlayersByLevel 13
+GetHighestLevel 459
+GetHighestLevel 292
+GetGroupsHighestLevel 50
+IncreaseLevel 2321 4
+IncreaseLevel 1420 1
+GetHighestLevel 974
+AddGroup 386
+GetGroupsHighestLevel 22
+AddPlayer 7738 299 8
+GetAllPlayersByLevel 171
+IncreaseLevel 8943 3
+AddGroup 520
+IncreaseLevel 2903 3
+AddPlayer 4605 523 4
+AddGroup 412
+AddGroup 738
+IncreaseLevel 9148 3
+GetHighestLevel 494
+AddGroup 708
+IncreaseLevel 3851 2
+RemovePlayer 729
+ReplaceGroup 749 818
+IncreaseLevel 8429 4
+IncreaseLevel 8403 2
+IncreaseLevel 2230 4
+AddGroup 367
+ReplaceGroup 163 411
+IncreaseLevel 1971 3
+IncreaseLevel 9120 2
+IncreaseLevel 573 2
+IncreaseLevel 5336 4
+AddPlayer 8797 432 1
+IncreaseLevel 6328 4
+IncreaseLevel 604 5
+ReplaceGroup 367 89
+AddGroup 488
+ReplaceGroup 937 763
+GetHighestLevel -1
+ReplaceGroup 401 293
+IncreaseLevel 8493 2
+IncreaseLevel 3851 1
+ReplaceGroup 386 821
+AddGroup 637
+ReplaceGroup 522 299
+IncreaseLevel 2039 1
+ReplaceGroup 125 818
+ReplaceGroup 749 522
+ReplaceGroup 76 488
+ReplaceGroup 412 342
+RemovePlayer 4582
+GetAllPlayersByLevel 432
+AddGroup 970
+AddPlayer 9866 163 2
+GetGroupsHighestLevel 6
+ReplaceGroup 749 432
+GetAllPlayersByLevel 454
+IncreaseLevel 4703 2
+RemovePlayer 6958
+IncreaseLevel 9718 4
+AddGroup 352
+IncreaseLevel 2360 1
+ReplaceGroup 749 172
+GetAllPlayersByLevel 48
+IncreaseLevel 1688 3
+ReplaceGroup 974 540
+GetHighestLevel 76
+IncreaseLevel 6033 1
+ReplaceGroup 293 456
+IncreaseLevel 9052 2
+IncreaseLevel 1534 3
+GetHighestLevel 54
+ReplaceGroup 635 293
+IncreaseLevel 8761 5
+ReplaceGroup 214 441
+RemovePlayer 94
+GetAllPlayersByLevel 432
+RemovePlayer 4221
+GetAllPlayersByLevel 406
+IncreaseLevel 1414 2
+AddPlayer 342 68 0
+AddPlayer 9938 392 3
+IncreaseLevel 387 5
+ReplaceGroup 37 822
+IncreaseLevel 8034 5
+IncreaseLevel 4173 2
+IncreaseLevel 5256 3
+ReplaceGroup 161 105
+GetGroupsHighestLevel 40
+GetGroupsHighestLevel 3
+ReplaceGroup 256 838
+GetAllPlayersByLevel 406
+IncreaseLevel 3017 4
+AddPlayer 2228 637 8
+IncreaseLevel 916 5
+GetHighestLevel 28
+RemovePlayer 2362
+ReplaceGroup 161 116
+AddPlayer 890 725 4
+AddPlayer 4887 28 9
+IncreaseLevel 6276 1
+ReplaceGroup 105 769
+IncreaseLevel 604 3
+AddPlayer 4076 318 6
+GetAllPlayersByLevel 985
+GetGroupsHighestLevel 2
+ReplaceGroup 441 20
+GetGroupsHighestLevel 46
+ReplaceGroup 161 68
+RemovePlayer 738
+IncreaseLevel 640 3
+IncreaseLevel 2531 1
+GetGroupsHighestLevel 26
+GetHighestLevel 171
+IncreaseLevel 3700 4
+GetHighestLevel 763
+IncreaseLevel 2903 1
+IncreaseLevel 9808 1
+IncreaseLevel 5786 2
+AddGroup 560
+ReplaceGroup 432 125
+AddGroup 441
+ReplaceGroup 749 299
+GetAllPlayersByLevel 54
+ReplaceGroup 792 386
+AddPlayer 235 838 8
+GetGroupsHighestLevel 9
+ReplaceGroup 749 247
+RemovePlayer 1316
+ReplaceGroup 520 378
+IncreaseLevel 9905 5
+IncreaseLevel 3299 5
+ReplaceGroup 76 677
+AddGroup 769
+GetHighestLevel 961
+ReplaceGroup 444 708
+IncreaseLevel 2292 1
+ReplaceGroup 749 970
+ReplaceGroup 412 249
+ReplaceGroup 375 68
+IncreaseLevel 1418 3
+ReplaceGroup 386 125
+ReplaceGroup 293 299
+IncreaseLevel 6232 1
+ReplaceGroup 937 88
+IncreaseLevel 4460 1
+AddGroup 571
+IncreaseLevel 5256 2
+AddPlayer 158 253 9
+AddPlayer 8701 64 2
+RemovePlayer 9593
+ReplaceGroup 54 847
+IncreaseLevel 9088 1
+AddGroup 249
+GetHighestLevel 432
+GetAllPlayersByLevel 949
+AddPlayer 9649 161 5
+IncreaseLevel 2083 3
+AddGroup 214
+AddPlayer 5747 687 5
+IncreaseLevel 5772 3
+GetHighestLevel 982
+ReplaceGroup 318 845
+IncreaseLevel 339 4
+IncreaseLevel 5979 5
+IncreaseLevel 4992 5
+IncreaseLevel 7453 3
+IncreaseLevel 406 4
+RemovePlayer 9145
+ReplaceGroup 738 763
+RemovePlayer 2531
+AddGroup 392
+IncreaseLevel 935 1
+IncreaseLevel 9765 2
+RemovePlayer 318
+IncreaseLevel 640 2
+AddGroup 118
+ReplaceGroup 982 386
+IncreaseLevel 507 2
+GetHighestLevel 401
+GetHighestLevel 28
+AddGroup 988
+AddGroup 401
+ReplaceGroup 76 523
+RemovePlayer 7299
+IncreaseLevel 6123 3
+GetAllPlayersByLevel 68
+IncreaseLevel 6033 2
+GetGroupsHighestLevel 8
+ReplaceGroup 118 161
+ReplaceGroup 687 949
+ReplaceGroup 105 847
+IncreaseLevel 6294 1
+GetGroupsHighestLevel 27
+AddGroup 763
+GetHighestLevel 243
+GetHighestLevel 838
+AddPlayer 8034 818 3
+IncreaseLevel 5221 3
+IncreaseLevel 2903 2
+ReplaceGroup 988 26
+AddGroup 283
+AddGroup 37
+GetAllPlayersByLevel 709
+IncreaseLevel 4299 5
+RemovePlayer 783
+ReplaceGroup 974 253
+IncreaseLevel 2091 1
+GetGroupsHighestLevel 33
+ReplaceGroup 345 118
+ReplaceGroup 818 571
+IncreaseLevel 3128 3
+ReplaceGroup 792 256
+GetHighestLevel 874
+IncreaseLevel 1931 2
+IncreaseLevel 1879 5
+ReplaceGroup 334 116
+IncreaseLevel 4276 1
+GetGroupsHighestLevel 22
+GetHighestLevel 293
+IncreaseLevel 3421 2
+GetHighestLevel 253
+IncreaseLevel 9806 2
+ReplaceGroup 534 465
+ReplaceGroup 985 269
+IncreaseLevel 235 1
+AddPlayer 5797 116 1
+IncreaseLevel 4702 3
+GetAllPlayersByLevel -1
+IncreaseLevel 2966 2
+GetAllPlayersByLevel 921
+AddPlayer 9218 412 3
+IncreaseLevel 8568 3
+ReplaceGroup 970 847
+IncreaseLevel 595 3
+IncreaseLevel 7760 5
+IncreaseLevel 9520 1
+IncreaseLevel 8610 2
+AddGroup 412
+RemovePlayer 2822
+ReplaceGroup 283 677
+ReplaceGroup 54 441
+IncreaseLevel 2822 1
+IncreaseLevel 8846 3
+ReplaceGroup 406 293
+ReplaceGroup 68 571
+IncreaseLevel 1038 4
+GetGroupsHighestLevel 11
+GetGroupsHighestLevel 23
+AddGroup 998
+RemovePlayer 6958
+AddPlayer 1515 256 5
+IncreaseLevel 1931 4
+IncreaseLevel 6498 1
+IncreaseLevel 729 3
+GetHighestLevel 818
+IncreaseLevel 95 2
+GetGroupsHighestLevel 41
+IncreaseLevel 3098 3
+ReplaceGroup 401 125
+IncreaseLevel 3955 1
+GetGroupsHighestLevel 12
+IncreaseLevel 2373 4
+AddGroup 105
+AddGroup 243
+ReplaceGroup 256 874
+AddPlayer 9244 342 8
+RemovePlayer 1980
+AddGroup 283
+IncreaseLevel 7978 1
+GetGroupsHighestLevel 36
+ReplaceGroup 423 423
+IncreaseLevel 2055 5
+ReplaceGroup 465 125
+ReplaceGroup 253 48
+IncreaseLevel 1980 1
+IncreaseLevel 3128 2
+GetGroupsHighestLevel 3
+ReplaceGroup 822 269
+IncreaseLevel 3458 1
+GetHighestLevel -1
+GetAllPlayersByLevel 105
+ReplaceGroup 709 725
+IncreaseLevel 9218 4
+AddPlayer 3794 454 9
+IncreaseLevel 8836 1
+AddGroup 738
+ReplaceGroup 163 375
+ReplaceGroup 342 709
+AddGroup 334
+IncreaseLevel 7605 1
+ReplaceGroup 293 822
+RemovePlayer 1606
+ReplaceGroup 792 821
+IncreaseLevel 8597 4
+ReplaceGroup 64 646
+RemovePlayer 1357
+ReplaceGroup 441 247
+AddGroup 829
+RemovePlayer 5168
+IncreaseLevel 8946 3
+GetAllPlayersByLevel 241
+AddPlayer 6979 318 5
+ReplaceGroup 838 838
+ReplaceGroup 494 635
+ReplaceGroup 20 970
+IncreaseLevel 5045 3
+ReplaceGroup 520 769
+IncreaseLevel 8347 1
+ReplaceGroup 808 708
+ReplaceGroup 401 522
+ReplaceGroup 432 367
+ReplaceGroup 432 68
+ReplaceGroup 37 406
+ReplaceGroup 725 375
+IncreaseLevel 3265 2
+ReplaceGroup 847 818
+ReplaceGroup 838 392
+RemovePlayer 5104
+GetHighestLevel 571
+RemovePlayer 5730
+ReplaceGroup 970 68
+AddGroup 961
+GetGroupsHighestLevel 3
+GetAllPlayersByLevel 423
+IncreaseLevel 7043 4
+IncreaseLevel 6548 3
+ReplaceGroup 459 534
+GetGroupsHighestLevel 2
+IncreaseLevel 2055 2
+ReplaceGroup 494 105
+AddPlayer 8353 256 3
+IncreaseLevel 8034 3
+GetHighestLevel 375
+IncreaseLevel 166 5
+ReplaceGroup 171 522
+RemovePlayer 3063
+GetHighestLevel 318
+ReplaceGroup 125 247
+ReplaceGroup 970 243
+GetAllPlayersByLevel 829
+AddPlayer 921 818 0
+ReplaceGroup 412 637
+GetGroupsHighestLevel 33
+GetGroupsHighestLevel 10
+RemovePlayer 5229
+IncreaseLevel 2321 5
+ReplaceGroup 847 709
+RemovePlayer 1515
+GetHighestLevel 283
+GetHighestLevel 88
+IncreaseLevel 9218 4
+IncreaseLevel 3537 1
+IncreaseLevel 5486 5
+AddGroup 26
+ReplaceGroup 269 725
+GetHighestLevel 423
+IncreaseLevel 6626 5
+AddGroup 406
+IncreaseLevel 197 4
+IncreaseLevel 9637 1
+RemovePlayer 4222
+ReplaceGroup 998 454
+IncreaseLevel 4810 4
+AddGroup 441
+GetHighestLevel 921
+IncreaseLevel 9758 3
+IncreaseLevel 5181 4
+GetGroupsHighestLevel 33
+ReplaceGroup 465 171
+IncreaseLevel 3552 5
+ReplaceGroup 68 931
+ReplaceGroup 26 367
+IncreaseLevel 267 3
+IncreaseLevel 2686 1
+AddPlayer 6283 269 6
+IncreaseLevel 6425 2
+ReplaceGroup 432 465
+GetGroupsHighestLevel 21
+IncreaseLevel 3528 3
+GetHighestLevel 677
+IncreaseLevel 2623 5
+IncreaseLevel 9936 5
+ReplaceGroup 342 488
+IncreaseLevel 8203 4
+AddGroup 392
+GetHighestLevel 921
+IncreaseLevel 441 1
+ReplaceGroup 677 68
+AddGroup 68
+ReplaceGroup 988 792
+ReplaceGroup 822 292
+GetAllPlayersByLevel 401
+RemovePlayer 598
+AddGroup 988
+AddPlayer 8310 560 1
+AddGroup 334
+IncreaseLevel 23 4
+IncreaseLevel 9241 3
+IncreaseLevel 8823 2
+GetAllPlayersByLevel 249
+ReplaceGroup 961 646
+ReplaceGroup 792 345
+IncreaseLevel 7635 4
+GetAllPlayersByLevel 423
+ReplaceGroup 54 334
+AddPlayer 3785 465 4
+IncreaseLevel 2618 5
+ReplaceGroup 241 898
+GetHighestLevel 13
+ReplaceGroup 214 269
+IncreaseLevel 2360 5
+IncreaseLevel 2111 1
+IncreaseLevel 2620 3
+AddGroup 161
+ReplaceGroup 432 937
+ReplaceGroup 243 68
+GetGroupsHighestLevel 9
+AddGroup 534
+AddGroup 738
+IncreaseLevel 9095 1
+IncreaseLevel 2008 4
+IncreaseLevel 9544 3
+IncreaseLevel 2421 2
+IncreaseLevel 6137 1
+AddGroup 20
+IncreaseLevel 2604 3
+IncreaseLevel 1963 3
+GetAllPlayersByLevel -1
+ReplaceGroup 345 818
+GetAllPlayersByLevel 523
+ReplaceGroup 725 28
+IncreaseLevel 4255 1
+IncreaseLevel 8307 1
+ReplaceGroup 28 725
+IncreaseLevel 9449 1
+IncreaseLevel 7711 1
+IncreaseLevel 5756 3
+IncreaseLevel 5352 4
+ReplaceGroup 318 163
+IncreaseLevel 7381 5
+ReplaceGroup 411 171
+IncreaseLevel 641 1
+AddPlayer 8504 105 5
+ReplaceGroup 523 459
+ReplaceGroup 37 423
+IncreaseLevel 1971 5
+IncreaseLevel 7114 3
+GetGroupsHighestLevel 27
+IncreaseLevel 1308 5
+GetHighestLevel 838
+GetHighestLevel 821
+AddGroup 249
+AddGroup 64
+IncreaseLevel 5333 3
+ReplaceGroup 677 28
+ReplaceGroup 974 818
+AddGroup 821
+GetHighestLevel 26
+GetAllPlayersByLevel 401
+IncreaseLevel 6672 1
+GetAllPlayersByLevel 725
+GetHighestLevel 48
+RemovePlayer 4588
+ReplaceGroup 172 352
+GetHighestLevel 411
+IncreaseLevel 2976 4
+IncreaseLevel 2154 2
+IncreaseLevel 9154 4
+ReplaceGroup 171 326
+ReplaceGroup 635 345
+IncreaseLevel 8119 3
+IncreaseLevel 2518 2
+IncreaseLevel 460 1
+GetHighestLevel 392
+ReplaceGroup 342 874
+GetAllPlayersByLevel 76
+AddPlayer 2440 738 8
+IncreaseLevel 9037 3
+IncreaseLevel 9659 1
+IncreaseLevel 5917 1
+RemovePlayer 6505
+ReplaceGroup 412 444
+GetAllPlayersByLevel 378
+ReplaceGroup 845 709
+IncreaseLevel 4764 5
+GetAllPlayersByLevel 28
+GetGroupsHighestLevel 20
+ReplaceGroup 677 523
+IncreaseLevel 9113 1
+ReplaceGroup 456 423
+AddPlayer 843 105 2
+ReplaceGroup 709 105
+ReplaceGroup 253 411
+IncreaseLevel 3537 4
+AddGroup 523
+IncreaseLevel 9593 4
+GetAllPlayersByLevel 763
+IncreaseLevel 1273 1
+ReplaceGroup 105 560
+IncreaseLevel 4001 2
+ReplaceGroup 249 253
+ReplaceGroup 838 637
+IncreaseLevel 5022 1
+AddGroup 465
+ReplaceGroup 769 523
+GetHighestLevel 28
+IncreaseLevel 7111 1
+GetGroupsHighestLevel 1
+IncreaseLevel 4474 4
+ReplaceGroup 738 375
+ReplaceGroup 845 256
+GetHighestLevel 171
+ReplaceGroup 838 89
+IncreaseLevel 2383 5
+AddGroup 243
+IncreaseLevel 1632 1
+GetHighestLevel 432
+AddGroup 937
+ReplaceGroup 454 293
+AddPlayer 5256 738 4
+ReplaceGroup 708 283
+ReplaceGroup 88 163
+GetHighestLevel 540
+ReplaceGroup 635 874
+AddPlayer 2143 247 8
+ReplaceGroup 326 560
+IncreaseLevel 5281 1
+RemovePlayer 3471
+ReplaceGroup 375 37
+RemovePlayer 547
+IncreaseLevel 3471 3
+GetAllPlayersByLevel 293
+IncreaseLevel 3768 3
+GetHighestLevel 68
+ReplaceGroup 269 725
+IncreaseLevel 322 4
+IncreaseLevel 7042 1
+IncreaseLevel 158 4
+IncreaseLevel 9811 3
+IncreaseLevel 7111 5
+AddGroup 292
+IncreaseLevel 1179 4
+AddGroup 931
+GetGroupsHighestLevel 21
+RemovePlayer 5747
+IncreaseLevel 232 5
+ReplaceGroup 974 392
+GetHighestLevel 441
+IncreaseLevel 16 3
+IncreaseLevel 8034 1
+IncreaseLevel 96 2
+ReplaceGroup 635 423
+GetHighestLevel 105
+ReplaceGroup 970 406
+IncreaseLevel 8504 4
+ReplaceGroup 838 432
+AddPlayer 173 243 1
+ReplaceGroup 13 292
+IncreaseLevel 2519 4
+ReplaceGroup 822 845
+GetAllPlayersByLevel 465
+IncreaseLevel 7978 4
+IncreaseLevel 6494 3
+ReplaceGroup 375 687
+ReplaceGroup 378 125
+IncreaseLevel 2637 2
+IncreaseLevel 7978 4
+IncreaseLevel 2127 4
+GetHighestLevel 249
+GetHighestLevel 292
+IncreaseLevel 1980 4
+GetAllPlayersByLevel 105
+AddGroup 432
+IncreaseLevel 2129 5
+AddGroup 105
+ReplaceGroup 985 444
+AddGroup 829
+GetHighestLevel 64
+GetHighestLevel 326
+GetHighestLevel 687
+AddGroup 708
+RemovePlayer 938
+GetGroupsHighestLevel 26
+GetAllPlayersByLevel 375
+RemovePlayer 5229
+GetAllPlayersByLevel 214
+IncreaseLevel 1480 1
+ReplaceGroup 37 118
+ReplaceGroup 28 68
+IncreaseLevel 5418 2
+IncreaseLevel 9689 1
+AddPlayer 9765 352 7
+IncreaseLevel 2024 4
+RemovePlayer 1821
+IncreaseLevel 5013 3
+IncreaseLevel 8480 3
+IncreaseLevel 1905 2
+AddGroup 592
+AddGroup 352
+ReplaceGroup 763 342
+IncreaseLevel 2552 4
+AddPlayer 4457 838 1
+ReplaceGroup 637 898
+IncreaseLevel 4992 2
+ReplaceGroup 520 738
+IncreaseLevel 3054 5
+ReplaceGroup 342 763
+IncreaseLevel 8605 4
+IncreaseLevel 2903 3
+IncreaseLevel 5100 1
+ReplaceGroup 68 522
+GetGroupsHighestLevel 30
+IncreaseLevel 5477 5
+AddGroup 937
+GetAllPlayersByLevel 392
+AddGroup 738
+IncreaseLevel 7943 1
+RemovePlayer 7674
+IncreaseLevel 3532 1
+GetGroupsHighestLevel 25
+IncreaseLevel 8229 5
+GetGroupsHighestLevel 27
+GetHighestLevel -1
+AddPlayer 6599 13 6
+GetHighestLevel 253
+IncreaseLevel 5827 5
+ReplaceGroup 243 592
+IncreaseLevel 1581 2
+ReplaceGroup 988 76
+IncreaseLevel 8564 5
+ReplaceGroup 253 725
+AddGroup 76
+AddPlayer 1165 465 7
+IncreaseLevel 3248 3
+IncreaseLevel 8759 2
+AddGroup 821
+AddPlayer 2091 342 4
+ReplaceGroup 28 386
+GetAllPlayersByLevel 293
+IncreaseLevel 4715 3
+GetGroupsHighestLevel 11
+ReplaceGroup 637 540
+ReplaceGroup 444 367
+GetHighestLevel 488
+ReplaceGroup 283 534
+ReplaceGroup 635 646
+GetGroupsHighestLevel 13
+ReplaceGroup 48 406
+ReplaceGroup 345 738
+GetHighestLevel 646
+AddGroup 378
+AddPlayer 5917 465 1
+GetGroupsHighestLevel 7
+ReplaceGroup 378 118
+IncreaseLevel 5009 5
+IncreaseLevel 8433 1
+IncreaseLevel 488 5
+AddPlayer 9556 523 2
+RemovePlayer 2935
+IncreaseLevel 185 3
+ReplaceGroup 367 54
+IncreaseLevel 8173 3
+ReplaceGroup 749 88
+IncreaseLevel 4634 5
+AddPlayer 5094 534 7
+AddPlayer 3707 822 1
+IncreaseLevel 5979 4
+AddGroup 465
+ReplaceGroup 243 749
+ReplaceGroup 392 88
+ReplaceGroup 769 961
+AddPlayer 2471 283 3
+IncreaseLevel 1972 4
+IncreaseLevel 9666 2
+IncreaseLevel 8761 1
+GetAllPlayersByLevel 874
+GetHighestLevel -1
+ReplaceGroup 334 988
+RemovePlayer 2135
+GetHighestLevel 352
+RemovePlayer 4464
+IncreaseLevel 598 5
+ReplaceGroup 725 488
+AddGroup 406
+AddGroup 116
+ReplaceGroup 367 898
+GetAllPlayersByLevel 64
+ReplaceGroup 292 256
+ReplaceGroup 116 821
+IncreaseLevel 2355 3
+IncreaseLevel 1083 4
+AddPlayer 1493 378 1
+ReplaceGroup 172 709
+GetHighestLevel 345
+IncreaseLevel 485 2
+IncreaseLevel 5711 3
+IncreaseLevel 8224 4
+GetHighestLevel 54
+IncreaseLevel 4608 5
+IncreaseLevel 9689 4
+ReplaceGroup 116 560
+ReplaceGroup 253 26
+IncreaseLevel 938 3
+ReplaceGroup 961 367
+GetHighestLevel 367
+AddPlayer 3917 988 2
+ReplaceGroup 520 89
+AddPlayer 6301 494 4
+AddPlayer 5585 454 3
+IncreaseLevel 9709 5
+IncreaseLevel 7368 2
+RemovePlayer 4086
+GetAllPlayersByLevel 26
+ReplaceGroup 283 334
+ReplaceGroup 411 459
+IncreaseLevel 4222 2
+ReplaceGroup 982 985
+AddGroup 874
+IncreaseLevel 9014 4
+GetHighestLevel 326
+IncreaseLevel 4419 3
+IncreaseLevel 4474 5
+ReplaceGroup 342 105
+ReplaceGroup 540 459
+GetAllPlayersByLevel 821
+AddPlayer 3582 269 7
+ReplaceGroup 163 423
+IncreaseLevel 2449 2
+IncreaseLevel 1764 2
+GetGroupsHighestLevel 16
+AddGroup 411
+ReplaceGroup 982 378
+GetAllPlayersByLevel -1
+IncreaseLevel 95 1
+ReplaceGroup 847 161
+AddGroup 988
+ReplaceGroup 949 709
+IncreaseLevel 8323 5
+IncreaseLevel 7859 2
+RemovePlayer 6142
+AddGroup 637
+IncreaseLevel 8039 2
+ReplaceGroup 37 412
+AddPlayer 6650 847 0
+ReplaceGroup 523 256
+ReplaceGroup 89 818
+RemovePlayer 7056
+ReplaceGroup 635 214
+IncreaseLevel 3262 1
+IncreaseLevel 9601 2
+GetHighestLevel 687
+IncreaseLevel 9936 4
+AddPlayer 1511 401 8
+IncreaseLevel 5683 2
+IncreaseLevel 595 4
+IncreaseLevel 3017 3
+IncreaseLevel 8429 5
+GetGroupsHighestLevel 24
+ReplaceGroup 822 637
+ReplaceGroup 406 725
+AddGroup 375
+RemovePlayer 3365
+AddGroup 829
+ReplaceGroup 708 367
+IncreaseLevel 1632 4
+IncreaseLevel 9254 5
+AddGroup 89
+IncreaseLevel 1665 1
+AddGroup 318
+IncreaseLevel 8009 5
+AddPlayer 2038 874 3
+RemovePlayer 9948
+AddGroup 88
+ReplaceGroup 635 738
+AddPlayer 9938 949 7
+ReplaceGroup 241 163
+ReplaceGroup 406 454
+IncreaseLevel 3568 1
+AddGroup 352
+ReplaceGroup 937 998
+IncreaseLevel 5145 2
+AddPlayer 4814 635 4
+AddGroup 459
+ReplaceGroup 76 116
+IncreaseLevel 1480 1
+IncreaseLevel 5353 2
+IncreaseLevel 8347 5
+IncreaseLevel 6342 1
+ReplaceGroup 931 838
+AddGroup 709
+GetAllPlayersByLevel -1
+IncreaseLevel 3707 4
+ReplaceGroup 988 432
+ReplaceGroup 738 88
+GetHighestLevel 125
+AddPlayer 9916 592 2
+GetHighestLevel 988
+ReplaceGroup 412 247
+IncreaseLevel 4362 4
+AddGroup 293
+RemovePlayer 8009
+ReplaceGroup 26 48
+ReplaceGroup 54 444
+IncreaseLevel 4953 2
+IncreaseLevel 434 2
+IncreaseLevel 8039 5
+GetGroupsHighestLevel 23
+AddGroup 769
+IncreaseLevel 8566 5
+IncreaseLevel 2022 3
+ReplaceGroup 89 378
+GetGroupsHighestLevel 4
+ReplaceGroup 161 171
+ReplaceGroup 646 256
+AddGroup 982
+IncreaseLevel 8578 2
+IncreaseLevel 8249 3
+IncreaseLevel 8705 5
+IncreaseLevel 6548 3
+IncreaseLevel 5336 1
+GetGroupsHighestLevel 0
+IncreaseLevel 7779 2
+AddPlayer 2217 116 3
+ReplaceGroup 292 54
+ReplaceGroup 738 456
+RemovePlayer 9883
+ReplaceGroup 763 560
+IncreaseLevel 3677 4
+RemovePlayer 6881
+IncreaseLevel 3793 1
+AddPlayer 5879 88 2
+AddGroup 931
+AddGroup 247
+AddPlayer 1713 847 5
+GetAllPlayersByLevel 465
+ReplaceGroup 48 494
+GetGroupsHighestLevel 1
+IncreaseLevel 4292 1
+ReplaceGroup 26 89
+IncreaseLevel 9037 2
+IncreaseLevel 1603 5
+IncreaseLevel 2717 2
+AddGroup 253
+ReplaceGroup 534 375
+IncreaseLevel 1988 4
+ReplaceGroup 334 423
+IncreaseLevel 3055 1
+ReplaceGroup 845 88
+ReplaceGroup 48 949
+ReplaceGroup 488 406
+GetHighestLevel 118
+ReplaceGroup 88 961
+RemovePlayer 7082
+AddGroup 738
+AddPlayer 7685 937 5
+IncreaseLevel 485 4
+ReplaceGroup 171 845
+RemovePlayer 9916
+GetGroupsHighestLevel 3
+ReplaceGroup 808 392
+GetAllPlayersByLevel 818
+IncreaseLevel 6518 4
+IncreaseLevel 6801 3
+ReplaceGroup 459 401
+IncreaseLevel 460 4
+ReplaceGroup 459 520
+AddPlayer 2914 352 3
+GetHighestLevel 635
+IncreaseLevel 5786 2
+IncreaseLevel 7878 3
+IncreaseLevel 4420 3
+ReplaceGroup 345 560
+IncreaseLevel 3950 4
+AddGroup 845
+ReplaceGroup 118 406
+IncreaseLevel 1514 5
+RemovePlayer 5090
+ReplaceGroup 172 488
+IncreaseLevel 4291 3
+IncreaseLevel 1414 5
+AddPlayer 5104 838 8
+AddGroup 454
+IncreaseLevel 4086 2
+GetHighestLevel 89
+AddGroup 708
+RemovePlayer 8317
+GetGroupsHighestLevel 16
+GetAllPlayersByLevel 342
+AddGroup 592
+GetHighestLevel 534
+IncreaseLevel 483 4
+IncreaseLevel 2327 4
+IncreaseLevel 1633 1
+AddGroup 949
+IncreaseLevel 4971 3
+ReplaceGroup 637 459
+IncreaseLevel 3871 4
+AddGroup 523
+IncreaseLevel 5910 3
+GetHighestLevel 367
+ReplaceGroup 241 821
+ReplaceGroup 68 454
+IncreaseLevel 9866 5
+AddGroup 444
+GetAllPlayersByLevel 646
+GetHighestLevel 985
+ReplaceGroup 540 441
+AddGroup 89
+IncreaseLevel 729 2
+ReplaceGroup 988 974
+AddPlayer 257 406 1
+ReplaceGroup 998 921
+GetAllPlayersByLevel 214
+IncreaseLevel 8259 1
+IncreaseLevel 8122 5
+IncreaseLevel 3118 4
+AddGroup 949
+IncreaseLevel 6524 4
+GetHighestLevel 687
+AddPlayer 3930 534 3
+GetHighestLevel 560
+IncreaseLevel 8272 5
+AddPlayer 6099 459 6
+IncreaseLevel 2024 3
+IncreaseLevel 7423 2
+ReplaceGroup 326 28
+ReplaceGroup 441 432
+RemovePlayer 6688
+ReplaceGroup 243 26
+AddGroup 171
+GetHighestLevel 283
+IncreaseLevel 3384 3
+AddGroup 334
+ReplaceGroup 456 13
+ReplaceGroup 326 444
+AddPlayer 7381 749 3
+GetAllPlayersByLevel 637
+GetAllPlayersByLevel 406
+ReplaceGroup 386 646
+GetHighestLevel 13
+ReplaceGroup 28 540
+ReplaceGroup 821 256
+IncreaseLevel 3543 4
+IncreaseLevel 990 1
+IncreaseLevel 2135 2
+AddGroup 256
+AddGroup 334
+IncreaseLevel 8816 1
+IncreaseLevel 5763 4
+IncreaseLevel 441 3
+GetGroupsHighestLevel 21
+ReplaceGroup 792 821
+AddGroup 172
+IncreaseLevel 5585 2
+ReplaceGroup 247 687
+ReplaceGroup 48 709
+ReplaceGroup 931 28
+ReplaceGroup 375 874
+AddPlayer 3248 874 6
+AddPlayer 1459 444 1
+RemovePlayer 4291
+GetHighestLevel 342
+IncreaseLevel 4795 2
+GetAllPlayersByLevel 646
+IncreaseLevel 6457 1
+AddGroup 635
+ReplaceGroup 406 334
+AddGroup 974
+IncreaseLevel 8968 2
+IncreaseLevel 675 3
+GetAllPlayersByLevel 253
+RemovePlayer 8961
+IncreaseLevel 2471 2
+ReplaceGroup 522 763
+IncreaseLevel 5827 5
+IncreaseLevel 1273 2
+IncreaseLevel 2465 4
+IncreaseLevel 6672 5
+IncreaseLevel 2038 1
+AddGroup 949
+ReplaceGroup 412 677
+ReplaceGroup 829 318
+IncreaseLevel 8761 1
+ReplaceGroup 345 687
+GetAllPlayersByLevel 367
+IncreaseLevel 6123 5
+IncreaseLevel 2317 4
+ReplaceGroup 838 523
+GetGroupsHighestLevel 14
+RemovePlayer 215
+RemovePlayer 7738
+IncreaseLevel 6782 1
+AddPlayer 7337 523 1
+IncreaseLevel 1967 3
+IncreaseLevel 3730 3
+AddPlayer 6382 808 6
+ReplaceGroup 792 441
+IncreaseLevel 990 2
+IncreaseLevel 5747 1
+AddGroup 26
+ReplaceGroup 560 345
+IncreaseLevel 5151 4
+ReplaceGroup 818 37
+AddGroup 48
+ReplaceGroup 523 769
+GetAllPlayersByLevel 161
+RemovePlayer 8110
+AddPlayer 7182 520 6
+RemovePlayer 6283
+AddGroup 725
+ReplaceGroup 534 334
+IncreaseLevel 8105 3
+IncreaseLevel 7980 4
+GetGroupsHighestLevel 1
+IncreaseLevel 1688 1
+ReplaceGroup 687 560
+IncreaseLevel 3097 3
+AddGroup 637
+ReplaceGroup 293 829
+IncreaseLevel 3955 2
+IncreaseLevel 151 2
+IncreaseLevel 6881 4
+ReplaceGroup 269 637
+ReplaceGroup 571 163
+AddGroup 68
+ReplaceGroup 749 76
+ReplaceGroup 822 974
+IncreaseLevel 5768 5
+IncreaseLevel 2731 5
+ReplaceGroup 687 637
+IncreaseLevel 867 3
+ReplaceGroup 243 822
+IncreaseLevel 1857 2
+IncreaseLevel 2090 1
+GetHighestLevel 269
+ReplaceGroup 247 738
+ReplaceGroup 874 738
+AddPlayer 1414 522 5
+ReplaceGroup 378 401
+ReplaceGroup 26 821
+IncreaseLevel 5768 1
+IncreaseLevel 4298 1
+GetHighestLevel 48
+GetAllPlayersByLevel 709
+GetGroupsHighestLevel 18
+GetAllPlayersByLevel 560
+ReplaceGroup 444 342
+IncreaseLevel 8203 4
+IncreaseLevel 5885 5
+AddPlayer 9938 20 2
+AddPlayer 9011 26 5
+IncreaseLevel 9509 4
+GetGroupsHighestLevel 22
+ReplaceGroup 318 988
+IncreaseLevel 547 1
+AddPlayer 1550 89 4
+IncreaseLevel 4703 3
+GetHighestLevel 949
+AddPlayer 8173 249 0
+IncreaseLevel 5308 4
+IncreaseLevel 6032 3
+GetAllPlayersByLevel 64
+RemovePlayer 1083
+ReplaceGroup 874 76
+AddGroup 961
+IncreaseLevel 5768 1
+IncreaseLevel 6815 4
+AddPlayer 3477 214 6
+GetHighestLevel -1
+ReplaceGroup 520 738
+IncreaseLevel 7596 4
+ReplaceGroup 749 48
+AddPlayer 6742 293 2
+AddPlayer 2370 163 5
+IncreaseLevel 1378 5
+IncreaseLevel 4299 3
+ReplaceGroup 318 76
+IncreaseLevel 7230 4
+ReplaceGroup 247 974
+IncreaseLevel 1179 5
+IncreaseLevel 339 3
+IncreaseLevel 2344 5
+IncreaseLevel 804 5
+IncreaseLevel 5913 2
+ReplaceGroup 125 592
+ReplaceGroup 28 454
+GetGroupsHighestLevel 21
+IncreaseLevel 2731 3
+IncreaseLevel 3930 3
+GetGroupsHighestLevel 11
+AddPlayer 2008 571 2
+AddGroup 378
+IncreaseLevel 1251 1
+ReplaceGroup 386 985
+AddGroup 161
+AddGroup 592
+ReplaceGroup 76 334
+ReplaceGroup 406 637
+AddGroup 68
+IncreaseLevel 5221 1
+IncreaseLevel 9283 1
+IncreaseLevel 2966 1
+ReplaceGroup 171 998
+IncreaseLevel 4798 1
+ReplaceGroup 163 540
+GetGroupsHighestLevel 10
+AddPlayer 1378 293 9
+IncreaseLevel 1383 1
+ReplaceGroup 534 444
+IncreaseLevel 2008 1
+IncreaseLevel 260 1
+ReplaceGroup 961 13
+AddGroup 171
+AddPlayer 8003 375 8
+IncreaseLevel 8816 4
+ReplaceGroup 256 494
+IncreaseLevel 7828 2
+IncreaseLevel 8846 1
+ReplaceGroup 970 432
+IncreaseLevel 9598 1
+ReplaceGroup 818 367
+ReplaceGroup 763 974
+AddGroup 949
+IncreaseLevel 1369 3
+GetGroupsHighestLevel 5
+AddPlayer 3118 249 5
+IncreaseLevel 485 2
+IncreaseLevel 158 4
+ReplaceGroup 89 534
+IncreaseLevel 99 1
+ReplaceGroup 161 985
+ReplaceGroup 334 392
+IncreaseLevel 6439 3
+IncreaseLevel 2127 2
+ReplaceGroup 488 432
+IncreaseLevel 5477 3
+IncreaseLevel 9458 1
+GetGroupsHighestLevel 17
+IncreaseLevel 9564 5
+IncreaseLevel 1032 1
+GetHighestLevel 411
+GetAllPlayersByLevel 949
+GetHighestLevel 105
+ReplaceGroup 637 76
+AddGroup 26
+ReplaceGroup 982 441
+ReplaceGroup 465 677
+ReplaceGroup 763 54
+IncreaseLevel 8648 4
+ReplaceGroup 970 88
+GetHighestLevel 125
+IncreaseLevel 2355 4
+GetHighestLevel 465
+AddGroup 974
+ReplaceGroup 637 326
+GetGroupsHighestLevel 19
+GetHighestLevel 283
+AddPlayer 1534 988 3
+IncreaseLevel 1790 5
+IncreaseLevel 9626 4
+ReplaceGroup 898 571
+IncreaseLevel 9476 3
+ReplaceGroup 970 709
+IncreaseLevel 6382 4
+IncreaseLevel 5786 4
+AddPlayer 9312 540 8
+AddPlayer 8995 441 1
+RemovePlayer 9601
+IncreaseLevel 2031 3
+AddGroup 432
+ReplaceGroup 214 214
+ReplaceGroup 378 998
+IncreaseLevel 5477 3
+RemovePlayer 3054
+ReplaceGroup 299 116
+IncreaseLevel 8034 1
+ReplaceGroup 392 829
+IncreaseLevel 729 1
+GetAllPlayersByLevel 54
+IncreaseLevel 7862 2
+ReplaceGroup 423 292
+GetHighestLevel 125
+AddGroup 769
+ReplaceGroup 522 326
+ReplaceGroup 392 88
+ReplaceGroup 48 378
+GetHighestLevel 76
+IncreaseLevel 2038 5
+IncreaseLevel 7959 4
+IncreaseLevel 3950 3
+IncreaseLevel 8616 4
+GetHighestLevel 375
+GetGroupsHighestLevel 6
+GetHighestLevel 488
+IncreaseLevel 604 3
+GetGroupsHighestLevel 13
+IncreaseLevel 9790 2
+ReplaceGroup 378 37
+ReplaceGroup 105 970
+GetAllPlayersByLevel 838
+ReplaceGroup 937 249
+AddGroup 161
+GetAllPlayersByLevel 352
+IncreaseLevel 4786 2
+GetGroupsHighestLevel 5
+IncreaseLevel 2915 1
+GetAllPlayersByLevel 54
+IncreaseLevel 1480 3
+AddPlayer 4876 375 5
+AddPlayer 7334 982 4
+ReplaceGroup 523 386
+AddGroup 845
+GetGroupsHighestLevel 11
+IncreaseLevel 3365 1
+ReplaceGroup 26 949
+GetHighestLevel -1
+IncreaseLevel 6342 5
+ReplaceGroup 352 48
+AddPlayer 1060 838 2
+ReplaceGroup 708 763
+GetHighestLevel 456
+IncreaseLevel 2199 5
+AddGroup 214
+IncreaseLevel 8363 1
+RemovePlayer 1966
+IncreaseLevel 8568 1
+ReplaceGroup 406 931
+GetAllPlayersByLevel 411
+IncreaseLevel 1207 5
+IncreaseLevel 2774 5
+IncreaseLevel 3098 3
+IncreaseLevel 7253 2
+AddGroup 253
+GetHighestLevel 247
+AddGroup 488
+ReplaceGroup 808 68
+RemovePlayer 9659
+ReplaceGroup 961 769
+ReplaceGroup 243 26
+AddGroup 386
+IncreaseLevel 9937 1
+GetHighestLevel 249
+AddGroup 829
+ReplaceGroup 441 874
+IncreaseLevel 3410 2
+GetAllPlayersByLevel 283
+ReplaceGroup 560 20
+GetAllPlayersByLevel 318
+GetAllPlayersByLevel 334
+AddGroup 214
+IncreaseLevel 1373 1
+IncreaseLevel 5258 4
+GetHighestLevel 821
+IncreaseLevel 8066 2
+AddGroup 709
+ReplaceGroup 241 838
+IncreaseLevel 7581 5
+IncreaseLevel 7696 1
+IncreaseLevel 6328 5
+IncreaseLevel 5145 1
+ReplaceGroup 163 253
+GetGroupsHighestLevel 1
+AddGroup 974
+RemovePlayer 8968
+AddGroup 367
+ReplaceGroup 116 540
+ReplaceGroup 249 454
+IncreaseLevel 7253 2
+IncreaseLevel 2465 3
+GetHighestLevel 326
+GetHighestLevel 838
+AddPlayer 4850 677 5
+GetGroupsHighestLevel 11
+ReplaceGroup 88 20
+GetHighestLevel 708
+IncreaseLevel 2129 5
+AddGroup 386
+GetGroupsHighestLevel 5
+ReplaceGroup 89 808
+ReplaceGroup 386 334
+GetHighestLevel 725
+IncreaseLevel 4255 5
+IncreaseLevel 1090 2
+AddPlayer 4786 769 7
+GetHighestLevel 26
+AddPlayer 5887 411 1
+AddGroup 411
+ReplaceGroup 821 970
+GetGroupsHighestLevel 17
+ReplaceGroup 687 171
+IncreaseLevel 9690 5
+AddPlayer 3384 432 6
+ReplaceGroup 818 386
+IncreaseLevel 460 2
+ReplaceGroup 406 847
+ReplaceGroup 423 432
+AddGroup 342
+IncreaseLevel 2268 3
+ReplaceGroup 172 89
+GetGroupsHighestLevel 0
+ReplaceGroup 13 488
+GetHighestLevel 985
+IncreaseLevel 7933 4
+AddPlayer 9844 898 0
+ReplaceGroup 342 637
+IncreaseLevel 5486 4
+IncreaseLevel 3077 5
+IncreaseLevel 2431 1
+GetAllPlayersByLevel 432
+IncreaseLevel 8402 3
+IncreaseLevel 675 2
+AddPlayer 1057 118 7
+ReplaceGroup 808 247
+ReplaceGroup 709 988
+IncreaseLevel 2552 2
+IncreaseLevel 3718 4
+GetAllPlayersByLevel 89
+ReplaceGroup 540 821
+IncreaseLevel 449 5
+GetGroupsHighestLevel 0
+RemovePlayer 4368
+GetHighestLevel 520
+IncreaseLevel 513 3
+IncreaseLevel 1207 4
+IncreaseLevel 2620 3
+ReplaceGroup 105 432
+IncreaseLevel 6142 4
+ReplaceGroup 974 375
+AddGroup 172
+IncreaseLevel 2915 4
+AddGroup 520
+ReplaceGroup 28 931
+GetGroupsHighestLevel 3
+IncreaseLevel 7635 5
+GetHighestLevel 454
+AddGroup 454
+ReplaceGroup 118 949
+GetAllPlayersByLevel 829
+ReplaceGroup 534 687
+IncreaseLevel 2471 4
+ReplaceGroup 247 68
+AddPlayer 7828 520 6
+AddGroup 406
+GetHighestLevel 921
+IncreaseLevel 364 4
+GetAllPlayersByLevel 334
+IncreaseLevel 2590 5
+AddPlayer 8823 985 9
+IncreaseLevel 6236 4
+AddGroup 269
+IncreaseLevel 5168 4
+GetHighestLevel 406
+GetHighestLevel 998
+GetHighestLevel 269
+IncreaseLevel 9512 2
+GetHighestLevel 709
+GetGroupsHighestLevel 11
+IncreaseLevel 8317 2
+GetHighestLevel 465
+GetGroupsHighestLevel 4
+AddGroup 646
+ReplaceGroup 465 345
+ReplaceGroup 26 28
+IncreaseLevel 3543 1
+AddGroup 444
+IncreaseLevel 9843 5
+IncreaseLevel 8925 3
+ReplaceGroup 708 269
+GetHighestLevel 48
+AddPlayer 2199 342 8
+ReplaceGroup 540 459
+ReplaceGroup 256 592
+ReplaceGroup 105 874
+GetHighestLevel 931
+AddPlayer 4705 560 0
+IncreaseLevel 8797 1
+GetAllPlayersByLevel 523
+IncreaseLevel 2965 2
+IncreaseLevel 8084 4
+RemovePlayer 5241
+AddPlayer 8239 326 0
+AddGroup 163
+IncreaseLevel 7111 2
+IncreaseLevel 5683 5
+IncreaseLevel 5487 5
+IncreaseLevel 322 1
+IncreaseLevel 9418 4
+GetHighestLevel -1
+AddGroup 708
+ReplaceGroup 974 89
+GetHighestLevel 454
+IncreaseLevel 8705 4
+ReplaceGroup 28 821
+GetAllPlayersByLevel 821
+IncreaseLevel 3917 2
+GetHighestLevel 172
+IncreaseLevel 8403 4
+GetGroupsHighestLevel 14
+ReplaceGroup 256 318
+IncreaseLevel 7235 5
+ReplaceGroup 125 68
+IncreaseLevel 1004 3
+ReplaceGroup 125 522
+IncreaseLevel 1248 1
+IncreaseLevel 2838 2
+AddGroup 540
+ReplaceGroup 161 829
+GetAllPlayersByLevel 822
+ReplaceGroup 687 163
+IncreaseLevel 7384 5
+ReplaceGroup 76 874
+IncreaseLevel 7685 4
+AddGroup 125
+GetAllPlayersByLevel 847
+IncreaseLevel 8504 3
+ReplaceGroup 571 13
+IncreaseLevel 6672 2
+ReplaceGroup 411 171
+AddGroup 26
+IncreaseLevel 8693 1
+AddGroup 163
+IncreaseLevel 5898 3
+ReplaceGroup 998 88
+ReplaceGroup 256 345
+IncreaseLevel 6026 1
+GetAllPlayersByLevel 105
+IncreaseLevel 4598 3
+IncreaseLevel 5428 5
+ReplaceGroup 256 386
+IncreaseLevel 9751 4
+GetHighestLevel 808
+ReplaceGroup 494 465
+IncreaseLevel 7381 5
+GetAllPlayersByLevel 406
+IncreaseLevel 3594 3
+IncreaseLevel 1192 5
+RemovePlayer 4122
+RemovePlayer 1490
+ReplaceGroup 214 523
+IncreaseLevel 8768 4
+GetAllPlayersByLevel 37
+IncreaseLevel 1764 1
+AddPlayer 4419 249 0
+IncreaseLevel 4657 3
+IncreaseLevel 9113 4
+IncreaseLevel 9088 5
+GetHighestLevel 125
+ReplaceGroup 949 523
+IncreaseLevel 7368 1
+IncreaseLevel 4544 1
+IncreaseLevel 9509 5
+IncreaseLevel 8707 1
+GetAllPlayersByLevel 818
+AddPlayer 645 161 9
+GetAllPlayersByLevel 709
+AddGroup 334
+AddGroup 161
+RemovePlayer 7943
+ReplaceGroup 441 423
+ReplaceGroup 401 172
+AddGroup 738
+IncreaseLevel 5307 4
+ReplaceGroup 970 13
+GetHighestLevel 921
+IncreaseLevel 2519 2
+GetHighestLevel 48
+RemovePlayer 2125
+IncreaseLevel 3711 4
+GetHighestLevel 118
+ReplaceGroup 637 318
+IncreaseLevel 6059 2
+GetAllPlayersByLevel 392
+GetGroupsHighestLevel 9
+IncreaseLevel 9462 1
+IncreaseLevel 1713 1
+IncreaseLevel 7959 1
+GetHighestLevel 635
+RemovePlayer 4157
+GetAllPlayersByLevel 459
+GetAllPlayersByLevel 974
+GetHighestLevel 523
+ReplaceGroup 749 441
+IncreaseLevel 8152 5
+AddPlayer 507 898 1
+IncreaseLevel 6958 5
+AddGroup 411
+IncreaseLevel 8728 1
+IncreaseLevel 2024 4
+GetAllPlayersByLevel 375
+ReplaceGroup 687 961
+IncreaseLevel 4315 4
+IncreaseLevel 7933 1
+AddPlayer 2717 635 4
+AddPlayer 645 845 0
+AddPlayer 8229 243 8
+ReplaceGroup 345 411
+IncreaseLevel 8040 3
+ReplaceGroup 949 352
+GetHighestLevel 982
+IncreaseLevel 1534 3
+IncreaseLevel 4971 2
+IncreaseLevel 513 4
+RemovePlayer 9722
+IncreaseLevel 6342 5
+AddPlayer 6011 822 1
+ReplaceGroup 411 345
+ReplaceGroup 974 375
+IncreaseLevel 6768 5
+AddGroup 961
+GetAllPlayersByLevel 37
+AddPlayer 9254 441 4
+AddGroup 118
+IncreaseLevel 1145 5
+GetHighestLevel 48
+IncreaseLevel 4712 5
+IncreaseLevel 8768 5
+IncreaseLevel 7235 1
+ReplaceGroup 392 64
+ReplaceGroup 253 921
+IncreaseLevel 2380 3
+GetAllPlayersByLevel 792
+GetGroupsHighestLevel 6
+IncreaseLevel 8969 4
+AddGroup 256
+IncreaseLevel 1710 1
+ReplaceGroup 76 326
+ReplaceGroup 571 163
+GetAllPlayersByLevel 54
+ReplaceGroup 444 334
+IncreaseLevel 1004 4
+ReplaceGroup 345 571
+RemovePlayer 7114
+IncreaseLevel 1971 3
+ReplaceGroup 441 961
+IncreaseLevel 1665 4
+GetGroupsHighestLevel 13
+IncreaseLevel 6087 4
+IncreaseLevel 9795 5
+ReplaceGroup 725 822
+IncreaseLevel 2370 4
+GetAllPlayersByLevel 172
+GetGroupsHighestLevel 12
+IncreaseLevel 4276 5
+RemovePlayer 3460
+AddPlayer 6928 763 9
+AddPlayer 5703 269 3
+GetHighestLevel 540
+ReplaceGroup 171 845
+IncreaseLevel 2865 2
+IncreaseLevel 8379 1
+AddGroup 411
+ReplaceGroup 256 540
+IncreaseLevel 9088 2
+GetHighestLevel 54
+GetAllPlayersByLevel 392
+ReplaceGroup 406 13
+IncreaseLevel 8968 2
+ReplaceGroup 961 249
+ReplaceGroup 172 163
+AddPlayer 8639 988 5
+ReplaceGroup 522 243
+ReplaceGroup 988 37
+ReplaceGroup 982 534
+GetHighestLevel 256
+IncreaseLevel 2351 4
+IncreaseLevel 4669 2
+IncreaseLevel 6688 5
+ReplaceGroup 64 592
+IncreaseLevel 6502 1
+ReplaceGroup 818 378
+IncreaseLevel 488 2
+IncreaseLevel 6992 4
+ReplaceGroup 998 161
+ReplaceGroup 411 838
+ReplaceGroup 738 937
+ReplaceGroup 292 392
+ReplaceGroup 253 125
+ReplaceGroup 635 163
+IncreaseLevel 5938 4
+ReplaceGroup 592 949
+IncreaseLevel 9811 3
+ReplaceGroup 808 411
+IncreaseLevel 2552 1
+IncreaseLevel 449 1
+IncreaseLevel 5244 5
+AddGroup 677
+IncreaseLevel 4928 5
+GetHighestLevel -1
+ReplaceGroup 334 523
+ReplaceGroup 459 293
+IncreaseLevel 9666 4
+IncreaseLevel 916 4
+ReplaceGroup 241 571
+AddPlayer 5586 494 2
+AddPlayer 8307 392 2
+IncreaseLevel 6301 3
+ReplaceGroup 292 494
+IncreaseLevel 2022 5
+AddGroup 345
+RemovePlayer 3063
+IncreaseLevel 9938 4
+IncreaseLevel 9937 5
+IncreaseLevel 8816 2
+IncreaseLevel 5879 2
+IncreaseLevel 8648 5
+IncreaseLevel 5013 1
+GetGroupsHighestLevel 13
+ReplaceGroup 68 345
+IncreaseLevel 1273 4
+RemovePlayer 6044
+ReplaceGroup 540 326
+AddGroup 214
+RemovePlayer 2952
+IncreaseLevel 8347 1
+GetHighestLevel 378
+GetAllPlayersByLevel 367
+IncreaseLevel 2863 4
+ReplaceGroup 20 367
+AddGroup 838
+IncreaseLevel 6768 3
+AddGroup 118
+IncreaseLevel 1261 3
+ReplaceGroup 28 241
+ReplaceGroup 970 247
+RemovePlayer 1988
+IncreaseLevel 1037 3
+IncreaseLevel 3282 2
+IncreaseLevel 8379 3
+IncreaseLevel 3711 3
+AddGroup 249
+IncreaseLevel 5427 1
+ReplaceGroup 116 540
+ReplaceGroup 708 818
+GetGroupsHighestLevel 8
+GetGroupsHighestLevel 17
+IncreaseLevel 8816 1
+AddPlayer 9637 571 5
+IncreaseLevel 7235 2
+GetAllPlayersByLevel 949
+IncreaseLevel 2022 2
+ReplaceGroup 326 13
+GetAllPlayersByLevel 998
+AddPlayer 6032 738 4
+IncreaseLevel 4203 4
+IncreaseLevel 2024 1
+RemovePlayer 4076
+IncreaseLevel 9718 1
+IncreaseLevel 6441 3
+ReplaceGroup 749 523
+GetHighestLevel 444
+IncreaseLevel 4299 1
+ReplaceGroup 334 725
+IncreaseLevel 8961 4
+GetGroupsHighestLevel 3
+IncreaseLevel 7253 5
+GetGroupsHighestLevel 1
+AddGroup 454
+ReplaceGroup 13 334
+GetGroupsHighestLevel 9
+ReplaceGroup 874 982
+IncreaseLevel 1179 4
+AddPlayer 7281 982 1
+GetGroupsHighestLevel 2
+IncreaseLevel 3626 1
+AddGroup 172
+RemovePlayer 509
+IncreaseLevel 4712 5
+AddPlayer 935 637 4
+AddPlayer 9564 456 6
+IncreaseLevel 197 4
+IncreaseLevel 3941 4
+Quit
