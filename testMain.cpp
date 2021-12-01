@@ -90,14 +90,14 @@ static bool isInit = false;
 /***************************************************************************/
 
 int main(int argc, const char**argv) {
-    freopen("output2.txt","w",stdout);
+    freopen("output1.txt","w",stdout);
     char buffer[MAX_STRING_INPUT_SIZE];
 
     // Reading commands
     int line = 1;
     while (fgets(buffer, MAX_STRING_INPUT_SIZE, stdin) != NULL) {
         fflush(stdout);
-        if(line == 519){
+        if(line == 46){
             std::cout<<"";
         }
         if (parser(buffer) == error)
