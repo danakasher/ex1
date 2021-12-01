@@ -95,6 +95,7 @@ public:
         Group *group = groupOwner.get();
         groupOwner->insertPlayer(playerOwner.get());
 
+
         if(groupOwner->getSize() == 1){
             nonEmptyGroupTree.insert(groupId, group);
         }
@@ -249,8 +250,9 @@ public:
                 return FAILURE;
             }
             GroupOwner groupOwner = groupNode->getData();
-            *numOfPlayers= groupOwner->getSize();
+            *numOfPlayers = groupOwner->getSize();
             if (*numOfPlayers == 0){
+                (*players) = nullptr;
                 return SUCCESS;
             }
             else {
@@ -272,6 +274,7 @@ public:
         if(players == nullptr || numOfGroups < 1){
             return INVALID_INPUT;
         }
+
         Node<int, Group*> **groupArr;
         try{
             groupArr = this->nonEmptyGroupTree.scanInOrder();
