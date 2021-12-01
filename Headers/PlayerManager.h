@@ -42,7 +42,10 @@ public:
     explicit PlayerManager(): currentHighest(){}
 
     ~PlayerManager(){
-        //TODO
+        playerTree.~SearchTree();
+        nonEmptyGroupTree.~SearchTree();
+        groupTree.~SearchTree();
+        currentHighest.~PlayerKey();
     }
 
     StatusType AddGroup(int groupID){
