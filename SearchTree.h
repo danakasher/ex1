@@ -7,11 +7,12 @@
 
 template<typename Key, typename Data>
 class SearchTree {
+    typedef std::shared_ptr<Node<Key, Data>> NodeOwner;
 private:
-    Node<Key, Data> *root;
+    NodeOwner root;
     int size;
 
-    void findUnbalance(Node<Key, Data> *currentNode) {
+    void findUnbalance(NodeOwner currentNode) {
         bool balancingPnt = false;
         while (!balancingPnt) {
             currentNode->calculateHeightAndBalance();
