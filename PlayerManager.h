@@ -231,6 +231,7 @@ public:
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
             if (this->playerTree.getSize()==0){
+                *players = nullptr;
                 return SUCCESS;
             }
             else {
