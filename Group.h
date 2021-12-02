@@ -1,7 +1,7 @@
 #ifndef EX1_GROUP_H
 
 #define EX1_GROUP_H
-#include "Player.cpp"
+#include "Player.h"
 #include "SearchTree.h"
 
 
@@ -59,12 +59,13 @@ public:
         playerTree.remove(playerKey);
     }
 
-    Node<PlayerKey, Player*> **toArray(){
-        return playerTree.scanInOrder();
+    void toArray(Node<PlayerKey, Player*> ***array){
+        playerTree.scanInOrder(array);
     }
 
     void merge(Group *group){
-        Node<PlayerKey, Player*> **arr = group->toArray();
+        auto **arr = new Node<PlayerKey, Player*>*[group->getSize()];
+        group->toArray(&arr);
         playerTree.mergeWith(arr, group->getSize());
         for(int i=0; i<group->getSize(); i++){
             arr[i]->getData()->setGroupId(this->groupId);
@@ -72,6 +73,7 @@ public:
         if(currentHighest < group->getCurrentHighest()){
             currentHighest = group->getCurrentHighest();
         }
+        delete[] arr;
     }
 
     int getSize(){

@@ -228,8 +228,6 @@ public:
         if (groupID == 0 || players == nullptr || numOfPlayers == nullptr){
             return INVALID_INPUT;
         }
-        Node<PlayerKey, Player*> **playerNodes;
-        Node<PlayerKey, Player*> **groupPlayerNodes;
         if (groupID < 0){
             *numOfPlayers = this->playerTree.getSize();
             if (this->playerTree.getSize()==0){
@@ -238,13 +236,15 @@ public:
             }
             else {
                 try{
-                    playerNodes = playerByLevel.scanInOrder();
+                    auto **playerNodes = new Node<PlayerKey, Player*>*[playerTree.getSize()];
+                    playerByLevel.scanInOrder(&playerNodes);
                     (*players) = new int[playerTree.getSize()];
+                    for(int i=playerTree.getSize()-1; i>=0; i--){
+                        (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey().getId();
+                    }
+                    delete []playerNodes;
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
-                }
-                for(int i=playerTree.getSize()-1; i>=0; i--){
-                    (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey().getId();
                 }
             }
         }
@@ -261,13 +261,15 @@ public:
             }
             else {
                 try{
-                    groupPlayerNodes = groupOwner->toArray();
+                    Node<PlayerKey, Player*> **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
+                    groupOwner->toArray(&groupPlayerNodes);
                     (*players) = (int*)(malloc(sizeof(int) * groupOwner->getSize()));
+                    for(int i=groupOwner->getSize()-1; i >=0; i--){
+                        (*players)[groupOwner->getSize()-1 - i] = groupPlayerNodes[i]->getKey().getId();
+                    }
+                    delete[] groupPlayerNodes;
                 } catch (std::bad_alloc &e){
                     return ALLOCATION_ERROR;
-                }
-                for(int i=groupOwner->getSize()-1; i >=0; i--){
-                    (*players)[groupOwner->getSize()-1 - i] = groupPlayerNodes[i]->getKey().getId();
                 }
             }
         }
@@ -283,16 +285,18 @@ public:
             return FAILURE;
         }
 
-        Node<int, Group*> **groupArr;
         try{
-            groupArr = this->nonEmptyGroupTree.scanInOrder();
+            auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
+            nonEmptyGroupTree.scanInOrder(&groupArr);
             (*players) = (int*)(malloc(sizeof(int) * playerTree.getSize()));
+            for (int i=0; i<numOfGroups; i++){
+                (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
+            }
+            delete []groupArr;
         } catch(std::bad_alloc &e){
             return ALLOCATION_ERROR;
         }
-        for (int i=0; i<numOfGroups; i++){
-            (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
-        }
+
         return SUCCESS;
     }
 };

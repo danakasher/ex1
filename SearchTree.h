@@ -50,12 +50,12 @@ private:
         }
     }
 
-    int scanInOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index) {
+    int scanInOrder(Node<Key, Data> *node, Node<Key, Data> ***sortedArr, int index) {
         if (index == this->size || node == nullptr) {
             return index;
         }
         index = scanInOrder(node->getLeft(), sortedArr, index);
-        sortedArr[index] = node;
+        (*sortedArr)[index] = node;
         index++;
         index = scanInOrder(node->getRight(), sortedArr, index);
         return index;
@@ -184,7 +184,7 @@ public:
     void insert(Node<Key, Data> *newNode);
 
     void insert(Key &key, Data &data); //For Testing
-    Node<Key, Data> **scanInOrder();
+    void scanInOrder(Node<Key, Data> ***sortedArr);
 
     Node<Key, Data> *findLeftmost(Node<Key, Data> *node);
 
@@ -241,10 +241,8 @@ void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
 }
 
 template<typename Key, typename Data>
-Node<Key, Data> **SearchTree<Key, Data>::scanInOrder() {
-    auto **sortedArr = new Node<Key, Data> *[this->size];
+void SearchTree<Key, Data>::scanInOrder(Node<Key, Data> ***sortedArr) {
     scanInOrder(this->root, sortedArr, 0);
-    return sortedArr;
 }
 
 template<typename Key, typename Data>
@@ -447,9 +445,10 @@ void SearchTree<Key, Data>::insert(Key &key, Data &data) {
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize) {
-    Node<Key, Data> **ownNodes = this->scanInOrder();
+    auto **ownNodes = new Node<Key, Data>*[size];
+    scanInOrder(&ownNodes);
     int mergedSize = this->size + toMergeSize;
-    Node<Key, Data> **sortedArr = new Node<Key, Data> *[mergedSize];
+    auto **sortedArr = new Node<Key, Data> *[mergedSize];
     int indexToMerge = 0, indexOwn = 0;
     int currentIndex = 0;
     //int minSize = (int) fmin(toMergeSize, this->getSize());
