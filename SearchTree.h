@@ -483,6 +483,8 @@ void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMerg
 
     setRoot(buildFromSortedArray(sortedArr, 0, mergedSize - 1));
     this->size = mergedSize;
+    delete[] ownNodes;
+    delete[] sortedArr;
 }
 
 template<typename Key, typename Data>
