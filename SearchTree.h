@@ -304,7 +304,7 @@ void SearchTree<Key, Data>::remove(Key const &key) {
         balanceTree(father);
         father = father->getFather();
     }
-
+    delete node;
     this->size -= 1;
 }
 
@@ -330,15 +330,14 @@ void SearchTree<Key, Data>::removeOneChildLeft(Node<Key, Data> *node, Node<Key, 
     if (father == nullptr) {
         setRoot(leftSon);
         return;
-    }
-
-    if (father->getLeft() == node) {
-        father->setLeft(leftSon);
     } else {
-        father->setRight(leftSon);
+        if (father->getLeft() == node) {
+            father->setLeft(leftSon);
+        } else {
+            father->setRight(leftSon);
+        }
+        father->calculateHeightAndBalance();
     }
-
-    father->calculateHeightAndBalance();
 
     node->setFather(nullptr);
     node->setLeft(nullptr);
@@ -376,6 +375,7 @@ Node<Key, Data> *SearchTree<Key, Data>::removeTwoChildren(Node<Key, Data> *node,
         } else {
             father->setRight(nextInOrder);
         }
+        father->calculateHeightAndBalance();
     }
 
     if (fatherNextInOrder->getRight() == nextInOrder) {

@@ -133,8 +133,8 @@ public:
         //GroupOwner groupOwner = groupNode->getData();
         Group *group = groupNode->getData();
 
-        playerTree.remove(playerID);
         playerByLevel.remove(PlayerKey(playerID, playerOwner->getLevel()));
+        playerTree.remove(playerID);
         group->removePlayer(playerID, playerOwner->getLevel());
 
         if(group->getSize() == 0) {
