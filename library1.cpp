@@ -6,6 +6,7 @@ void *Init(){
     try{
         manager = new PlayerManager();
     } catch (std::bad_alloc &e){
+        delete manager;
         return nullptr;
     }
     return manager;
