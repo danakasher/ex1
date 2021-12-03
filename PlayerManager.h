@@ -260,7 +260,7 @@ public:
             }
             else {
                 try{
-                    Node<PlayerKey, Player*> **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
+                    auto **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
                     groupOwner->toArray(&groupPlayerNodes);
                     (*players) = (int*)(malloc(sizeof(int) * groupOwner->getSize()));
                     if(*players == nullptr){

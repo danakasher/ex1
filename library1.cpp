@@ -8,7 +8,7 @@ void *Init(){
     } catch (std::bad_alloc &e){
         return nullptr;
     }
-    return (void*)manager;
+    return manager;
 }
 
 StatusType AddGroup(void *DS, int GroupID){
