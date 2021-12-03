@@ -90,7 +90,6 @@ static bool isInit = false;
 /***************************************************************************/
 
 int main(int argc, const char**argv) {
-    freopen("o1.txt","w",stdout);
     char buffer[MAX_STRING_INPUT_SIZE];
 
     // Reading commands
