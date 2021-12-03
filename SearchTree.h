@@ -72,6 +72,17 @@ private:
         return index;
     }
 
+    int scanInOrderLimited(Node<Key, Data> *node, Node<Key, Data> ***sortedArr, int index, int stop) {
+        if (index == stop || node == nullptr) {
+            return index;
+        }
+        index = scanInOrderLimited(node->getLeft(), sortedArr, index, stop);
+        (*sortedArr)[index] = node;
+        index++;
+        index = scanInOrderLimited(node->getRight(), sortedArr,index, stop);
+        return index;
+    }
+
     void roll_LL(Node<Key, Data> *balancingPnt) {
         rightRotate(balancingPnt);
     }
@@ -185,6 +196,7 @@ public:
 
     void insert(Key &key, Data &data); //For Testing
     void scanInOrder(Node<Key, Data> ***sortedArr);
+    void scanInOrderLimited(Node<Key, Data> ***sortedArr, int stop);
 
     Node<Key, Data> *findLeftmost(Node<Key, Data> *node);
 
@@ -242,6 +254,11 @@ void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::scanInOrder(Node<Key, Data> ***sortedArr) {
     scanInOrder(this->root, sortedArr, 0);
+}
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::scanInOrderLimited(Node<Key, Data> ***sortedArr, int stop) {
+    scanInOrderLimited(this->root, sortedArr, 0, stop);
 }
 
 template<typename Key, typename Data>

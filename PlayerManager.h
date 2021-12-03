@@ -288,9 +288,9 @@ public:
         }
 
         try{
-            auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
-            nonEmptyGroupTree.scanInOrder(&groupArr);
-            (*players) = (int*)(malloc(sizeof(int) * playerTree.getSize()));
+            auto **groupArr = new Node<int, Group*>*[numOfGroups];
+            nonEmptyGroupTree.scanInOrderLimited(&groupArr, numOfGroups);
+            (*players) = (int*)(malloc(sizeof(int) * numOfGroups));
             if(*players == nullptr){
                return ALLOCATION_ERROR;
             }
