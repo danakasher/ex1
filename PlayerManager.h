@@ -167,7 +167,7 @@ public:
         if(toMergeOwner->getSize() - toRemoveOwner->getSize() == 0 && toMergeOwner->getSize() != 0){
             nonEmptyGroupTree.insert(replacementId, toMerge);
         }
-
+        toRemoveOwner.reset();
         groupTree.remove(groupId);
         nonEmptyGroupTree.remove(groupId);
 
