@@ -77,6 +77,9 @@ private:
             return index;
         }
         index = scanInOrderLimited(node->getLeft(), sortedArr, index, stop);
+        if(index == stop){
+            return index;
+        }
         (*sortedArr)[index] = node;
         index++;
         index = scanInOrderLimited(node->getRight(), sortedArr,index, stop);
