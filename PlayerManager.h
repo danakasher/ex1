@@ -286,9 +286,10 @@ public:
         }
 
         try{
-            auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
-            nonEmptyGroupTree.scanInOrder(&groupArr);
-            (*players) = (int*)(malloc(sizeof(int) * playerTree.getSize()));
+            auto **groupArr = new Node<int, Group*>*[numOfGroups];
+            //auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
+            nonEmptyGroupTree.scanInOrderLimited(&groupArr, numOfGroups);
+            (*players) = (int*)(malloc(sizeof(int) * numOfGroups));
             for (int i=0; i<numOfGroups; i++){
                 (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
             }
