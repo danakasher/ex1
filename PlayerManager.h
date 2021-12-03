@@ -253,7 +253,6 @@ public:
                 return FAILURE;
             }
             GroupOwner groupOwner = groupNode->getData();
-            Group *group = groupOwner.get();
             *numOfPlayers = groupOwner->getSize();
             if (*numOfPlayers == 0){
                 (*players) = nullptr;
