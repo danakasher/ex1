@@ -2,15 +2,17 @@
 #define EX1_NODE_H
 
 #include <cmath>
+#include <memory>
 
 template <typename Key, typename Data>
 class Node {
+    typedef std::shared_ptr<Node<Key, Data>> NodeOwner;
 private:
     const Key key;
     Data data;
-    Node<Key, Data>* left = nullptr;
-    Node<Key, Data>* right = nullptr;
-    Node<Key, Data>* father = nullptr;
+    NodeOwner left = nullptr;
+    NodeOwner right = nullptr;
+    NodeOwner father = nullptr;
 
 public:
     int height, balancingParameter;
