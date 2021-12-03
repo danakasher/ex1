@@ -128,9 +128,8 @@ public:
         Node<PlayerKey, Player*> *nodeByLevel = playerByLevel.find(key);
         replaceIfHighestRemoved(nodeByLevel);
 
-        Node<int, Group*> *groupNode = nonEmptyGroupTree.find(playerOwner->getGroupId());
-        //Node<int, GroupOwner> *groupNode = groupTree.find(playerOwner->getGroupId());
-        //GroupOwner groupOwner = groupNode->getData();
+        int groupId = playerOwner->getGroupId();
+        Node<int, Group*> *groupNode = nonEmptyGroupTree.find(groupId);
         Group *group = groupNode->getData();
 
         playerByLevel.remove(PlayerKey(playerID, playerOwner->getLevel()));
@@ -254,6 +253,7 @@ public:
                 return FAILURE;
             }
             GroupOwner groupOwner = groupNode->getData();
+            Group *group = groupOwner.get();
             *numOfPlayers = groupOwner->getSize();
             if (*numOfPlayers == 0){
                 (*players) = nullptr;

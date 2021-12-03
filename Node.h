@@ -38,6 +38,13 @@ public:
         }
         this->calculateHeightAndBalance();
     }
+
+    void clearNode(){
+        this->left = nullptr;
+        this->right = nullptr;
+        this->father = nullptr;
+    }
+
     void setFather(Node<Key, Data>* const prev){ this->father = prev;}
     void calculateHeightAndBalance(){
         if(this->getLeft() == nullptr && this->getRight() == nullptr) {
