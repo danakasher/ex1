@@ -50,6 +50,17 @@ private:
         }
     }
 
+    void clearPostOrder(Node<Key, Data> *currentRoot) {
+        if (currentRoot == nullptr) {
+            return;
+        }
+
+        clearPostOrder(currentRoot->getRight());
+        clearPostOrder(currentRoot->getLeft());
+
+        currentRoot->clearNode();
+    }
+
     int scanInOrder(Node<Key, Data> *node, Node<Key, Data> ***sortedArr, int index) {
         if (index == this->size || node == nullptr) {
             return index;
@@ -58,17 +69,6 @@ private:
         (*sortedArr)[index] = node;
         index++;
         index = scanInOrder(node->getRight(), sortedArr, index);
-        return index;
-    }
-
-    int scanPostOrder(Node<Key, Data> *node, Node<Key, Data> **sortedArr, int index) {
-        if (index == this->size || node == nullptr) {
-            return index;
-        }
-        index = scanPostOrder(node->getRight(), sortedArr, index);
-        sortedArr[index] = node;
-        index++;
-        index = scanPostOrder(node->getLeft(), sortedArr, index);
         return index;
     }
 
@@ -190,13 +190,13 @@ public:
 
     Node<Key, Data> *findRightmost(Node<Key, Data> *node);
 
-    Node<Key, Data> **scanPostOrder();
-
     int getSize() const { return this->size; }
 
     void removeOneChildLeft(Node<Key, Data> *node, Node<Key, Data> *father);
 
     bool isBalanced();
+
+    void clearTree();
 
     void mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize);
     Node<Key, Data>* getRoot(){
@@ -204,7 +204,6 @@ public:
     }
 
 };
-
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::insert(Node<Key, Data> *newNode) {
@@ -261,6 +260,8 @@ Node<Key, Data> *SearchTree<Key, Data>::find(Key const &key) {
     return nullptr;
 }
 
+
+
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::remove(Key const &key) {
     Node<Key, Data> *node = find(key);
@@ -294,6 +295,7 @@ void SearchTree<Key, Data>::remove(Key const &key) {
         father = this->root;
         if (father == nullptr) {
             this->size = 0;
+            delete node;
             return;
         }
         balanceTree(father->getRight());
@@ -307,6 +309,8 @@ void SearchTree<Key, Data>::remove(Key const &key) {
     delete node;
     this->size -= 1;
 }
+
+
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father) {
@@ -521,6 +525,12 @@ Node<Key, Data> *SearchTree<Key, Data>::findRightmost(Node<Key, Data> *node){
     }
 
     return node;
+}
+
+template<typename Key, typename Data>
+void SearchTree<Key, Data>::clearTree() {
+    clearPostOrder(root);
+    root = nullptr;
 }
 
 #endif //EX1_SEARCHTREE_H

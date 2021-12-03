@@ -38,6 +38,8 @@ public:
 
     int getId(){ return this->groupId; }
 
+    void clearGroup(){ playerTree.clearTree(); }
+
     PlayerKey getCurrentHighest() const { return this->currentHighest; }
 
     void insertPlayer(Player *newPlayer){
@@ -66,6 +68,7 @@ public:
     void merge(Group *group){
         auto **arr = new Node<PlayerKey, Player*>*[group->getSize()];
         group->toArray(&arr);
+        group->clearGroup();
         playerTree.mergeWith(arr, group->getSize());
         for(int i=0; i<group->getSize(); i++){
             arr[i]->getData()->setGroupId(this->groupId);
