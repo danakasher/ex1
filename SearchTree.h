@@ -77,12 +77,12 @@ private:
             return index;
         }
         index = scanInOrderLimited(node->getLeft(), sortedArr, index, stop);
-        if(index == stop){
+        if (index == stop) {
             return index;
         }
         (*sortedArr)[index] = node;
         index++;
-        index = scanInOrderLimited(node->getRight(), sortedArr,index, stop);
+        index = scanInOrderLimited(node->getRight(), sortedArr, index, stop);
         return index;
     }
 
@@ -197,8 +197,10 @@ public:
 
     void insert(Node<Key, Data> *newNode);
 
-    void insert(Key &key, Data &data); //For Testing
+    void insert(Key &key, Data &data);
+
     void scanInOrder(Node<Key, Data> ***sortedArr);
+
     void scanInOrderLimited(Node<Key, Data> ***sortedArr, int stop);
 
     Node<Key, Data> *findLeftmost(Node<Key, Data> *node);
@@ -214,7 +216,8 @@ public:
     void clearTree();
 
     void mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize);
-    Node<Key, Data>* getRoot(){
+
+    Node<Key, Data> *getRoot() {
         return this->root;
     }
 
@@ -280,8 +283,6 @@ Node<Key, Data> *SearchTree<Key, Data>::find(Key const &key) {
     return nullptr;
 }
 
-
-
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::remove(Key const &key) {
     Node<Key, Data> *node = find(key);
@@ -329,8 +330,6 @@ void SearchTree<Key, Data>::remove(Key const &key) {
     delete node;
     this->size -= 1;
 }
-
-
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::removeNoChildren(Node<Key, Data> *node, Node<Key, Data> *father) {
@@ -469,7 +468,7 @@ void SearchTree<Key, Data>::insert(Key &key, Data &data) {
 
 template<typename Key, typename Data>
 void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMergeSize) {
-    auto **ownNodes = new Node<Key, Data>*[size];
+    auto **ownNodes = new Node<Key, Data> *[size];
     scanInOrder(&ownNodes);
     int mergedSize = this->size + toMergeSize;
     auto **sortedArr = new Node<Key, Data> *[mergedSize];
@@ -499,7 +498,7 @@ void SearchTree<Key, Data>::mergeWith(Node<Key, Data> **toMergeNodes, int toMerg
         currentIndex++;
     }
 
-    for(int i=0; i<mergedSize; i++){
+    for (int i = 0; i < mergedSize; i++) {
         sortedArr[i]->setLeft(nullptr);
         sortedArr[i]->setRight(nullptr);
         sortedArr[i]->setFather(nullptr);
@@ -528,9 +527,9 @@ Node<Key, Data> *SearchTree<Key, Data>::buildFromSortedArray(Node<Key, Data> **a
 }
 
 template<typename Key, typename Data>
-Node<Key, Data> *SearchTree<Key, Data>::findLeftmost(Node<Key, Data> *node){
-    if(node == nullptr) return node;
-    while(node->getLeft() != nullptr){
+Node<Key, Data> *SearchTree<Key, Data>::findLeftmost(Node<Key, Data> *node) {
+    if (node == nullptr) return node;
+    while (node->getLeft() != nullptr) {
         node = node->getLeft();
     }
 
@@ -538,9 +537,9 @@ Node<Key, Data> *SearchTree<Key, Data>::findLeftmost(Node<Key, Data> *node){
 }
 
 template<typename Key, typename Data>
-Node<Key, Data> *SearchTree<Key, Data>::findRightmost(Node<Key, Data> *node){
-    if(node == nullptr) return node;
-    while(node->getRight() != nullptr){
+Node<Key, Data> *SearchTree<Key, Data>::findRightmost(Node<Key, Data> *node) {
+    if (node == nullptr) return node;
+    while (node->getRight() != nullptr) {
         node = node->getRight();
     }
 
