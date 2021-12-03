@@ -263,6 +263,9 @@ public:
                     Node<PlayerKey, Player*> **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
                     groupOwner->toArray(&groupPlayerNodes);
                     (*players) = (int*)(malloc(sizeof(int) * groupOwner->getSize()));
+                    if(*players == nullptr){
+                        return ALLOCATION_ERROR;
+                    }
                     for(int i=groupOwner->getSize()-1; i >=0; i--){
                         (*players)[groupOwner->getSize()-1 - i] = groupPlayerNodes[i]->getKey().getId();
                     }
@@ -288,6 +291,9 @@ public:
             auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
             nonEmptyGroupTree.scanInOrder(&groupArr);
             (*players) = (int*)(malloc(sizeof(int) * playerTree.getSize()));
+            if(*players == nullptr){
+               return ALLOCATION_ERROR;
+            }
             for (int i=0; i<numOfGroups; i++){
                 (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
             }
