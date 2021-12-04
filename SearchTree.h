@@ -77,12 +77,14 @@ private:
             return index;
         }
         index = scanInOrderLimited(node->getLeft(), sortedArr, index, stop);
+        if(index == stop){
+            return index;
+        }
         (*sortedArr)[index] = node;
         index++;
         index = scanInOrderLimited(node->getRight(), sortedArr,index, stop);
         return index;
     }
-
 
     void roll_LL(Node<Key, Data> *balancingPnt) {
         rightRotate(balancingPnt);
@@ -200,6 +202,7 @@ public:
     void scanInOrderLimited(Node<Key, Data> ***sortedArr, int stop);
 
     Node<Key, Data> *findLeftmost(Node<Key, Data> *node);
+
     Node<Key, Data> *findRightmost(Node<Key, Data> *node);
 
     int getSize() const { return this->size; }

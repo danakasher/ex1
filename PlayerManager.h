@@ -10,7 +10,6 @@ class PlayerManager {
     typedef std::shared_ptr<Group> GroupOwner;
 
 private:
-    //TODO: Make everything a pointer
     PlayerKey currentHighest;
     SearchTree<int, PlayerOwner> playerTree;
     SearchTree<PlayerKey, Player*> playerByLevel;
@@ -45,9 +44,10 @@ public:
     explicit PlayerManager(): currentHighest(){}
 
     ~PlayerManager(){
+        groupTree.~SearchTree();
         playerTree.~SearchTree();
         nonEmptyGroupTree.~SearchTree();
-        groupTree.~SearchTree();
+        playerByLevel.~SearchTree();
         currentHighest.~PlayerKey();
     }
 
@@ -143,8 +143,13 @@ public:
     }
 
     void Quit(){
+        //groupTree.~SearchTree();
+        //playerTree.~SearchTree();
         groupTree.~SearchTree();
         playerTree.~SearchTree();
+        nonEmptyGroupTree.~SearchTree();
+        playerByLevel.~SearchTree();
+        currentHighest.~PlayerKey();
     }
 
     StatusType ReplaceGroup(int groupId, int replacementId){
@@ -253,7 +258,6 @@ public:
                 return FAILURE;
             }
             GroupOwner groupOwner = groupNode->getData();
-            Group *group = groupOwner.get();
             *numOfPlayers = groupOwner->getSize();
             if (*numOfPlayers == 0){
                 (*players) = nullptr;
@@ -261,9 +265,12 @@ public:
             }
             else {
                 try{
-                    Node<PlayerKey, Player*> **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
+                    auto **groupPlayerNodes = new Node<PlayerKey, Player*>*[groupOwner->getSize()];
                     groupOwner->toArray(&groupPlayerNodes);
                     (*players) = (int*)(malloc(sizeof(int) * groupOwner->getSize()));
+                    if(*players == nullptr){
+                        return ALLOCATION_ERROR;
+                    }
                     for(int i=groupOwner->getSize()-1; i >=0; i--){
                         (*players)[groupOwner->getSize()-1 - i] = groupPlayerNodes[i]->getKey().getId();
                     }
@@ -287,9 +294,11 @@ public:
 
         try{
             auto **groupArr = new Node<int, Group*>*[numOfGroups];
-            //auto **groupArr = new Node<int, Group*>*[nonEmptyGroupTree.getSize()];
             nonEmptyGroupTree.scanInOrderLimited(&groupArr, numOfGroups);
             (*players) = (int*)(malloc(sizeof(int) * numOfGroups));
+            if(*players == nullptr){
+               return ALLOCATION_ERROR;
+            }
             for (int i=0; i<numOfGroups; i++){
                 (*players)[i] = groupArr[i]->getData()->getCurrentHighest().getId();
             }

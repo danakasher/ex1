@@ -21,8 +21,8 @@ public:
     const Key &getKey() const { return this->key; }
     Node *getLeft() const { return this->left; }
     Node *getRight() const { return this->right; }
-    void setData(Data data){
-        this->data=data;
+    void setData(Data &nodeData){
+        this->data=nodeData;
     }
     void setLeft(Node* const leftNode){
         this->left = leftNode;

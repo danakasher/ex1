@@ -8,7 +8,7 @@ void *Init(){
     } catch (std::bad_alloc &e){
         return nullptr;
     }
-    return manager;
+    return (void*)manager;
 }
 
 StatusType AddGroup(void *DS, int GroupID){
@@ -76,7 +76,10 @@ StatusType GetGroupsHighestLevel(void *DS, int numOfGroups, int **Players){
 }
 
 void Quit(void** DS){
-    ((PlayerManager*)*DS)->Quit();
-    ((PlayerManager*)*DS)->~PlayerManager();
+    PlayerManager* pm = (PlayerManager*)*DS;
+    pm->Quit();
+    delete pm;
+    //((PlayerManager*)*DS)->Quit();
+    //((PlayerManager*)*DS)->~PlayerManager();
     *DS = nullptr;
 }
