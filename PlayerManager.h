@@ -242,7 +242,7 @@ public:
                 try{
                     auto **playerNodes = new Node<PlayerKey, Player*>*[playerTree.getSize()];
                     playerByLevel.scanInOrder(&playerNodes);
-                    (*players) = new int[playerTree.getSize()];
+                    (*players) = (int*) malloc(sizeof(int)*playerTree.getSize());
                     for(int i=playerTree.getSize()-1; i>=0; i--){
                         (*players)[playerTree.getSize()-1 - i] = playerNodes[i]->getKey().getId();
                     }
